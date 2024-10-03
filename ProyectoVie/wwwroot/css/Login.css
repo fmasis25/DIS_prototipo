@@ -1,0 +1,127 @@
+﻿/* Fondo gris para toda la página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Barra azul superior */
+.header-tec {
+    width: 100%;
+    background-color: #0a4275; /* Color azul del fondo */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Estilos para el logo */
+.tec-barra-logo {
+    max-width: 200px;
+    height: auto;
+    background-color: #0a4275; /* Hacer el fondo del logo del mismo color que la barra */
+    padding: 5px; /* Añadir un pequeño margen interno si es necesario */
+    display: block;
+}
+
+
+/* Contenedor principal del login */
+.login-container {
+    width: 420px;
+    background: white;
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 120px; /* Mueve el cuadro de login hacia abajo para no superponerlo con la barra */
+}
+
+/* Imagen dentro del formulario */
+.form-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para el título dentro del formulario */
+.login-rectangulo h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos para los campos de entrada */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+    .input-box label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* Estilo de los íconos */
+    .input-box i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 20px;
+    }
+
+/* Estilos del botón */
+.btn-ingresar {
+    width: 100%;
+    padding: 10px;
+    background-color: #0a4275; /* Color del botón más oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .btn-ingresar:hover {
+        background-color: #08385f;
+    }
+
+/* Estilos para el enlace de "¿Olvidaste tu contraseña?" */
+.contra-olvido {
+    text-align: right;
+    font-size: 14px;
+    margin: 10px 20px;
+}
+
+    .contra-olvido a {
+        color: #0a4275;
+        text-decoration: none;
+    }
+
+        .contra-olvido a:hover {
+            text-decoration: underline;
+        }

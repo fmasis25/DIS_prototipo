@@ -1,0 +1,56 @@
+﻿@page
+@model ProyectoVie.Pages.VieWeb.LoginModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Login.css" />
+    <title>Sistema de Propuestas - Login</title>
+</head>
+<body>
+    <!-- Barra azul superior con el logo del TEC -->
+    <header role="banner" class="header-tec">
+        <!-- Cambiar el logo del TEC -->
+        <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-barra-logo" aria-label="Logo del Tecnológico de Costa Rica">
+    </header>
+
+    <!-- Contenedor del login -->
+    <div class="login-container" role="main" aria-labelledby="loginFormTitle">
+        <!-- Imagen en el formulario de login -->
+        <img src="~/css/fondo-tec.jpg" alt="Imagen del campus" class="form-image">
+
+        <div class="login-rectangulo">
+            <h1 id="loginFormTitle">Sistema de Propuestas</h1>
+
+            <!-- Formulario de login accesible -->
+            <form method="post" aria-labelledby="loginFormTitle" role="form">
+                <!-- Campo de correo accesible (sin texto redundante) -->
+                <div class="input-box">
+                    <label for="Email" id="emailLabel">Correo</label>
+                    <input type="text" asp-for="Email" id="Email" placeholder="Correo" required aria-required="true" aria-labelledby="emailLabel">
+                    <i class="bx bx-user" aria-hidden="true"></i>
+                </div>
+
+                <!-- Campo de contraseña accesible (sin texto redundante) -->
+                <div class="input-box">
+                    <label for="Password" id="passwordLabel">Contraseña</label>
+                    <input type="password" asp-for="Password" id="Password" placeholder="Contraseña" required aria-required="true" aria-labelledby="passwordLabel">
+                    <i class="bx bxs-lock" aria-hidden="true"></i>
+                </div>
+
+                <!-- Enlace accesible para "Olvidaste tu contraseña" -->
+                <div class="contra-olvido">
+                    <a asp-page="/RecoverPassword" aria-label="Recupera tu contraseña aquí">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <!-- Botón accesible -->
+                <button type="submit" class="btn-ingresar" aria-label="Haz clic para iniciar sesión">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
