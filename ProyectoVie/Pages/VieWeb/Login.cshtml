@@ -28,19 +28,39 @@
 
             <!-- Formulario de login accesible -->
             <form method="post" aria-labelledby="loginFormTitle" role="form">
-                <!-- Campo de correo accesible (sin texto redundante) -->
+                <!-- Campo de correo con ícono accesible -->
                 <div class="input-box">
                     <label for="Email" id="emailLabel">Correo</label>
                     <input type="text" asp-for="Email" id="Email" placeholder="Correo" required aria-required="true" aria-labelledby="emailLabel">
-                    <i class="bx bx-user" aria-hidden="true"></i>
+                    <!-- Ícono accesible -->
+                    <i class="bx bx-user" aria-label="Icono de usuario"></i>
                 </div>
 
-                <!-- Campo de contraseña accesible (sin texto redundante) -->
+                <!-- Campo de contraseña con ícono accesible -->
                 <div class="input-box">
                     <label for="Password" id="passwordLabel">Contraseña</label>
                     <input type="password" asp-for="Password" id="Password" placeholder="Contraseña" required aria-required="true" aria-labelledby="passwordLabel">
-                    <i class="bx bxs-lock" aria-hidden="true"></i>
+                    <!-- Ícono accesible -->
+                    <i class="bx bxs-lock" aria-label="Icono de candado"></i>
+
+                    <!-- Feedback de la contraseña accesible con aria-live -->
+                    <div id="passwordFeedback" aria-live="assertive" class="sr-only"></div>
                 </div>
+
+                <!-- Script para validar la contraseña y proporcionar retroalimentación -->
+                <script>
+                    document.getElementById('Password').addEventListener('input', function() {
+                        const password = this.value;
+                        const feedback = document.getElementById('passwordFeedback');
+
+                        if (password.length < 6) {
+                            feedback.textContent = 'La contraseña es demasiado corta. Debe tener al menos 6 caracteres.';
+                        } else {
+                            feedback.textContent = 'La contraseña es válida.';
+                        }
+                    });
+                </script>
+
 
                 <!-- Enlace accesible para "Olvidaste tu contraseña" -->
                 <div class="contra-olvido">

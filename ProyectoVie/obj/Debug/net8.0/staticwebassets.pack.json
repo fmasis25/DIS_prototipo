@@ -13,12 +13,32 @@
       "PackagePath": "staticwebassets\\css\\MenuAdmin.css"
     },
     {
-      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\MenuExtensionista.css",
-      "PackagePath": "staticwebassets\\css\\MenuExtensionista.css"
-    },
-    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\fondo-tec.jpg",
       "PackagePath": "staticwebassets\\css\\fondo-tec.jpg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\eliminar.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\eliminar.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lapiz.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\lapiz.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lupa.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\lupa.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\perfil.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\perfil.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\plus.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\plus.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menue.css",
+      "PackagePath": "staticwebassets\\css\\menue.css"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\site.css",
@@ -27,10 +47,6 @@
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.jpg",
       "PackagePath": "staticwebassets\\css\\tec-logo.jpg"
-    },
-    {
-      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.png",
-      "PackagePath": "staticwebassets\\css\\tec-logo.png"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\favicon.ico",
