@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lXp9J6A9n/9WCr9UhVoPELSCxR9QI33vTYAcvCKuP7Y=",
+  "Hash": "loyp9LRwfnhT+FzbhoxFRi8mdmhC9dNP6SM9GO8cesI=",
   "Source": "ProyectoVie",
   "BasePath": "_content/ProyectoVie",
   "Mode": "Default",
@@ -188,12 +188,12 @@
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
-      "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\MenuAdmin.css",
+      "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
       "BasePath": "_content/ProyectoVie",
-      "RelativePath": "css/MenuAdmin.css",
+      "RelativePath": "css/menua.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,7 +204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\MenuAdmin.css"
+      "OriginalItemSpec": "wwwroot\\css\\menua.css"
     },
     {
       "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menue.css",

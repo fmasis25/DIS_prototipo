@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
-      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\MenuAdmin.css",
-      "PackagePath": "staticwebassets\\css\\MenuAdmin.css"
-    },
-    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\fondo-tec.jpg",
       "PackagePath": "staticwebassets\\css\\fondo-tec.jpg"
     },
@@ -35,6 +31,10 @@
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\plus.svg",
       "PackagePath": "staticwebassets\\css\\icons\\plus.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
+      "PackagePath": "staticwebassets\\css\\menua.css"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menue.css",

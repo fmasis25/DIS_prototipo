@@ -1,64 +1,101 @@
 ﻿@page
 @model ProyectoVie.Pages.VieWeb.MenuAdminModel
 @{
+    ViewData["Title"] = "Menú Admin";
 }
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/MenuAdmin.css" />
-    <title>Panel Administrador</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Admin</title>
+    <link rel="stylesheet" href="../css/menua.css">
 </head>
 <body>
-    <!-- Estructura semántica con header -->
-    <header role="banner">
-        <!-- Logo accesible con descripción en 'alt' -->
-        <img src="~/css/logo-admin.jpg" alt="Logo del Administrador" class="logo-admin" aria-label="Logo del Administrador">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
+            </div>
+            <form role="search">
+                <input type="text" placeholder="Buscar propuesta..." aria-label="Buscar propuesta">
+            </form>
+            <nav class="header-icons">
+                <a href="/perfil">
+                    <img src="/css/icons/perfil.svg" alt="Icono de perfil">
+                </a>
+                <a href="#"><img src="/css/icons/search.svg" alt="Buscar"></a>
+                <a href="#"><img src="/css/icons/notification.svg" alt="Notificaciones"></a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Barra de navegación accesible -->
-    <nav role="navigation" aria-label="Menú principal de administración">
-        <ul>
-            <!-- Enlaces con aria-label para mayor contexto a usuarios de lectores de pantalla -->
-            <li><a href="/Proyectos" aria-label="Gestionar Proyectos">Proyectos</a></li>
-            <li><a href="/Usuarios" aria-label="Gestionar Usuarios">Usuarios</a></li>
-            <li><a href="/Finanzas" aria-label="Gestionar Finanzas">Finanzas</a></li>
-        </ul>
-    </nav>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Estadísticas e informes</a></li>
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="#">Propuestas</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <!-- Contenido principal accesible -->
-    <main role="main">
-        <!-- Ejemplo de tabla con encabezados accesibles -->
-        <table>
-            <caption>Resumen de Actividades Recientes</caption>
+    <main>
+        <h1>Propuestas Recibidas</h1>
+
+
+        <!-- Filtro por Estado -->
+        <div class="filter">
+            <label for="estado">Filtrar por estado:</label>
+            <form method="get">
+                <select id="estado" name="estadoId" onchange="this.form.submit()">
+                    <option value="0">Todas</option>
+                    @foreach (var estado in Model.EstadosPropuesta)
+                    {
+                        if (estado["ID"].ToString() == Model.SelectedEstadoId.ToString())
+                        {
+                            <option value="@estado["ID"]" selected>@estado["Nombre"]</option>
+                        }
+                        else
+                        {
+                            <option value="@estado["ID"]">@estado["Nombre"]</option>
+                        }
+                    }
+                </select>
+            </form>
+        </div>
+        
+        <!-- Tabla de Propuestas -->
+        <table class="propuestas-table">
             <thead>
                 <tr>
-                    <!-- Scope para indicar que estos son encabezados de columnas -->
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Acción</th>
-                    <th scope="col">Usuario</th>
+                    <th>Nombre de la Propuesta</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>01/10/2024</td>
-                    <td>Proyecto Aprobado</td>
-                    <td>Juan Pérez</td>
-                </tr>
-                <tr>
-                    <td>02/10/2024</td>
-                    <td>Usuario Agregado</td>
-                    <td>Maria García</td>
-                </tr>
+                @foreach (var propuesta in Model.Propuestas)
+                {
+                    <tr>
+                        <td>@propuesta["NombrePropuesta"]</td>
+                        <td>@propuesta["Estado"]</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn">⋮</button>
+                                <div class="dropdown-content">
+                                    <a href="/propuesta/descargar/@propuesta["ID"]">Descargar</a>
+                                    <a href="/propuesta/asignar/@propuesta["ID"]">Asignar</a>
+                                    <a href="/propuesta/evaluar/@propuesta["ID"]">Evaluar</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </main>
-
-    <!-- Pie de página accesible -->
-    <footer role="contentinfo">
-        <p>&copy; 2024 Proyecto VIE</p>
-    </footer>
 </body>
 </html>
+
