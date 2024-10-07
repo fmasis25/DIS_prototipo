@@ -1,0 +1,251 @@
+﻿@page
+@model ProyectoVie.Pages.VieWeb.Pages_VieWeb_ModificarPropuesta
+@{
+    ViewData["Title"] = "Modificar Propuestas";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/ProposalRegistration.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <title>Sistema de Propuestas - Modificación</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #d9d9d9;
+            padding: 10px 20px;
+            border-bottom: 2px solid #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            justify-content: space-between; /* Justifica el contenido a ambos lados */
+        }
+
+            .header img {
+                height: 50px;
+                margin-right: 20px;
+            }
+
+        .sidebar {
+            width: 200px;
+            background-color: #140e39;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            top: 60px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .sidebar .option, .sidebar .exit-option {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 50px 0;
+            }
+
+                .sidebar .option img,
+                .sidebar .exit-option img {
+                    width: 80px;
+                    margin-bottom: 5px;
+                }
+
+                .sidebar .option span,
+                .sidebar .exit-option span {
+                    font-size: 23px;
+                    text-align: center;
+                }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            margin-top: 60px;
+            overflow-y: auto;
+            height: calc(100vh - 60px);
+        }
+
+        .form-container {
+            background-color: #ececec;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+            .form-field label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold; /* Hacer los labels en negrita */
+            }
+
+            .form-field p {
+                margin: 0;
+            }
+
+        .ods-description, .proposal-description {
+            width: 100%;
+            height: 200px; /* Aumentar el tamaño del campo */
+            resize: none; /* No permitir redimensionar */
+            overflow-y: auto; /* Habilitar el desplazamiento */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #d9d9d9;
+        }
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .save-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .save-button:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
+        <img src="~/css/ProfilePic.png" alt="Perfil" class="profile-pic" aria-label="Perfil">
+    </header>
+
+    <div class="sidebar">
+        <div class="option">
+            <img src="~/css/Pagina.png" alt="Mis Propuestas">
+            <span>Mis Propuestas</span>
+        </div>
+        <div class="exit-option">
+            <img src="~/css/Salir.png" alt="Salir">
+            <span>Salir</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Modificar Propuestas de Extensión</h1>
+            <h2>DATOS INSTANCIA ACADÉMICA</h2>
+            <div class="form-field">
+                <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
+                <p id="agreement-number">12345</p> <!-- Este campo es solo lectura -->
+            </div>
+            <div class="form-field">
+                <label for="approval-date">Fecha de aprobación:</label>
+                <input type="date" id="approval-date" value="2024-01-01" aria-label="Fecha de aprobación">
+            </div>
+            <div class="form-field">
+                <label for="project-condition">Condición actual del proyecto:</label>
+                <input type="text" id="project-condition" value="Activo" aria-label="Condición del proyecto">
+            </div>
+
+            <h2>DATOS DEL PROYECTO</h2>
+            <div class="form-field">
+                <label for="project-name">Nombre del proyecto:</label>
+                <input type="text" id="project-name" value="Proyecto de Ejemplo" aria-label="Nombre del proyecto">
+            </div>
+            <div class="form-field">
+                <label for="extension-type">Tipo de extensión:</label>
+                <input type="text" id="extension-type" value="Educativa" aria-label="Tipo de extensión">
+            </div>
+            <div class="form-field">
+                <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
+                <textarea id="sustainable-goals" class="ods-description" aria-label="Descripción del ODS">Reducción de la pobreza</textarea>
+            </div>
+
+            <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellidos</th>
+                        <th>Escuela/Instancia Académica</th>
+                        <th>Tipo de Nombramiento</th>
+                        <th>Condición</th>
+                        <th>Periodo de Participación</th>
+                    </tr>
+                </thead>
+                <tbody id="extensionist-table-body">
+                    <tr>
+                        <td><input type="text" value="Juan Pérez" aria-label="Nombre y Apellidos"></td>
+                        <td><input type="text" value="Escuela de Ciencias" aria-label="Escuela/Instancia Académica"></td>
+                        <td><input type="text" value="Profesor" aria-label="Tipo de Nombramiento"></td>
+                        <td><input type="text" value="Activo" aria-label="Condición"></td>
+                        <td><input type="text" value="2024" aria-label="Periodo de Participación"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellidos (Contacto Principal)</th>
+                        <th>Institución u Organización</th>
+                        <th>Contacto (Correo Electrónico y/o Teléfono)</th>
+                    </tr>
+                </thead>
+                <tbody id="organization-table-body">
+                    <tr>
+                        <td><input type="text" value="María López" aria-label="Nombre y Apellidos"></td>
+                        <td><input type="text" value="Organización Ejemplo" aria-label="Institución u Organización"></td>
+                        <td><input type="text" value="maria@example.com" aria-label="Contacto"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>DESCRIPCIÓN BREVE DE LA PROPUESTA</h2>
+            <div class="form-field">
+                <textarea id="proposal-description" class="proposal-description" aria-label="Descripción de la propuesta">Esta es una descripción breve de la propuesta de extensión.</textarea>
+            </div>
+
+            <h2>DOCUMENTO ADJUNTO</h2>
+            <div class="form-field file-upload">
+                <p>Archivo PDF: <a href="path/to/document.pdf" target="_blank">Ver documento</a></p>
+            </div>
+
+            <button class="save-button" aria-label="Guardar cambios">Guardar Cambios</button>
+        </div>
+    </div>
+</body>
+</html>
