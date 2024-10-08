@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\",
+  "WorkspaceRootPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\windows\\documents\\dise\u00F1o\\dis_prototipo\\proyectovie\\pages\\vieweb\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\pages\\vieweb\\evaluar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\evaluar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\windows\\documents\\dise\u00F1o\\dis_prototipo\\proyectovie\\pages\\vieweb\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\pages\\vieweb\\agregarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\agregarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\windows\\documents\\dise\u00F1o\\dis_prototipo\\proyectovie\\wwwroot\\css\\miperfil.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:wwwroot\\css\\miperfil.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\pages\\vieweb\\agregarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\agregarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\pages\\vieweb\\asignarevaluadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\asignarevaluadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,41 +39,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MiPerfil.cshtml",
-              "DocumentMoniker": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MiPerfil.cshtml",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\MiPerfil.cshtml",
-              "ToolTip": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MiPerfil.cshtml",
-              "RelativeToolTip": "Pages\\VieWeb\\MiPerfil.cshtml",
+              "Title": "Evaluar.cshtml",
+              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\Evaluar.cshtml",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\Evaluar.cshtml",
+              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\Evaluar.cshtml",
+              "RelativeToolTip": "Pages\\VieWeb\\Evaluar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T23:46:29.067Z",
+              "WhenOpened": "2024-10-08T03:38:10.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Usuarios.cshtml",
-              "DocumentMoniker": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\Usuarios.cshtml",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\Usuarios.cshtml",
-              "ToolTip": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\Usuarios.cshtml",
-              "RelativeToolTip": "Pages\\VieWeb\\Usuarios.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T23:46:25.959Z",
+              "Title": "AgregarPropuesta.cshtml.cs",
+              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
+              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
+              "RelativeToolTip": "Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:29:57.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "miperfil.css",
-              "DocumentMoniker": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\miperfil.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\miperfil.css",
-              "ToolTip": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\miperfil.css",
-              "RelativeToolTip": "wwwroot\\css\\miperfil.css",
+              "Title": "AgregarPropuesta.cshtml",
+              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\AgregarPropuesta.cshtml",
+              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml",
+              "RelativeToolTip": "Pages\\VieWeb\\AgregarPropuesta.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-07T23:45:26.382Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T23:48:50.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AsignarEvaluadores.cshtml",
+              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AsignarEvaluadores.cshtml",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\AsignarEvaluadores.cshtml",
+              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AsignarEvaluadores.cshtml",
+              "RelativeToolTip": "Pages\\VieWeb\\AsignarEvaluadores.cshtml",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T23:48:40.357Z"
             }
           ]
         }
