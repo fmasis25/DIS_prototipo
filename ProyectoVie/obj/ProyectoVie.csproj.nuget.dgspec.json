@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {}
+    "c:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {
+    "c:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
+        "projectUniqueName": "c:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
         "projectName": "ProyectoVie",
-        "projectPath": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
-        "packagesPath": "C:\\Users\\mjose\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\",
+        "projectPath": "c:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
+        "packagesPath": "C:\\Users\\windows\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
