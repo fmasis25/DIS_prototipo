@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T04:33:50.741Z",
-              "EditorCaption": ""
             }
           ]
         }

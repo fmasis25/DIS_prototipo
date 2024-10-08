@@ -40,7 +40,7 @@
             flex-grow: 1;
             display: flex;
             margin-left: 10px;
-            justify-content: space-between; /* Justifica el contenido de la barra de búsqueda */
+            justify-content: space-between;
         }
 
             .search-bar input {
@@ -48,17 +48,17 @@
                 padding: 10px;
                 border-radius: 20px;
                 border: 1px solid #ccc;
-                margin-right: 10px; /* Añade margen a la derecha del input */
+                margin-right: 10px;
             }
 
         .icon {
             width: 40px;
-            margin-left: 10px; /* Espacio a la izquierda del icono de búsqueda */
+            margin-left: 10px;
         }
 
         .profile-pic {
             width: 50px;
-            margin-right: 10px; /* Mantiene el espacio a la derecha del icono de perfil */
+            margin-right: 10px;
         }
 
         .sidebar {
@@ -197,53 +197,72 @@
                             <td><input type="text" placeholder="Condición" aria-label="Condición" /></td>
                             <td><input type="text" placeholder="Periodo de Participación" aria-label="Periodo de Participación" /></td>
                         </tr>`;
-                    tableBody.insertAdjacentHTML('beforeend', newRow);
-                }
+            tableBody.insertAdjacentHTML('beforeend', newRow);
+        }
 
-                function addOrganizationRow() {
+        function addOrganizationRow() {
             const tableBody = document.getElementById("organization-table-body");
             const newRow = `
-                <tr>
+                        <tr>
                             <td><input type="text" placeholder="Nombre y Apellidos (Contacto Principal)" aria-label="Nombre y Apellidos (Contacto Principal)" /></td>
                             <td><input type="text" placeholder="Institución u Organización" aria-label="Institución u Organización" /></td>
                             <td><input type="text" placeholder="Contacto (Correo Electrónico y/o Teléfono)" aria-label="Contacto (Correo Electrónico y/o Teléfono)" /></td>
                         </tr>`;
-                    tableBody.insertAdjacentHTML('beforeend', newRow);
-                }
+            tableBody.insertAdjacentHTML('beforeend', newRow);
+        }
 
-            function removeRow(tableBodyId) {
-                    const tableBody = document.getElementById(tableBodyId);
-                    const rows = tableBody.getElementsByTagName('tr');
-                    if (rows.length > 0) {
-                            tableBody.deleteRow(rows.length - 1);
-                    }
-                }
+        function removeRow(tableBodyId) {
+            const tableBody = document.getElementById(tableBodyId);
+            const rows = tableBody.getElementsByTagName('tr');
+            if (rows.length > 0) {
+                tableBody.deleteRow(rows.length - 1);
+            }
+        }
+
+        function showAlert() {
+            const nombreProyecto = document.getElementById("project-name").value;
+            const extensionType = document.getElementById("extension-type").value;
+            const sustainableGoals = document.getElementById("sustainable-goals").value;
+            const agreementNumber = document.getElementById("agreement-number").value;
+            const approvalDate = document.getElementById("approval-date").value;
+            const projectCondition = document.getElementById("project-condition").value;
+
+            const extensionists = Array.from(document.querySelectorAll("#extensionist-table-body tr")).map(row => {
+                return Array.from(row.querySelectorAll("input")).map(input => input.value).join(", ");
+            }).join(" | ");
+
+            const organizations = Array.from(document.querySelectorAll("#organization-table-body tr")).map(row => {
+                return Array.from(row.querySelectorAll("input")).map(input => input.value).join(", ");
+            }).join(" | ");
+
+            alert(`Datos del Proyecto:\nNombre: ${nombreProyecto}\nTipo de Extensión: ${extensionType}\nODS: ${sustainableGoals}\nNúmero de Acuerdo: ${agreementNumber}\nFecha de Aprobación: ${approvalDate}\nCondición Actual: ${projectCondition}\n\nExtensionistas:\n${extensionists}\n\nOrganizaciones:\n${organizations}`);
+        }
     </script>
 </head>
 <body>
     <header class="header">
         <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
         <div class="search-bar">
-            <img src="~/css/ProfilePic.png" alt="Perfil" class="profile-pic" aria-label="Perfil"> <!-- Icono de perfil -->
+            <img src="~/css/ProfilePic.png" alt="Perfil" class="profile-pic" aria-label="Perfil">
             <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <img src="~/css/Lupa.png" alt="Buscar" class="icon" aria-hidden="true"> <!-- Icono de búsqueda -->
+            <img src="~/css/Lupa.png" alt="Buscar" class="icon" aria-hidden="true">
         </div>
     </header>
 
     <div class="sidebar">
         <div class="option">
-            <img src="~/css/Pagina.png" alt="Mis Propuestas"> <!-- Icono de Mis Propuestas -->
+            <img src="~/css/Pagina.png" alt="Mis Propuestas">
             <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <img src="~/css/Salir.png" alt="Salir"> <!-- Icono de Salir -->
+            <img src="~/css/Salir.png" alt="Salir">
             <span>Salir</span>
         </div>
     </div>
 
     <div class="main-content">
         <div class="form-container">
-            <h1>Inscripción de Proyectos de Extensión</h1> <!-- Título principal -->
+            <h1>Inscripción de Proyectos de Extensión</h1>
             <h2>DATOS INSTANCIA ACADÉMICA</h2>
             <div class="form-field">
                 <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
@@ -336,7 +355,7 @@
             </div>
 
             <div class="btn-container">
-                <button type="submit" class="btn-submit">Enviar</button>
+                <button type="button" class="btn-submit" onclick="showAlert()">Enviar</button>
             </div>
         </div>
     </div>

@@ -102,6 +102,7 @@
   <ItemGroup>
     <Folder Include="obj\Debug\net8.0\scopedcss\Pages\Shared\" />
     <Folder Include="obj\Debug\net8.0\scopedcss\projectbundle\" />
+    <Folder Include="obj\NewFolder\" />
   </ItemGroup>
 
 </Project>
