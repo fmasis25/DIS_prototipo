@@ -46,12 +46,12 @@ namespace ProyectoVie.Pages.VieWeb
 
                 if (estadoId == 0)
                 {
-                    // Aquí ajustaré para que llame al procedimiento correcto y devuelva las columnas necesarias
-                    commandPropuestas = new SqlCommand("ConsultarTodasPropuesta", connection);
+                    // Mostrar todas las propuestas si estadoId es 0 (sin filtro de estado)
+                    commandPropuestas = new SqlCommand("SELECT P.ID, P.NombrePropuesta, E.Nombre AS Estado, P.ID_Estado FROM PROPUESTA AS P INNER JOIN ESTADO_PROYECTO AS E ON P.ID_Estado = E.ID", connection);
                 }
                 else
                 {
-                    // Aquí se llama al procedimiento almacenado para propuestas por estado
+                    // Mostrar propuestas según el estado seleccionado
                     commandPropuestas = new SqlCommand("ConsultarPropuestasPorEstado", connection);
                     commandPropuestas.CommandType = CommandType.StoredProcedure;
                     commandPropuestas.Parameters.AddWithValue("@EstadoId", estadoId); // Parámetro del estado seleccionado
@@ -67,7 +67,7 @@ namespace ProyectoVie.Pages.VieWeb
                         {
                             { "ID", readerPropuestas["ID"] },
                             { "NombrePropuesta", readerPropuestas["NombrePropuesta"].ToString() },
-                            { "Estado", readerPropuestas["Estado"].ToString() },  // Validando que esta columna esté disponible
+                            { "Estado", readerPropuestas["Estado"].ToString() },
                             { "ID_Estado", readerPropuestas["ID_Estado"] }
                         };
                         Propuestas.Add(propuesta);

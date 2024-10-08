@@ -1,4 +1,106 @@
 ﻿@page
 @model ProyectoVie.Pages.VieWeb.UsuariosModel
 @{
+    ViewData["Title"] = "Gestión de Usuarios";
 }
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
+            </div>
+            <form role="search">
+                <input type="text" placeholder="Buscar usuario..." aria-label="Buscar usuario">
+            </form>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Estadísticas e informes</a></li>
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="#">Propuestas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Gestión de Usuarios</h1>
+        <table class="usuarios-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in Model.Usuarios)
+                {
+                    <tr>
+                        <td>@usuario.Nombre</td>
+                        <td>@usuario.Correo</td>
+                        <td>@usuario.Rol</td>
+                        <td>
+                            <button class="edit-btn">✏️</button>
+                            <button class="delete-btn" onclick="openDeleteModal('@usuario.Cedula')">🗑️</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Modal para confirmación de eliminación -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Eliminar Usuario</h2>
+            <p>¿Está seguro que desea eliminar este usuario?</p>
+            <button class="confirm-delete-btn" onclick="confirmDelete()">Eliminar</button>
+            <button class="cancel-btn" onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        let userIdToDelete = null;
+
+        function openDeleteModal(userId) {
+            userIdToDelete = userId;
+            document.getElementById('deleteModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('deleteModal').style.display = "none";
+            userIdToDelete = null;
+        }
+
+        function confirmDelete() {
+            if (userIdToDelete) {
+                fetch(`/Usuarios/EliminarUsuario?cedula=${userIdToDelete}`, {
+                    method: 'POST',
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            location.reload(); // Recargar la página después de eliminar el usuario
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+            closeModal();
+        }
+    </script>
+
+</body>
+</html>
