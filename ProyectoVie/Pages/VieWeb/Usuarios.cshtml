@@ -13,94 +13,87 @@
     <link rel="stylesheet" href="../css/usuarios.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
-            </div>
-            <form role="search">
-                <input type="text" placeholder="Buscar usuario..." aria-label="Buscar usuario">
-            </form>
+    <!-- Header general del sistema -->
+    <header class="header">
+        <a href="/">
+            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar usuarios">
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
+            </a>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            </a>
         </div>
     </header>
 
-    <aside class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#">Estadísticas e informes</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Propuestas</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main>
-        <h1>Gestión de Usuarios</h1>
-        <table class="usuarios-table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Rol</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var usuario in Model.Usuarios)
-                {
-                    <tr>
-                        <td>@usuario.Nombre</td>
-                        <td>@usuario.Correo</td>
-                        <td>@usuario.Rol</td>
-                        <td>
-                            <button class="edit-btn">✏️</button>
-                            <button class="delete-btn" onclick="openDeleteModal('@usuario.Cedula')">🗑️</button>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </main>
-
-    <!-- Modal para confirmación de eliminación -->
-    <div id="deleteModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Eliminar Usuario</h2>
-            <p>¿Está seguro que desea eliminar este usuario?</p>
-            <button class="confirm-delete-btn" onclick="confirmDelete()">Eliminar</button>
-            <button class="cancel-btn" onclick="closeModal()">Cancelar</button>
+    <!-- Sidebar izquierdo con opciones -->
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Propuestas">
+            </a>
+            <span>Propuestas</span>
+        </div>
+        <div class="option">
+            <a href="/estadisticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+            </a>
+            <span>Estadísticas</span>
+        </div>
+        <div class="option">
+            <a href="/usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+            </a>
+            <span>Usuarios</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
         </div>
     </div>
 
-    <script>
-        let userIdToDelete = null;
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h1>Gestión de Usuarios</h1>
 
-        function openDeleteModal(userId) {
-            userIdToDelete = userId;
-            document.getElementById('deleteModal').style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById('deleteModal').style.display = "none";
-            userIdToDelete = null;
-        }
-
-        function confirmDelete() {
-            if (userIdToDelete) {
-                fetch(`/Usuarios/EliminarUsuario?cedula=${userIdToDelete}`, {
-                    method: 'POST',
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            location.reload(); // Recargar la página después de eliminar el usuario
-                        }
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
-            closeModal();
-        }
-    </script>
+        <!-- Tabla de usuarios -->
+        <div class="usuarios-container">
+            <table class="usuarios-table">
+                <thead>
+                    <tr>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Contraseña</th> <!-- Nueva columna para la contraseña -->
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var usuario in Model.Usuarios)
+                    {
+                        <tr>
+                            <td>@usuario.Correo</td>
+                            <td>@usuario.Rol</td>
+                            <td>@usuario.Contrasena</td> <!-- Mostrar la contraseña -->
+                            <td>
+                                <div class="dropdown">
+                                    <button class="dropbtn">⋮</button>
+                                    <div class="dropdown-content">
+                                        <a href="/usuario/editar/@usuario.Cedula">Editar</a>
+                                        <a href="/usuario/eliminar/@usuario.Cedula">Eliminar</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </body>
 </html>

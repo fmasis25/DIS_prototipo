@@ -1,0 +1,133 @@
+﻿body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Ajuste para el header */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    width: calc(100% - 220px); /* Deja espacio para el sidebar */
+    top: 0;
+    left: 220px; /* Alinea el header correctamente con el sidebar */
+    height: 60px;
+    z-index: 1000;
+}
+
+.tec-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+}
+
+.icon, .profile-pic {
+    width: 40px;
+    height: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #0a4275;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Evita que el sidebar se superponga con el header */
+    height: calc(100vh - 60px); /* Ajusta el sidebar para evitar conflicto con el header */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .option, .sidebar .exit-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.sidebar .option a img, .sidebar .exit-option a img {
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.sidebar .option span, .sidebar .exit-option span {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Ajuste del main content */
+.main-content {
+    margin-left: 220px; /* Deja espacio para el sidebar */
+    margin-top: 60px; /* Deja espacio para el header */
+    padding: 40px;
+    width: calc(100% - 220px); /* Asegura que el main ocupe todo el espacio restante */
+    box-sizing: border-box;
+    background-color: white;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Ajusta la altura para que ocupe todo el espacio sin superponerse */
+}
+
+/* Tabla y otros estilos */
+.usuarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.usuarios-table th, .usuarios-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.usuarios-table th {
+    background-color: #003366;
+    color: white;
+}
+
+.usuarios-table td {
+    background-color: #f2f2f2;
+}
+
+.usuarios-table tr:hover {
+    background-color: #e6e6e6;
+}
+
+.assign-btn {
+    background-color: #0a4275;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.assign-btn:hover {
+    background-color: #08385f;
+}

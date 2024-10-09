@@ -205,3 +205,4 @@ C:\Users\windows\Documents\Diseño\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\re
 C:\Users\windows\Documents\Diseño\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.pdb
 C:\Users\windows\Documents\Diseño\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.genruntimeconfig.cache
 C:\Users\windows\Documents\Diseño\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ref\ProyectoVie.dll
+D:\Descargas\DIS_prototipo\ProyectoVie\bin\Debug\net8.0\Newtonsoft.Json.dll

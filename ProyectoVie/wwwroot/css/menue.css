@@ -1,115 +1,139 @@
-﻿/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+﻿body {
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-}
-
-header {
-    background-color: #003366;
-    color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    height: 100vh;
+    overflow: hidden;
 }
 
-    header .logo img {
-        max-width: 150px;
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.tec-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Aprovecha todo el espacio */
+    gap: 10px;
+}
+
+    .search-bar input {
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        flex-grow: 1; /* Hace que la barra de búsqueda se ajuste a todo el espacio disponible */
     }
 
-.search-form input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 250px;
-}
-
-.profile-nav a img {
+.icon, .profile-pic {
     width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    height: auto;
 }
 
 .sidebar {
-    width: 250px;
-    background-color: #003366;
+    width: 200px;
+    background-color: #0a4275;
     color: white;
+    padding: 20px;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    height: 100%;
+    top: 60px; /* Asegúrate de que comience justo debajo del header */
     left: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 2rem;
+    z-index: 1000;
 }
 
-    .sidebar .add-button {
+
+    .sidebar .option, .sidebar .exit-option {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        padding: 1rem;
-        background-color: #0059b3;
-        border-radius: 10px;
-        width: 80%;
-        text-align: center;
+        margin: 30px 0;
     }
 
-        .sidebar .add-button img {
-            margin-right: 10px;
-            width: 30px;
-            height: 30px;
+        .sidebar .option a img, .sidebar .exit-option a img {
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .sidebar .option span, .sidebar .exit-option span {
+            font-size: 18px;
+            text-align: center;
         }
 
 .main-content {
-    margin-left: 250px; /* This adjusts to the sidebar */
-    padding: 2rem;
+    margin-left: 240px;
+    padding: 20px;
+    margin-top: 80px;
+    width: calc(100% - 240px);
+    box-sizing: border-box;
 }
 
-    .main-content h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
+.propuestas-container {
+    height: 400px; /* Establece una altura fija para la tabla */
+    overflow-y: auto; /* Habilita el scroll vertical */
+}
 
 .propuestas-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
     .propuestas-table th, .propuestas-table td {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
+        border: 1px solid #ccc;
+        padding: 10px;
         text-align: left;
     }
 
-    .propuestas-table th {
-        background-color: #003366;
-        color: white;
-    }
-
-    .propuestas-table td {
-        background-color: #f9f9f9;
-    }
-
-.action-icons img {
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
-    cursor: pointer;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #003366;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar img {
+        max-width: 40px;
+    }
 }

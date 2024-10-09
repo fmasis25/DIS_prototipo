@@ -1,2 +1,167 @@
 ﻿body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Ajustes para el header */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    width: calc(100% - 220px); /* Deja espacio para el sidebar */
+    top: 0;
+    left: 220px; /* Alinea el header para que no se superponga con el sidebar */
+    height: 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.tec-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Aprovecha todo el espacio */
+    gap: 10px;
+}
+
+    .search-bar input {
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        flex-grow: 1; /* Hace que la barra de búsqueda se ajuste a todo el espacio disponible */
+    }
+
+.icon, .profile-pic {
+    width: 40px;
+    height: auto;
+}
+
+/* Ajustes para el sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #0a4275;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Evita que el sidebar se superponga con el header */
+    height: calc(100vh - 60px); /* Deja espacio para el header */
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .sidebar .option, .sidebar .exit-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+        .sidebar .option a img, .sidebar .exit-option a img {
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .sidebar .option span, .sidebar .exit-option span {
+            font-size: 18px;
+            text-align: center;
+        }
+
+/* Ajustes para el contenido principal */
+main {
+    margin-left: 220px; /* Deja espacio para el sidebar */
+    margin-top: 60px; /* Deja espacio para el header */
+    padding: 40px;
+    background-color: white;
+    flex-grow: 1; /* Hace que el main ocupe todo el espacio disponible */
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Ajusta la altura para evitar el conflicto con el header */
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+/* Estilo de los campos de formulario */
+.form-field {
+    margin-bottom: 20px;
+}
+
+    .form-field label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-field input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+/* Estilo del botón Guardar Cambios */
+.btn-guardar {
+    background-color: #0a4275;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: center;
+}
+
+    .btn-guardar:hover {
+        background-color: #08385f;
+    }
+
+/* Estilos para el scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+/* Mensajes de éxito y error */
+div[style*="color:red"] {
+    background-color: #fdd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+div[style*="color:green"] {
+    background-color: #dfd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,89 @@
+﻿@page
+@model ProyectoVie.Pages.VieWeb.EvaluadoresModel
+@{
+    ViewData["Title"] = "Asignar Evaluadores";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/evaluadores.css" />
+    <title>Asignar Evaluadores</title>
+</head>
+<body>
+    <!-- Header del sistema -->
+    <header class="header">
+        <a href="/"><img src="~/css/tec-logo.jpg" alt="Logo del TEC" class="tec-logo"></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar evaluadores">
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon">
+            </a>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic">
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar izquierdo -->
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Propuestas">
+            </a>
+            <span>Propuestas</span>
+        </div>
+        <div class="option">
+            <a href="/estadisticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+            </a>
+            <span>Estadísticas</span>
+        </div>
+        <div class="option">
+            <a href="/usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+            </a>
+            <span>Usuarios</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Asignar Evaluadores</h1>
+
+        <!-- Tabla de Usuarios con Rol 2 -->
+        <table class="usuarios-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>ID Rol</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in Model.UsuariosConRol2)
+                {
+                    <tr>
+                        <td>@usuario.Nombre</td>
+                        <td>@usuario.ID_rol</td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="usuarioId" value="@usuario.ID_rol" />
+                                <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar">Asignar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

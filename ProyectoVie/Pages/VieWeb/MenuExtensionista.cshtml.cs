@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System.Data;
+
 namespace ProyectoVie.Pages.VieWeb
 {
     public class MenuExtensionistaModel : PageModel
@@ -9,7 +10,7 @@ namespace ProyectoVie.Pages.VieWeb
 
         public void OnGet()
         {
-            int userId = HttpContext.Session.GetInt32("UserID") ?? 0;
+            int userId = HttpContext.Session.GetInt32("UserID") ?? 0; // Obtener el ID del usuario de la sesión
             Propuestas = new List<Dictionary<string, object>>();
 
             // Conexión a la base de datos
@@ -19,9 +20,10 @@ namespace ProyectoVie.Pages.VieWeb
             {
                 connection.Open();
 
+                // Ejecutar el procedimiento almacenado
                 SqlCommand command = new SqlCommand("ConsultarPropuestasPorUsuario", connection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@ID_Usuario", userId);
+                command.Parameters.AddWithValue("@ID_Usuario", userId); // Enviar el ID del usuario como parámetro
 
                 SqlDataReader reader = command.ExecuteReader();
 

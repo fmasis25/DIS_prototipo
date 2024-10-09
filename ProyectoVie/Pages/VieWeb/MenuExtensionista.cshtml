@@ -1,6 +1,7 @@
 ﻿@page
 @model ProyectoVie.Pages.VieWeb.MenuExtensionistaModel
 @{
+    ViewData["Title"] = "Menú Extensionista";
 }
 
 <!DOCTYPE html>
@@ -13,66 +14,68 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <img src="/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
-        </div>
-        <form role="search" aria-label="Buscar propuestas" class="search-form">
-            <input type="text" id="search-bar" placeholder="Buscar propuesta..." aria-label="Buscar propuesta">
-        </form>
-        <nav class="profile-nav">
-            <a href="/perfil" aria-label="Perfil de usuario">
-                <img src="/css/icons/perfil.svg" alt="Icono de perfil" class="icon">
+        <a href="/">
+            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
             </a>
-        </nav>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            </a>
+        </div>
     </header>
 
-    <aside class="sidebar">
-        <a href="/propuesta/agregar" class="add-button" aria-label="Agregar nueva propuesta">
-            <img src="/css/icons/plus.svg" alt="Añadir nueva propuesta" class="icon">
-            <span>Agregar Propuesta</span>
-        </a>
-    </aside>
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+            </a>
+            <span>Mis Propuestas</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
+        </div>
+    </div>
 
     <main class="main-content">
-        <h1>Mis propuestas</h1>
+        <h1>Mis Propuestas</h1>
 
-        <table class="propuestas-table">
-            <thead>
-                <tr>
-                    <th>Nombre de la Propuesta</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var propuesta in Model.Propuestas)
-                {
+        <div class="propuestas-container">
+            <table class="propuestas-table">
+                <thead>
                     <tr>
-                        <td>@propuesta["NombrePropuesta"]</td>
-                        <td class="action-icons">
-                            <a href="/propuesta/detalles/@propuesta["ID"]" aria-label="Consultar propuesta">
-                                <img src="/css/icons/lupa.svg" alt="Consultar" class="icon">
-                            </a>
-
-                            @if ((byte)propuesta["ID_Estado"] == 2) 
-                            {
-                                <a href="/propuesta/editar/@propuesta["ID"]" aria-label="Editar propuesta">
-                                    <img src="/css/icons/lapiz.svg" alt="Editar" class="icon">
-                                </a>
-                                <a href="/propuesta/eliminar/@propuesta["ID"]" aria-label="Eliminar propuesta">
-                                    <img src="/css/icons/eliminar.svg" alt="Eliminar" class="icon">
-                                </a>
-                            }
-                            else if ((byte)propuesta["ID_Estado"] == 3) 
-                            {
-                                <a href="/propuesta/eliminar/@propuesta["ID"]" aria-label="Eliminar propuesta">
-                                    <img src="/css/icons/eliminar.svg" alt="Eliminar" class="icon">
-                                </a>
-                            }
-                        </td>
+                        <th>Nombre de la Propuesta</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var propuesta in Model.Propuestas)
+                    {
+                        <tr>
+                            <td>@propuesta["NombrePropuesta"]</td>
+                            <td>@propuesta["Estado"]</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="dropbtn">⋮</button>
+                                    <div class="dropdown-content">
+                                        <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
+                                        <a href="/propuesta/editar/@propuesta["ID"]">Editar</a>
+                                        <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer class="footer">

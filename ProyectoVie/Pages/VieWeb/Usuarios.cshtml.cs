@@ -27,6 +27,7 @@ namespace ProyectoVie.Pages.VieWeb
                         Correo = reader["Correo"].ToString(),
                         Rol = reader["ID_rol"].ToString(),
                         Cedula = reader["Cedula"].ToString(),
+                        Contrasena = reader["Contrasena"].ToString() // Añadir el campo de contraseña
                     });
                 }
             }
@@ -36,7 +37,7 @@ namespace ProyectoVie.Pages.VieWeb
         {
             try
             {
-                string connectionString = "your_connection_string_here";
+                string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -55,6 +56,34 @@ namespace ProyectoVie.Pages.VieWeb
                 return Page();
             }
         }
+
+        public IActionResult OnPostEditarUsuario(Usuario usuario)
+        {
+            try
+            {
+                string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("ModificarUsuarioCompleto", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                    command.Parameters.AddWithValue("@Cedula", usuario.Cedula);
+                    command.Parameters.AddWithValue("@Correo", usuario.Correo);
+                    command.Parameters.AddWithValue("@Contrasena", usuario.Contrasena); // Incluyendo la contraseña
+                    command.Parameters.AddWithValue("@ID_rol", usuario.Rol);
+                    command.ExecuteNonQuery();
+                }
+
+                return RedirectToPage();
+            }
+            catch (Exception ex)
+            {
+                // Manejar error
+                return Page();
+            }
+        }
     }
 
     public class Usuario
@@ -63,5 +92,7 @@ namespace ProyectoVie.Pages.VieWeb
         public string Correo { get; set; }
         public string Rol { get; set; }
         public string Cedula { get; set; }
+        public string Contrasena { get; set; } // Añadir propiedad para contraseña
+        public byte ID_rol { get; internal set; }
     }
 }

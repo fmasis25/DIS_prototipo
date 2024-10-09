@@ -1,4 +1,96 @@
 ﻿@page
 @model ProyectoVie.Pages.VieWeb.MiPerfilModel
 @{
+    ViewData["Title"] = "Mi Perfil";
 }
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/miperfil.css" />
+    <title>Sistema de Propuestas - Mi Perfil</title>
+</head>
+<body>
+    <!-- Header general del sistema -->
+    <header class="header">
+        <a href="/">
+            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
+            </a>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+            </a>
+            <span>Mis Propuestas</span>
+        </div>
+        <div class="option">
+            <a href="/estadisticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+            </a>
+            <span>Estadísticas</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <h1>Mi Perfil</h1>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div style="color:red">@Model.ErrorMessage</div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div style="color:green">@Model.SuccessMessage</div>
+        }
+
+        <!-- Formulario para editar el perfil -->
+        <form method="post">
+            <div class="form-field">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" value="@Model.Nombre" required />
+            </div>
+            <div class="form-field">
+                <label for="Apellido">Apellido:</label>
+                <input type="text" id="Apellido" name="Apellido" value="@Model.Apellido" required />
+            </div>
+            <div class="form-field">
+                <label for="Cedula">Cédula:</label>
+                <input type="number" id="Cedula" name="Cedula" value="@Model.Cedula" required />
+            </div>
+            <div class="form-field">
+                <label for="Correo">Correo:</label>
+                <input type="email" id="Correo" name="Correo" value="@Model.Correo" required />
+            </div>
+            <div class="form-field">
+                <label for="Contrasena">Contraseña:</label>
+                <input type="password" id="Contrasena" name="Contrasena" value="@Model.Contrasena" required />
+            </div>
+
+            <!-- Botón para guardar cambios -->
+            <button type="submit" class="btn-guardar">Guardar Cambios</button>
+        </form>
+    </main>
+</body>
+</html>

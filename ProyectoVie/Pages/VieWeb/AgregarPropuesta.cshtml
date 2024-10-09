@@ -19,8 +19,10 @@
             overflow-y: scroll;
         }
 
+        /* Header Styles */
         .header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             background-color: #d9d9d9;
             padding: 10px 20px;
@@ -29,64 +31,74 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-sizing: border-box;
         }
 
-            .header img {
-                height: 50px;
-                margin-right: 20px;
-            }
+        .header a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tec-logo {
+            height: 50px; /* Ajusta la altura para que sea menos alta */
+            max-width: 100%; /* Mantiene el largo adecuado */
+            object-fit: contain; /* Asegura que no se distorsione */
+        }
+
 
         .search-bar {
-            flex-grow: 1;
             display: flex;
-            margin-left: 10px;
-            justify-content: space-between; /* Justifica el contenido de la barra de búsqueda */
+            align-items: center;
+            justify-content: center;
+            width: 70%; /* Aumenta el ancho de la barra de búsqueda */
         }
 
             .search-bar input {
-                width: 100%;
+                width: 80%; /* Aprovecha el espacio disponible */
                 padding: 10px;
                 border-radius: 20px;
                 border: 1px solid #ccc;
-                margin-right: 10px; /* Añade margen a la derecha del input */
             }
 
-        .icon {
-            width: 40px;
-            margin-left: 10px; /* Espacio a la izquierda del icono de búsqueda */
+        .icon, .profile-pic {
+            width: 35px; /* Ajusta el tamaño de los íconos */
+            height: 35px; /* Asegura que tengan el mismo tamaño */
+            margin-left: 10px;
         }
 
-        .profile-pic {
-            width: 50px;
-            margin-right: 10px; /* Mantiene el espacio a la derecha del icono de perfil */
+        /* Responsiveness for the SVG icons */
+        .header img, .icon, .profile-pic {
+            max-width: 100%;
+            height: auto;
         }
 
+        /* Sidebar Styles */
         .sidebar {
             width: 200px;
-            background-color: #140e39;
+            background-color: #0a4275;
             color: white;
             padding: 20px;
             position: fixed;
             height: 100%;
             top: 60px;
-            overflow-y: auto;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
 
             .sidebar .option, .sidebar .exit-option {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
-                margin: 50px 0;
+                margin: 20px 0;
             }
 
                 .sidebar .option img,
                 .sidebar .exit-option img {
                     width: 80px;
+                    height: auto;
                     margin-bottom: 5px;
                 }
 
@@ -96,6 +108,7 @@
                     text-align: center;
                 }
 
+        /* Main Content Styles */
         .main-content {
             margin-left: 220px;
             padding: 20px;
@@ -104,6 +117,7 @@
             height: calc(100vh - 60px);
         }
 
+        /* Form Styles */
         .form-container {
             background-color: #ececec;
             border-radius: 10px;
@@ -128,22 +142,6 @@
                 border: 1px solid #ccc;
             }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #d9d9d9;
-        }
-
         .btn-container {
             display: flex;
             justify-content: flex-start;
@@ -151,7 +149,6 @@
         }
 
         button {
-            font-family: 'Nunito', sans-serif;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
@@ -176,74 +173,47 @@
             font-size: 16px;
         }
 
-        .file-upload {
-            margin-top: 10px;
-        }
-
         h1 {
             font-size: 35px;
             text-align: center;
             margin-bottom: 20px;
         }
     </style>
-    <script>
-        function addExtensionistRow() {
-            const tableBody = document.getElementById("extensionist-table-body");
-            const newRow = `
-                        <tr>
-                            <td><input type="text" placeholder="Nombre y Apellidos" aria-label="Nombre y Apellidos" /></td>
-                            <td><input type="text" placeholder="Escuela/Instancia Académica" aria-label="Escuela/Instancia Académica" /></td>
-                            <td><input type="text" placeholder="Tipo de Nombramiento" aria-label="Tipo de Nombramiento" /></td>
-                            <td><input type="text" placeholder="Condición" aria-label="Condición" /></td>
-                            <td><input type="text" placeholder="Periodo de Participación" aria-label="Periodo de Participación" /></td>
-                        </tr>`;
-                    tableBody.insertAdjacentHTML('beforeend', newRow);
-                }
-
-                function addOrganizationRow() {
-            const tableBody = document.getElementById("organization-table-body");
-            const newRow = `
-                <tr>
-                            <td><input type="text" placeholder="Nombre y Apellidos (Contacto Principal)" aria-label="Nombre y Apellidos (Contacto Principal)" /></td>
-                            <td><input type="text" placeholder="Institución u Organización" aria-label="Institución u Organización" /></td>
-                            <td><input type="text" placeholder="Contacto (Correo Electrónico y/o Teléfono)" aria-label="Contacto (Correo Electrónico y/o Teléfono)" /></td>
-                        </tr>`;
-                    tableBody.insertAdjacentHTML('beforeend', newRow);
-                }
-
-            function removeRow(tableBodyId) {
-                    const tableBody = document.getElementById(tableBodyId);
-                    const rows = tableBody.getElementsByTagName('tr');
-                    if (rows.length > 0) {
-                            tableBody.deleteRow(rows.length - 1);
-                    }
-                }
-    </script>
 </head>
 <body>
     <header class="header">
-        <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica">
+        <a href="/">
+            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
         <div class="search-bar">
-            <img src="~/css/ProfilePic.png" alt="Perfil" class="profile-pic" aria-label="Perfil"> <!-- Icono de perfil -->
             <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <img src="~/css/Lupa.png" alt="Buscar" class="icon" aria-hidden="true"> <!-- Icono de búsqueda -->
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
+            </a>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            </a>
         </div>
     </header>
 
     <div class="sidebar">
         <div class="option">
-            <img src="~/css/Pagina.png" alt="Mis Propuestas"> <!-- Icono de Mis Propuestas -->
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+            </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <img src="~/css/Salir.png" alt="Salir"> <!-- Icono de Salir -->
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
             <span>Salir</span>
         </div>
     </div>
 
     <div class="main-content">
         <div class="form-container">
-            <h1>Inscripción de Proyectos de Extensión</h1> <!-- Título principal -->
+            <h1>Inscripción de Proyectos de Extensión</h1>
             <h2>DATOS INSTANCIA ACADÉMICA</h2>
             <div class="form-field">
                 <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>

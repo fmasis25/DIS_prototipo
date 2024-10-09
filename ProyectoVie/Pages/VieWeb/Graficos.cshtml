@@ -1,0 +1,151 @@
+﻿@page
+@model ProyectoVie.Pages.VieWeb.GraficosModel
+@{
+    ViewData["Title"] = "Gráficos de Datos";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/graficos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Sistema de Propuestas - Gráficos</title>
+</head>
+<body>
+    <!-- Header general del sistema -->
+    <header class="header">
+        <a href="/">
+            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
+            <a href="/buscar">
+                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
+            </a>
+            <a href="/perfil">
+                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+            </a>
+            <span>Mis Propuestas</span>
+        </div>
+        <div class="option">
+            <a href="/estadisticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+            </a>
+            <span>Estadísticas</span>
+        </div>
+        <div class="option">
+            <a href="/usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+            </a>
+            <span>Usuarios</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
+        </div>
+    </div>
+
+    <!-- Contenedor principal de gráficos -->
+    <div class="main-content">
+        <div class="graficos-container">
+
+            <div class="grafico-wrapper">
+                <canvas id="graficoEscuelasPorPropuesta"></canvas>
+            </div>
+
+            <div class="grafico-wrapper">
+                <canvas id="graficoPropuestasPorEstado"></canvas>
+            </div>
+
+            <div class="grafico-wrapper">
+                <canvas id="graficoEscuelasPorEstado"></canvas>
+            </div>
+
+            <div class="grafico-wrapper">
+                <canvas id="graficoNotasPromedio"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var ctx1 = document.getElementById('graficoEscuelasPorPropuesta').getContext('2d');
+        var graficoEscuelasPorPropuesta = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.EscuelasPorPropuesta.Select(e => e.Nombre))),
+                datasets: [{
+                    label: 'Total Escuelas',
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.EscuelasPorPropuesta.Select(e => e.TotalEscuelas))),
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var ctx2 = document.getElementById('graficoPropuestasPorEstado').getContext('2d');
+        var graficoPropuestasPorEstado = new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.PropuestasPorEstado.Select(p => p.EstadoProyecto))),
+                datasets: [{
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.PropuestasPorEstado.Select(p => p.CantidadPropuestas))),
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
+                }]
+            }
+        });
+
+        var ctx3 = document.getElementById('graficoEscuelasPorEstado').getContext('2d');
+        var graficoEscuelasPorEstado = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.EscuelasPorEstado.Select(e => e.Escuela))),
+                datasets: [{
+                    label: 'Total Propuestas por Estado',
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.EscuelasPorEstado.Select(e => e.TotalPropuestas))),
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)'
+                }]
+            }
+        });
+
+        var ctx4 = document.getElementById('graficoNotasPromedio').getContext('2d');
+        var graficoNotasPromedio = new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.NotasPromedioPorEscuela.Select(n => n.Escuela))),
+                datasets: [{
+                    label: 'Nota Promedio',
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.NotasPromedioPorEscuela.Select(n => n.NotaPromedio1))),
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

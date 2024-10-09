@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\ProyectoVie.bundle.scp.css"
     },
     {
-      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Login.css",
-      "PackagePath": "staticwebassets\\css\\Login.css"
-    },
-    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Lupa.png",
       "PackagePath": "staticwebassets\\css\\Lupa.png"
     },
@@ -25,8 +21,8 @@
       "PackagePath": "staticwebassets\\css\\Salir.png"
     },
     {
-      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\asignarevaluadores.css",
-      "PackagePath": "staticwebassets\\css\\asignarevaluadores.css"
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\evaluadores.css",
+      "PackagePath": "staticwebassets\\css\\evaluadores.css"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\evaluar.css",
@@ -37,8 +33,16 @@
       "PackagePath": "staticwebassets\\css\\fondo-tec.jpg"
     },
     {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\graficos.css",
+      "PackagePath": "staticwebassets\\css\\graficos.css"
+    },
+    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\eliminar.svg",
       "PackagePath": "staticwebassets\\css\\icons\\eliminar.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\estadisticas.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\estadisticas.svg"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lapiz.svg",
@@ -55,6 +59,26 @@
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\plus.svg",
       "PackagePath": "staticwebassets\\css\\icons\\plus.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\propuesta.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\propuesta.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\salir.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\salir.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\usuarios.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\usuarios.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\logo-tec.png",
+      "PackagePath": "staticwebassets\\css\\logo-tec.png"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
