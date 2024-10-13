@@ -27,13 +27,14 @@ namespace ProyectoVie.Pages.VieWeb
                         Correo = reader["Correo"].ToString(),
                         Rol = reader["ID_rol"].ToString(),
                         Cedula = reader["Cedula"].ToString(),
-                        Contrasena = reader["Contrasena"].ToString() // Añadir el campo de contraseña
+                        Contrasena = reader["Contrasena"].ToString()
                     });
                 }
             }
         }
 
-        public IActionResult OnPostEliminarUsuario(int cedula)
+        // Eliminar Usuario
+        public IActionResult OnPostEliminar(int cedula)
         {
             try
             {
@@ -42,22 +43,23 @@ namespace ProyectoVie.Pages.VieWeb
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("EliminarUsuario", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@InCedula", cedula);
+                    // Ejecutar el comando DELETE para eliminar el usuario
+                    SqlCommand command = new SqlCommand("DELETE FROM USUARIO WHERE Cedula = @Cedula", connection);
+                    command.Parameters.AddWithValue("@Cedula", cedula);
                     command.ExecuteNonQuery();
                 }
 
-                return RedirectToPage();
+                return RedirectToPage("/VieWeb/Usuarios");
             }
             catch (Exception ex)
             {
-                // Manejar el error
+                // Manejar errores
                 return Page();
             }
         }
 
-        public IActionResult OnPostEditarUsuario(Usuario usuario)
+        // Editar Usuario
+        public IActionResult OnPostEditar(Usuario usuario)
         {
             try
             {
@@ -66,33 +68,34 @@ namespace ProyectoVie.Pages.VieWeb
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("ModificarUsuarioCompleto", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    // Ejecutar el comando UPDATE para actualizar la información del usuario
+                    SqlCommand command = new SqlCommand("UPDATE USUARIO SET Nombre = @Nombre, Correo = @Correo, Contrasena = @Contrasena, ID_rol = @ID_rol WHERE Cedula = @Cedula", connection);
                     command.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-                    command.Parameters.AddWithValue("@Cedula", usuario.Cedula);
                     command.Parameters.AddWithValue("@Correo", usuario.Correo);
-                    command.Parameters.AddWithValue("@Contrasena", usuario.Contrasena); // Incluyendo la contraseña
+                    command.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
                     command.Parameters.AddWithValue("@ID_rol", usuario.Rol);
+                    command.Parameters.AddWithValue("@Cedula", usuario.Cedula);
                     command.ExecuteNonQuery();
                 }
 
-                return RedirectToPage();
+                return RedirectToPage("/VieWeb/Usuarios");
             }
             catch (Exception ex)
             {
-                // Manejar error
+                // Manejar errores
                 return Page();
             }
         }
     }
 
-    public class Usuario
+public class Usuario
     {
         public string Nombre { get; set; }
         public string Correo { get; set; }
-        public string Rol { get; set; }
+        public string Rol { get; set; } // Texto que representa el Rol
         public string Cedula { get; set; }
         public string Contrasena { get; set; } // Añadir propiedad para contraseña
-        public byte ID_rol { get; internal set; }
+        public int ID_rol { get; set; } // Asegurarse de incluir esta propiedad
     }
+
 }

@@ -1,0 +1,131 @@
+﻿/* Reinicio básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #0a4275;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .sidebar .option, .sidebar .exit-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+        .sidebar .option a img, .sidebar .exit-option a img {
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .sidebar .option span, .sidebar .exit-option span {
+            font-size: 18px;
+            text-align: center;
+        }
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.tec-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Aprovecha todo el espacio */
+    gap: 10px;
+}
+
+    .search-bar input {
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        flex-grow: 1; /* Hace que la barra de búsqueda se ajuste a todo el espacio disponible */
+    }
+
+.icon, .profile-pic {
+    width: 40px;
+    height: auto;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 220px; /* Deja espacio para el sidebar */
+    margin-top: 60px; /* Deja espacio para el header */
+    padding: 20px;
+    width: calc(100% - 220px); /* El contenido toma el espacio restante */
+    overflow-y: auto; /* Habilita el scroll si es necesario */
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+    .form-field label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-field input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+.btn-guardar {
+    background-color: #0a4275;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+    .btn-guardar:hover {
+        background-color: #08385f;
+    }

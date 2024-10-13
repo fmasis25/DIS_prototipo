@@ -7,23 +7,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/miperfil.css" />
-    <title>Sistema de Propuestas - Mi Perfil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
+
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
+        <a href="/VieWeb/MenuAdmin">
             <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <a href="/buscar">
+            <a href="/VieWeb/Buscar">
                 <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
             </a>
-            <a href="/perfil">
+            <a href="/VieWeb/MiPerfil">
                 <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
             </a>
         </div>
@@ -31,28 +32,52 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <div class="option">
-            <a href="/propuestas">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
-            </a>
-            <span>Mis Propuestas</span>
-        </div>
-        <div class="option">
-            <a href="/estadisticas">
-                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
-            </a>
-            <span>Estadísticas</span>
-        </div>
-        <div class="exit-option">
-            <a href="/salir">
-                <img src="~/css/icons/salir.svg" alt="Salir">
-            </a>
-            <span>Salir</span>
-        </div>
+        @if (Model.Rol == 1)
+        {
+            <div class="option">
+                <a href="/VieWeb/MenuExtensionista">
+                    <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+                </a>
+                <span>Mis Propuestas</span>
+            </div>
+            <div class="exit-option">
+                <a href="/VieWeb/Login">
+                    <img src="~/css/icons/salir.svg" alt="Salir">
+                </a>
+                <span>Salir</span>
+            </div>
+        }
+        else if (Model.Rol == 2)
+        {
+            <div class="option">
+                <a href="/VieWeb/MenuAdmin">
+                    <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+                </a>
+                <span>Propuestas</span>
+            </div>
+            <div class="option">
+                <a href="/VieWeb/Usuarios">
+                    <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+                </a>
+                <span>Usuarios</span>
+            </div>
+            <div class="option">
+                <a href="/VieWeb/Graficos">
+                    <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+                </a>
+                <span>Estadísticas</span>
+            </div>
+            <div class="exit-option">
+                <a href="/VieWeb/Login">
+                    <img src="~/css/icons/salir.svg" alt="Salir">
+                </a>
+                <span>Salir</span>
+            </div>
+        }
     </div>
 
     <!-- Main content -->
-    <main>
+    <main class="main-content">
         <h1>Mi Perfil</h1>
 
         @if (!string.IsNullOrEmpty(Model.ErrorMessage))
@@ -65,7 +90,6 @@
             <div style="color:green">@Model.SuccessMessage</div>
         }
 
-        <!-- Formulario para editar el perfil -->
         <form method="post">
             <div class="form-field">
                 <label for="Nombre">Nombre:</label>
@@ -76,10 +100,6 @@
                 <input type="text" id="Apellido" name="Apellido" value="@Model.Apellido" required />
             </div>
             <div class="form-field">
-                <label for="Cedula">Cédula:</label>
-                <input type="number" id="Cedula" name="Cedula" value="@Model.Cedula" required />
-            </div>
-            <div class="form-field">
                 <label for="Correo">Correo:</label>
                 <input type="email" id="Correo" name="Correo" value="@Model.Correo" required />
             </div>
@@ -88,7 +108,6 @@
                 <input type="password" id="Contrasena" name="Contrasena" value="@Model.Contrasena" required />
             </div>
 
-            <!-- Botón para guardar cambios -->
             <button type="submit" class="btn-guardar">Guardar Cambios</button>
         </form>
     </main>

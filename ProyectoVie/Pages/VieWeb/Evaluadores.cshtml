@@ -3,13 +3,13 @@
 @{
     ViewData["Title"] = "Asignar Evaluadores";
 }
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/evaluadores.css" />
+    <link rel="stylesheet" href="../css/menua.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <title>Asignar Evaluadores</title>
 </head>
 <body>
@@ -56,34 +56,36 @@
     </div>
 
     <!-- Contenido principal -->
-    <main>
+    <div class="main-content">
         <h1>Asignar Evaluadores</h1>
 
-        <!-- Tabla de Usuarios con Rol 2 -->
-        <table class="usuarios-table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>ID Rol</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var usuario in Model.UsuariosConRol2)
-                {
+        <!-- Tabla de Evaluadores con formato de MenuAdmin -->
+        <div class="propuestas-container">
+            <table class="propuestas-table">
+                <thead>
                     <tr>
-                        <td>@usuario.Nombre</td>
-                        <td>@usuario.ID_rol</td>
-                        <td>
-                            <form method="post">
-                                <input type="hidden" name="usuarioId" value="@usuario.ID_rol" />
-                                <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar">Asignar</button>
-                            </form>
-                        </td>
+                        <th>Nombre</th>
+                        <th>ID Rol</th>
+                        <th>Acción</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </main>
+                </thead>
+                <tbody>
+                    @foreach (var usuario in Model.UsuariosConRol2)
+                    {
+                        <tr>
+                            <td>@usuario.Nombre</td>
+                            <td>@usuario.ID_rol</td>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="usuarioId" value="@usuario.ID_rol" />
+                                    <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar">Asignar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

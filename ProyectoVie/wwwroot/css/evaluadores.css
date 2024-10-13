@@ -36,12 +36,12 @@
     gap: 10px;
 }
 
-.search-bar input {
-    padding: 8px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    flex-grow: 1;
-}
+    .search-bar input {
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        flex-grow: 1;
+    }
 
 .icon, .profile-pic {
     width: 40px;
@@ -62,24 +62,24 @@
     flex-direction: column;
 }
 
-.sidebar .option, .sidebar .exit-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0;
-}
+    .sidebar .option, .sidebar .exit-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
 
-.sidebar .option a img, .sidebar .exit-option a img {
-    width: 80px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 5px;
-}
+        .sidebar .option a img, .sidebar .exit-option a img {
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
 
-.sidebar .option span, .sidebar .exit-option span {
-    font-size: 18px;
-    text-align: center;
-}
+        .sidebar .option span, .sidebar .exit-option span {
+            font-size: 18px;
+            text-align: center;
+        }
 
 /* Ajuste del main content */
 .main-content {
@@ -100,24 +100,24 @@
     margin-top: 20px;
 }
 
-.usuarios-table th, .usuarios-table td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-}
+    .usuarios-table th, .usuarios-table td {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
 
-.usuarios-table th {
-    background-color: #003366;
-    color: white;
-}
+    .usuarios-table th {
+        background-color: #003366;
+        color: white;
+    }
 
-.usuarios-table td {
-    background-color: #f2f2f2;
-}
+    .usuarios-table td {
+        background-color: #f2f2f2;
+    }
 
-.usuarios-table tr:hover {
-    background-color: #e6e6e6;
-}
+    .usuarios-table tr:hover {
+        background-color: #e6e6e6;
+    }
 
 .assign-btn {
     background-color: #0a4275;
@@ -128,6 +128,6 @@
     cursor: pointer;
 }
 
-.assign-btn:hover {
-    background-color: #08385f;
-}
+    .assign-btn:hover {
+        background-color: #08385f;
+    }

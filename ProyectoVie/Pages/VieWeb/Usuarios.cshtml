@@ -15,15 +15,16 @@
 <body>
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
+        <a href="/VieWeb/MenuAdmin">
             <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar..." aria-label="Buscar usuarios">
-            <a href="/buscar">
+            <a href="/VieWeb/Buscar">
                 <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
             </a>
-            <a href="/perfil">
+            <!-- Icono del perfil redirige a MiPerfil -->
+            <a href="/VieWeb/MiPerfil">
                 <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
             </a>
         </div>
@@ -32,25 +33,25 @@
     <!-- Sidebar izquierdo con opciones -->
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas">
+            <a href="/VieWeb/MenuAdmin">
                 <img src="~/css/icons/propuesta.svg" alt="Propuestas">
             </a>
             <span>Propuestas</span>
         </div>
         <div class="option">
-            <a href="/estadisticas">
+            <a href="/VieWeb/Graficos">
                 <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/usuarios">
+            <a href="/VieWeb/Usuarios">
                 <img src="~/css/icons/usuarios.svg" alt="Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/salir">
+            <a href="/VieWeb/Login">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
@@ -68,7 +69,7 @@
                     <tr>
                         <th>Correo</th>
                         <th>Rol</th>
-                        <th>Contraseña</th> <!-- Nueva columna para la contraseña -->
+                        <th>Contraseña</th> <!-- Columna para la contraseña -->
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -78,13 +79,15 @@
                         <tr>
                             <td>@usuario.Correo</td>
                             <td>@usuario.Rol</td>
-                            <td>@usuario.Contrasena</td> <!-- Mostrar la contraseña -->
+                            <td>@usuario.Contrasena</td>
                             <td>
                                 <div class="dropdown">
                                     <button class="dropbtn">⋮</button>
                                     <div class="dropdown-content">
-                                        <a href="/usuario/editar/@usuario.Cedula">Editar</a>
-                                        <a href="/usuario/eliminar/@usuario.Cedula">Eliminar</a>
+                                        <!-- Ruta de editar usuario -->
+                                        <a asp-page-handler="Editar" asp-route-cedula="@usuario.Cedula">Editar</a>
+                                        <!-- Ruta de eliminar usuario -->
+                                        <a asp-page-handler="Eliminar" asp-route-cedula="@usuario.Cedula" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
                                     </div>
                                 </div>
                             </td>

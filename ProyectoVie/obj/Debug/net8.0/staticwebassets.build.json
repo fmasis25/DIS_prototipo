@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OglBRva6GvCJ1dAzJoSZoAcR7ECTVjG1JUJBmrQjbyQ=",
+  "Hash": "RgZFI/vTgiItbsZH0bomZEYRSZguOnorJeAhS067fBc=",
   "Source": "ProyectoVie",
   "BasePath": "_content/ProyectoVie",
   "Mode": "Default",
@@ -397,25 +397,6 @@
       "OriginalItemSpec": "wwwroot\\css\\menue.css"
     },
     {
-      "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\miperfil.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-      "BasePath": "_content/ProyectoVie",
-      "RelativePath": "css/miperfil.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\miperfil.css"
-    },
-    {
       "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Pagina.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
@@ -433,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Pagina.png"
+    },
+    {
+      "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\perfil.css",
+      "SourceId": "ProyectoVie",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
+      "BasePath": "_content/ProyectoVie",
+      "RelativePath": "css/perfil.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\perfil.css"
     },
     {
       "Identity": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\ProfilePic.png",

@@ -15,15 +15,16 @@
 <body>
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
+        <a href="/VieWeb/MenuAdmin">
             <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <a href="/buscar">
+            <a href="/VieWeb/Buscar">
                 <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
             </a>
-            <a href="/perfil">
+            <!-- Redirige al perfil -->
+            <a href="/VieWeb/MiPerfil">
                 <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
             </a>
         </div>
@@ -32,25 +33,29 @@
     <!-- Sidebar izquierdo con opciones adicionales -->
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas">
+            <!-- Mis Propuestas recarga la página actual -->
+            <a href="/VieWeb/MenuAdmin">
                 <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="option">
-            <a href="/estadisticas">
+            <!-- Estadísticas redirige a Gráficos -->
+            <a href="/VieWeb/Graficos">
                 <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/usuarios">
+            <!-- Usuarios redirige a Usuarios -->
+            <a href="/VieWeb/Usuarios">
                 <img src="~/css/icons/usuarios.svg" alt="Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/salir">
+            <!-- Salir redirige a la página de Login -->
+            <a href="/VieWeb/Login">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
@@ -71,11 +76,11 @@
                     {
                         if (estado["ID"].ToString() == Model.SelectedEstadoId.ToString())
                         {
-                            <option value="@estado["ID"]" selected>@estado["Nombre"]</option>
+                                    <option value="@estado["ID"]" selected>@estado["Nombre"]</option>
                         }
                         else
                         {
-                            <option value="@estado["ID"]">@estado["Nombre"]</option>
+                                    <option value="@estado["ID"]">@estado["Nombre"]</option>
                         }
                     }
                 </select>
@@ -95,19 +100,21 @@
                 <tbody>
                     @foreach (var propuesta in Model.Propuestas)
                     {
-                        <tr>
-                            <td>@propuesta["NombrePropuesta"]</td>
-                            <td>@propuesta["Estado"]</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn">⋮</button>
-                                    <div class="dropdown-content">
-                                        <a href="/propuesta/asignar/@propuesta["ID"]">Asignar</a>
-                                        <a href="/propuesta/evaluar/@propuesta["ID"]">Evaluar</a>
+                            <tr>
+                                <td>@propuesta["NombrePropuesta"]</td>
+                                <td>@propuesta["Estado"]</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">⋮</button>
+                                        <div class="dropdown-content">
+                                            <!-- Asignar redirige a Evaluadores -->
+                                            <a href="/VieWeb/Evaluadores?propuestaId=@propuesta["ID"]">Asignar</a>
+                                            <!-- Evaluar redirige a la página de evaluación -->
+                                            <a href="/VieWeb/Evaluar?propuestaId=@propuesta["ID"]">Evaluar</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
                     }
                 </tbody>
             </table>

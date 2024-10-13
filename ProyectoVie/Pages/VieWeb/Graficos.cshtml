@@ -16,15 +16,16 @@
 <body>
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
+        <a href="/VieWeb/MenuAdmin">
             <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <a href="/buscar">
+            <a href="/VieWeb/Buscar">
                 <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
             </a>
-            <a href="/perfil">
+            <a href="/VieWeb/MiPerfil">
+                <!-- Ajuste para redirigir al perfil -->
                 <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
             </a>
         </div>
@@ -33,25 +34,29 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas">
+            <a href="/VieWeb/MenuAdmin">
+                <!-- Ajuste para el menú de propuestas -->
                 <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="option">
-            <a href="/estadisticas">
+            <a href="/VieWeb/Graficos">
+                <!-- Ajuste para ir a la página de gráficos -->
                 <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/usuarios">
+            <a href="/VieWeb/Usuarios">
+                <!-- Ruta para la página de usuarios -->
                 <img src="~/css/icons/usuarios.svg" alt="Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/salir">
+            <a href="/VieWeb/Login">
+                <!-- Ruta para salir -->
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
