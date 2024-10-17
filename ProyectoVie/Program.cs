@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Threading.Tasks;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Habilitar caché distribuido en memoria para las sesiones

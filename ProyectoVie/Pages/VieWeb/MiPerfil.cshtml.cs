@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Http;
 
 namespace ProyectoVie.Pages.VieWeb
 {
@@ -51,7 +52,7 @@ namespace ProyectoVie.Pages.VieWeb
                         Apellido = reader["Apellido"].ToString();
                         Correo = reader["Correo"].ToString();
                         Contrasena = reader["Contrasena"].ToString();
-                        Rol = Convert.ToInt32(reader["ID_rol"]);
+                        Rol = System.Convert.ToInt32(reader["ID_rol"]);
                     }
                     else
                     {

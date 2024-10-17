@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http; // Add this using directive
 
 namespace ProyectoVie.Pages.VieWeb
 {
