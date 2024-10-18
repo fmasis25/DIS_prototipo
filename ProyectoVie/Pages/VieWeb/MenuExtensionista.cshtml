@@ -58,20 +58,57 @@
                 <tbody>
                     @foreach (var propuesta in Model.Propuestas)
                     {
-                        <tr>
-                            <td>@propuesta["NombrePropuesta"]</td>
-                            <td>@propuesta["Estado"]</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn">⋮</button>
-                                    <div class="dropdown-content">
-                                        <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
-                                        <a href="/propuesta/editar/@propuesta["ID"]">Editar</a>
-                                        <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
+                        if ((string)propuesta["Estado"] == "Rechazada") // Si el estado es 2, muestra ambos enlaces
+                        {
+                            <tr>
+                                <td>@propuesta["NombrePropuesta"]</td>
+                                <td>@propuesta["Estado"]</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">⋮</button>
+                                        <div class="dropdown-content">
+                                            <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
+                                            
+                                            <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        }
+                        if ((string)propuesta["Estado"] == "Recibida") // Si el estado es 2, muestra ambos enlaces
+                        {
+                            <tr>
+                                <td>@propuesta["NombrePropuesta"]</td>
+                                <td>@propuesta["Estado"]</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">⋮</button>
+                                        <div class="dropdown-content">
+                                            <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
+                                            <a href="/propuesta/editar/@propuesta["ID"]">Editar</a>
+                                            <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        if ((string)propuesta["Estado"] == "En revisión" || (string)propuesta["Estado"] == "Aceptada") // Si el estado es 2, muestra ambos enlaces
+                        {
+                            <tr>
+                                <td>@propuesta["NombrePropuesta"]</td>
+                                <td>@propuesta["Estado"]</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">⋮</button>
+                                        <div class="dropdown-content">
+                                            <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
+                                            <a href="/VieWeb/Calificacion?propuestaId=@propuesta["ID"]">Calificación</a>
+ 
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
                     }
                 </tbody>
             </table>

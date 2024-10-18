@@ -65,7 +65,7 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>ID Rol</th>
+                        <th>Rol</th>
                         <th>Acción</th>
                     </tr>
                 </thead>
@@ -74,10 +74,11 @@
                     {
                         <tr>
                             <td>@usuario.Nombre</td>
-                            <td>@usuario.ID_rol</td>
+                            <td>@usuario.Rol</td>
                             <td>
                                 <form method="post">
-                                    <input type="hidden" name="usuarioId" value="@usuario.ID_rol" />
+                                    <input type="hidden" name="usuarioId" value="@usuario.ID" />
+                                    <input type="hidden" name="PropuestaId" value="@Model.PropuestaId" /> <!-- Campo oculto para PropuestaId -->
                                     <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar">Asignar</button>
                                 </form>
                             </td>

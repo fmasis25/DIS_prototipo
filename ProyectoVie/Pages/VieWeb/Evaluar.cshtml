@@ -29,10 +29,18 @@
             font-weight: bold;
         }
 
-        input[type="text"] {
+        input[type="text"], input[type="number"] {
             width: 100%;
             box-sizing: border-box;
             padding: 6px;
+        }
+
+        /* Hacer el checkbox más grande */
+        input[type="checkbox"] {
+            width: 30px; /* Ajusta el tamaño del checkbox */
+            height: 30px; /* Ajusta el tamaño del checkbox */
+            margin: 0 auto; /* Centra el checkbox dentro de su contenedor */
+            display: block; /* Asegura que se comporte como un bloque y ocupe todo el ancho disponible */
         }
 
         /* Hacer que la tabla sea scrolleable */
@@ -117,111 +125,212 @@
         <h1>Evaluación de Propuesta</h1>
         <form method="post">
 
-        <!-- Tabla de rúbrica -->
-        <div class="rubrica-container">
-            <table class="rubrica-table">
-                <thead>
-                    <tr>
-                        <th>VARIABLE</th>
-                        <th>DESCRIPCIÓN DE LA VARIABLE</th>
-                        <th>No cumple</th>
-                        <th>Cumple parcial</th>
-                        <th>Cumple</th>
-                        <th>Porcentaje</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Afinidad de disciplinas</td>
-                        <td>
-                            El equipo de trabajo cumple con:<br>
-                            a. Explica la articulación de las áreas de conocimiento participantes.<br>
-                            b. Especifica la participación de cada integrante del equipo.<br>
-                            c. Tiene una conformación interdisciplinaria.
-                        </td>
-                        <td><input type="text" name="no_cumple_afinidad"></td>
-                        <td><input type="text" name="cumple_parcial_afinidad"></td>
-                        <td><input type="text" name="cumple_afinidad"></td>
-                        <td><input type="text" name="porcentaje_afinidad"></td>
-                    </tr>
-                    <tr>
-                        <td>El problema que aborda</td>
-                        <td>
-                            El problema que aborda cumple con:<br>
-                            a. Se encuentra justificado con fuentes de información con referencias actualizadas y dentro de las políticas nacionales vigentes.<br>
-                            b. Se vincula con los ejes del conocimiento estratégicos del ITCR.<br>
-                            c. Hay explicación sobre su correspondencia con los ODS.
-                        </td>
-                        <td><input type="text" name="no_cumple_problema"></td>
-                        <td><input type="text" name="cumple_parcial_problema"></td>
-                        <td><input type="text" name="cumple_problema"></td>
-                        <td><input type="text" name="porcentaje_problema"></td>
-                    </tr>
-                    <tr>
-                        <td>Estrategia de abordaje</td>
-                        <td>
-                            La estrategia de abordaje cumple con:<br>
-                            a. Describe el proceso para la obtención de los resultados esperados.<br>
-                            b. Especifica las metodologías y técnicas acorde al tipo de proyecto (extensión docente, transferencia tecnológica y acción participativa).<br>
-                            c. Especifica la relación del eje de conocimiento y su propuesta.
-                        </td>
-                        <td><input type="text" name="no_cumple_estrategia"></td>
-                        <td><input type="text" name="cumple_parcial_estrategia"></td>
-                        <td><input type="text" name="cumple_estrategia"></td>
-                        <td><input type="text" name="porcentaje_estrategia"></td>
-                    </tr>
-                    <tr>
-                        <td>Información técnica</td>
-                        <td>
-                            La información técnica cumple con:<br>
-                            a. Los objetivos específicos tienen resultados esperados.<br>
-                            b. Los objetivos específicos tienen actividades con indicadores y su respectivo medio de verificación.<br>
-                            c. Cuenta con un cronograma.<br>
-                            d. Presenta un análisis de los riesgos y mitigaciones.
-                        </td>
-                        <td><input type="text" name="no_cumple_informacion"></td>
-                        <td><input type="text" name="cumple_parcial_informacion"></td>
-                        <td><input type="text" name="cumple_informacion"></td>
-                        <td><input type="text" name="porcentaje_informacion"></td>
-                    </tr>
-                    <tr>
-                        <td>Viabilidad financiera</td>
-                        <td>
-                            En cuanto a los recursos cumple con:<br>
-                            a. Están debidamente justificados.<br>
-                            b. Se detallan ingresos y egresos.<br>
-                            c. Hay una distribución de los recursos que responden a las actividades de proyecto.
-                        </td>
-                        <td><input type="text" name="no_cumple_financiera"></td>
-                        <td><input type="text" name="cumple_parcial_financiera"></td>
-                        <td><input type="text" name="cumple_financiera"></td>
-                        <td><input type="text" name="porcentaje_financiera"></td>
-                    </tr>
-                    <tr>
-                        <td>Participación estudiantil</td>
-                        <td>
-                            Se evidencia la participación estudiantil como:<br>
-                            a. Estudiantes de grado como asistentes.<br>
-                            b. Estudiantes de grado con otra modalidad de participación estudiantil (pasantías, voluntarios, giras o trabajos finales de cursos, entre otros).<br>
-                            c. Uno o más tesis de grado o posgrado.
-                        </td>
-                        <td><input type="text" name="no_cumple_participacion"></td>
-                        <td><input type="text" name="cumple_parcial_participacion"></td>
-                        <td><input type="text" name="cumple_participacion"></td>
-                        <td><input type="text" name="porcentaje_participacion"></td>
-                    </tr>
-                   <tr>
-                        <td colspan="5"><strong>Total</strong></td>
-                        <td><input type="text" class="total-input" name="porcentaje_total"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <!-- Tabla de rúbrica -->
+            <div class="rubrica-container">
+                <table class="rubrica-table">
+                    <thead>
+                        <tr>
+                            <th>VARIABLE</th>
+                            <th>DESCRIPCIÓN DE LA VARIABLE</th>
+                            <th>No cumple</th>
+                            <th>Cumple parcial</th>
+                            <th>Cumple</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Afinidad de disciplinas</td>
+                            <td>
+                                El equipo de trabajo cumple con:<br>
+                                a. Explica la articulación de las áreas de conocimiento participantes.<br>
+                                b. Especifica la participación de cada integrante del equipo.<br>
+                                c. Tiene una conformación interdisciplinaria.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleAfinidad" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialAfinidad" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleAfinidad" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeAfinidad" min="0" max="10" oninput="calculateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td>El problema que aborda</td>
+                            <td>
+                                El problema que aborda cumple con:<br>
+                                a. Se encuentra justificado con fuentes de información con referencias actualizadas y dentro de las políticas nacionales vigentes.<br>
+                                b. Se vincula con los ejes del conocimiento estratégicos del ITCR.<br>
+                                c. Hay explicación sobre su correspondencia con los ODS.
+                            </td>
+                            <td>
+                                
+                                <input type="checkbox" name="NoCumpleProblema" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialProblema" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleProblema" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeProblema" min="0" max="20" oninput="calculateTotal()"></td>
 
-        <!-- Botón para completar la evaluación -->
-        <div class="button-container">
-            <button type="submit" class="complete-button" formaction="/menuadmin">Completar</button>
-        </div>
-    </form>
+                        </tr>
+                        <tr>
+                            <td>Estrategia de abordaje</td>
+                            <td>
+                                La estrategia de abordaje cumple con:<br>
+                                a. Describe el proceso para la obtención de los resultados esperados.<br>
+                                b. Especifica las metodologías y técnicas acorde al tipo de proyecto (extensión docente, transferencia tecnológica y acción participativa).<br>
+                                c. Especifica la relación del eje de conocimiento y su propuesta.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleEstrategia" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialEstrategia" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleEstrategia" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeEstrategia" min="0" max="20" oninput="calculateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td>Información técnica</td>
+                            <td>
+                                La información técnica cumple con:<br>
+                                a. Los objetivos específicos tienen resultados esperados.<br>
+                                b. Los objetivos específicos tienen actividades con indicadores y su respectivo medio de verificación.<br>
+                                c. Cuenta con un cronograma.<br>
+                                d. Presenta un análisis de los riesgos y mitigaciones.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleInformacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialInformacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleInformacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeInformacion" min="0" max="20" oninput="calculateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td>Viabilidad financiera</td>
+                            <td>
+                                En cuanto a los recursos cumple con:<br>
+                                a. Están debidamente justificados.<br>
+                                b. Se detallan ingresos y egresos.<br>
+                                c. Hay una distribución de los recursos que responden a las actividades de proyecto.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleFinanciera" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialFinanciera" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleFinanciera" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeFinanciera" min="0" max="20" oninput="calculateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td>Participación</td>
+                            <td>
+                                La participación cumple con:<br>
+                                a. Tiene el respaldo de los actores participantes.<br>
+                                b. Están debidamente justificados.<br>
+                                c. Está acorde al tipo de intervención.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleParticipacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialParticipacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParticipacion" value="1" onclick="toggleCheckboxes(this)">
+                            </td>
+                            <td><input type="number" name="PorcentajeParticipacion" min="0" max="10" oninput="calculateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td class="total-input"><strong>Total</strong></td>
+                            <td colspan="5">
+                                <input type="text" name="PorcentajeTotal" class="total-input" readonly>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Botón para completar la evaluación -->
+            <div class="button-container">
+                <input type="hidden" name="PropuestaId" value="@Model.PropuestaId" />
+                <button type="submit" class="complete-button">Completar Evaluación</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Función para manejar la selección de checkboxes
+        function toggleCheckboxes(currentCheckbox) {
+            // Obtener la fila del checkbox actual
+            const row = currentCheckbox.closest('tr');
+
+            // Obtener todos los checkboxes de la fila
+            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+
+            // Desmarcar otros checkboxes en la fila
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== currentCheckbox) {
+                    checkbox.checked = false;
+                }
+            });
+
+            // Calcular el total
+            calculateTotal();
+        }
+        // Función para manejar la selección de checkboxes
+        function calculateTotal() {
+            let total = 0;
+            let warningMessage = '';
+
+            document.querySelectorAll('input[type="number"]').forEach(input => {
+                let value = parseFloat(input.value) || 0;
+
+                // Verificar límites según el nombre del campo
+                if (input.name.includes('PorcentajeAfinidad') && (value < 0 || value > 10)) {
+                    warningMessage = 'El porcentaje de Afinidad debe estar entre 0 y 10.';
+                } else if (input.name.includes('PorcentajeProblema') && (value < 0 || value > 20)) {
+                    warningMessage = 'El porcentaje de Problema debe estar entre 0 y 200.';
+                } else if (input.name.includes('PorcentajeEstrategia') && (value < 0 || value > 20)) {
+                    warningMessage = 'El porcentaje de Estrategia debe estar entre 0 y 20.';
+                } else if (input.name.includes('PorcentajeInformacion') && (value < 0 || value > 20)) {
+                    warningMessage = 'El porcentaje de Información debe estar entre 0 y 20.';
+                } else if (input.name.includes('PorcentajeFinanciera') && (value < 0 || value > 20)) {
+                    warningMessage = 'El porcentaje de Viabilidad Financiera debe estar entre 0 y 20.';
+                } else if (input.name.includes('PorcentajeParticipacion') && (value < 0 || value > 10)) {
+                    warningMessage = 'El porcentaje de Participación debe estar entre 0 y 10.';
+                }
+
+                total += value;
+            });
+
+            document.querySelector('input[name="PorcentajeTotal"]').value = total;
+
+            // Mostrar o esconder el mensaje de advertencia
+            const warningDiv = document.getElementById('warning-message');
+            if (warningMessage) {
+                warningDiv.textContent = warningMessage;
+                warningDiv.style.display = 'block';
+            } else {
+                warningDiv.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
