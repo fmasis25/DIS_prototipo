@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
+using System;
+using System.Collections.Generic;
 
 namespace ProyectoVie.Pages.VieWeb
 {
@@ -51,7 +53,7 @@ namespace ProyectoVie.Pages.VieWeb
 
                 return RedirectToPage("/VieWeb/Usuarios");
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 // Manejar errores
                 return Page();

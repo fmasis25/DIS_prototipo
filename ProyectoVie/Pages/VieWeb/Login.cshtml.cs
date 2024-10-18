@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using System;
+using Microsoft.AspNetCore.Http;
 
 namespace ProyectoVie.Pages.VieWeb
 {
