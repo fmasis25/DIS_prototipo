@@ -1,61 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-<<<<<<< HEAD
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>3ed7af34-b701-4080-b973-8f0dffb8c021</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <OutputType>Exe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-=======
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-		<OutputType>Exe</OutputType>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-		<DebugType>portable</DebugType>
-		<DebugSymbols>true</DebugSymbols>
-		<Optimize>false</Optimize>
-		<PlatformTarget>AnyCPU</PlatformTarget>
-	</PropertyGroup>
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
 
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <Compile Remove="NewFolder\**" />
-	  <Content Remove="NewFolder\**" />
-	  <EmbeddedResource Remove="NewFolder\**" />
-	  <None Remove="NewFolder\**" />
-	</ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net8.0\appsettings.json" />
+    <Content Include="bin\Debug\net8.0\ProyectoVie.deps.json" />
+    <Content Include="bin\Debug\net8.0\ProyectoVie.runtimeconfig.json" />
+    <Content Include="bin\Debug\net8.0\ProyectoVie.staticwebassets.runtime.json" />
+    <Content Include="obj\Debug\net8.0\ApiEndpoints.json" />
+    <Content Include="obj\Debug\net8.0\ProyectoVie.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net8.0\ProyectoVie.sourcelink.json" />
+    <Content Include="obj\Debug\net8.0\scopedcss\bundle\ProyectoVie.styles.css" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.development.json" />
+    <Content Include="obj\Debug\net8.0\staticwebassets.pack.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\ProyectoVie.csproj.nuget.dgspec.json" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<Content Include="bin\Debug\net8.0\appsettings.Development.json" />
-		<Content Include="bin\Debug\net8.0\appsettings.json" />
-		<Content Include="bin\Debug\net8.0\ProyectoVie.deps.json" />
-		<Content Include="bin\Debug\net8.0\ProyectoVie.runtimeconfig.json" />
-		<Content Include="bin\Debug\net8.0\ProyectoVie.staticwebassets.runtime.json" />
-		<Content Include="obj\Debug\net8.0\ApiEndpoints.json" />
-		<Content Include="obj\Debug\net8.0\ProyectoVie.csproj.FileListAbsolute.txt" />
-		<Content Include="obj\Debug\net8.0\ProyectoVie.sourcelink.json" />
-		<Content Include="obj\Debug\net8.0\scopedcss\bundle\ProyectoVie.styles.css" />
-		<Content Include="obj\Debug\net8.0\staticwebassets.build.json" />
-		<Content Include="obj\Debug\net8.0\staticwebassets.development.json" />
-		<Content Include="obj\Debug\net8.0\staticwebassets.pack.json" />
-		<Content Include="obj\project.assets.json" />
-		<Content Include="obj\ProyectoVie.csproj.nuget.dgspec.json" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
-		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="obj\Debug\net8.0\scopedcss\Pages\Shared\" />
-		<Folder Include="obj\Debug\net8.0\scopedcss\projectbundle\" />
-		<Folder Include="Pages\PDF\" />
-	</ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\net8.0\scopedcss\Pages\Shared\" />
+    <Folder Include="obj\Debug\net8.0\scopedcss\projectbundle\" />
+    <Folder Include="Pages\PDF\" />
+  </ItemGroup>
 
 </Project>

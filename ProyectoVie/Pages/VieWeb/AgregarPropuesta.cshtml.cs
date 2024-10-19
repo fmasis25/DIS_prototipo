@@ -40,7 +40,7 @@ namespace ProyectoVie.Pages.VieWeb
         public DateTime FechaSolicitud { get; set; } = DateTime.Now; // Valor por defecto
 
         [BindProperty]
-        public int ID_UsuarioPromotor { get; set; } = 1; //TODO cambiar
+        public int ID_UsuarioPromotor { get; set; }
 
         [BindProperty]
         public int ID_Estado { get; set; } = 2;
@@ -72,15 +72,9 @@ namespace ProyectoVie.Pages.VieWeb
         {
             Debug.WriteLine("OnPostAsync ha comenzado");
 
-            if (!ModelState.IsValid)
-            {
-                Debug.WriteLine("El modelo no es válido. Errores: ");
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    Debug.WriteLine(error.ErrorMessage);
-                }
-                return Page();
-            }
+            ID_UsuarioPromotor = HttpContext.Session.GetInt32("UserID") ?? 0; // Obtener el ID del usuario de la sesión
+
+            Debug.WriteLine("ID_UsuarioPromotor: " + ID_UsuarioPromotor);
 
             Debug.WriteLine("Modelo es válido, procesando datos...");
 

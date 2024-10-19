@@ -30,14 +30,14 @@
 
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+            <a href="/VieWeb/AgregarPropuesta">
+                <img src="~/css/pagina.png" alt="Agregar Propuestas">
             </a>
-            <span>Mis Propuestas</span>
+            <span>Agregar Propuestas</span>
         </div>
         <div class="exit-option">
             <a href="/salir">
-                <img src="~/css/icons/salir.svg" alt="Salir">
+                <img src="~/css/salir.png" alt="Salir">
             </a>
             <span>Salir</span>
         </div>
@@ -58,7 +58,7 @@
                 <tbody>
                     @foreach (var propuesta in Model.Propuestas)
                     {
-                        if ((string)propuesta["Estado"] == "Rechazada") // Si el estado es 2, muestra ambos enlaces
+                        if ((string)propuesta["Estado"] == "Rechazada")
                         {
                             <tr>
                                 <td>@propuesta["NombrePropuesta"]</td>
@@ -67,15 +67,14 @@
                                     <div class="dropdown">
                                         <button class="dropbtn">⋮</button>
                                         <div class="dropdown-content">
-                                            <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
-                                            
+                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]">Consultar</a>
                                             <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                         }
-                        if ((string)propuesta["Estado"] == "Recibida") // Si el estado es 2, muestra ambos enlaces
+                        else if ((string)propuesta["Estado"] == "Recibida")
                         {
                             <tr>
                                 <td>@propuesta["NombrePropuesta"]</td>
@@ -84,7 +83,7 @@
                                     <div class="dropdown">
                                         <button class="dropbtn">⋮</button>
                                         <div class="dropdown-content">
-                                            <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
+                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]">Consultar</a>
                                             <a href="/propuesta/editar/@propuesta["ID"]">Editar</a>
                                             <a href="/propuesta/eliminar/@propuesta["ID"]">Eliminar</a>
                                         </div>
@@ -92,7 +91,7 @@
                                 </td>
                             </tr>
                         }
-                        if ((string)propuesta["Estado"] == "En revisión" || (string)propuesta["Estado"] == "Aceptada") // Si el estado es 2, muestra ambos enlaces
+                        else if ((string)propuesta["Estado"] == "En revisión" || (string)propuesta["Estado"] == "Aceptada")
                         {
                             <tr>
                                 <td>@propuesta["NombrePropuesta"]</td>
@@ -103,7 +102,6 @@
                                         <div class="dropdown-content">
                                             <a href="/propuesta/detalles/@propuesta["ID"]">Consultar</a>
                                             <a href="/VieWeb/Calificacion?propuestaId=@propuesta["ID"]">Calificación</a>
- 
                                         </div>
                                     </div>
                                 </td>

@@ -1,26 +1,14 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\windows\\documents\\dise\u00F1o\\dis_prototipo\\proyectovie\\pages\\vieweb\\menuadmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\menuadmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\windows\\documents\\dise\u00F1o\\dis_prototipo\\proyectovie\\pages\\vieweb\\menuadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\menuadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-=======
   "WorkspaceRootPath": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\mjose\\onedrive\\documents\\github\\dis_prototipo\\proyectovie\\pages\\vieweb\\agregarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\agregarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\mjose\\onedrive\\documents\\github\\dis_prototipo\\proyectovie\\pages\\vieweb\\consultarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\consultarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\mjose\\onedrive\\documents\\github\\dis_prototipo\\proyectovie\\pages\\vieweb\\agregarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\agregarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\mjose\\onedrive\\documents\\github\\dis_prototipo\\proyectovie\\pages\\vieweb\\consultarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\consultarpropuesta.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,13 +17,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-<<<<<<< HEAD
           "DockedWidth": 200,
           "SelectedChildIndex": 3,
-=======
-          "DockedWidth": 344,
-          "SelectedChildIndex": 2,
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,53 +30,28 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 1,
-              "Title": "MenuAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MenuAdmin.cshtml",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\MenuAdmin.cshtml",
-              "ToolTip": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MenuAdmin.cshtml",
-              "RelativeToolTip": "Pages\\VieWeb\\MenuAdmin.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAgwFsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T07:56:16.323Z",
+              "Title": "ConsultarPropuesta.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ConsultarPropuesta.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\ConsultarPropuesta.cshtml.cs",
+              "ToolTip": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ConsultarPropuesta.cshtml.cs",
+              "RelativeToolTip": "Pages\\VieWeb\\ConsultarPropuesta.cshtml.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAqwKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T20:35:59.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MenuAdmin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MenuAdmin.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\MenuAdmin.cshtml.cs",
-              "ToolTip": "C:\\Users\\windows\\Documents\\Dise\u00F1o\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MenuAdmin.cshtml.cs",
-              "RelativeToolTip": "Pages\\VieWeb\\MenuAdmin.cshtml.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAswFcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T08:43:04.563Z",
-=======
-              "DocumentIndex": 0,
-              "Title": "AgregarPropuesta.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
-              "ToolTip": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
-              "RelativeToolTip": "Pages\\VieWeb\\AgregarPropuesta.cshtml.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAArwM0AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T01:04:39.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AgregarPropuesta.cshtml",
-              "DocumentMoniker": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\AgregarPropuesta.cshtml",
-              "ToolTip": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\AgregarPropuesta.cshtml",
-              "RelativeToolTip": "Pages\\VieWeb\\AgregarPropuesta.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAABKAAAAAAAAAA==",
+              "Title": "ConsultarPropuesta.cshtml",
+              "DocumentMoniker": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ConsultarPropuesta.cshtml",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\ConsultarPropuesta.cshtml",
+              "ToolTip": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ConsultarPropuesta.cshtml",
+              "RelativeToolTip": "Pages\\VieWeb\\ConsultarPropuesta.cshtml",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAIwPAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T03:15:46.798Z",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
+              "WhenOpened": "2024-10-18T20:31:40.158Z",
               "EditorCaption": ""
             }
           ]

@@ -1,77 +1,171 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ProyectoVie.Pages.VieWeb
 {
     public class ConsultarPropuestaModel : PageModel
     {
-        [BindProperty]
-        public Proposal Proposal { get; set; } // Representa los datos de la propuesta
+        public Proposal Propuesta { get; set; } = new Proposal();
+        public List<Extensionist> Extensionists { get; set; } = new List<Extensionist>();
+        public List<Organization> Organizations { get; set; } = new List<Organization>();
 
-        public async Task OnGetAsync(int id)
+        public class Proposal
         {
-            // Aquí puedes obtener los datos de la propuesta según el ID
-            // Suponiendo que tienes un servicio para obtener los datos
-            //Proposal = await GetProposalByIdAsync(id);
+            public int Id { get; set; }
+            public string NombreProyecto { get; set; }
+            public string IdentificacionAcuerdo { get; set; }
+            public string TipoExtension { get; set; }
+            public string Descripcion { get; set; }
+            public string ObjetivoDesarrolloSostenible { get; set; }
+            public string DeclaracionFinal { get; set; }
+            public DateTime FechaAprobacion { get; set; }
+            public DateTime FechaSolicitud { get; set; }
+            public string RutaArchivo { get; set; } // Ruta al archivo PDF
+            public string UrlArchivo { get; set; } // URL completa del archivo PDF
         }
 
-        //private async Task<Proposal> GetProposalByIdAsync(int id)
-        //{
-        //    Lógica para obtener la propuesta de una base de datos
-        //     Aquí se utilizaría tu contexto de datos o repositorio para obtener la información
-        //     Retornando un objeto de ejemplo por ahora
-        //    return new Proposal
-        //    {
-        //        AgreementNumber = "12345",
-        //        ApprovalDate = "2024-01-01",
-        //        ProjectCondition = "Activo",
-        //        ProjectName = "Proyecto de Ejemplo",
-        //        ExtensionType = "Educativa",
-        //        SustainableGoals = "Reducción de la pobreza",
-        //        Extensionists = new List<Extensionist>
-        //        {
-        //            new Extensionist { Name = "Juan Pérez", School = "Escuela de Ciencias", AppointmentType = "Profesor", Condition = "Activo", ParticipationPeriod = "2024" }
-        //        },
-        //        Organizations = new List<Organization>
-        //        {
-        //            new Organization { ContactName = "María López", Institution = "Organización Ejemplo", ContactInfo = "maria@example.com" }
-        //        },
-        //        ProposalDescription = "Esta es una descripción breve de la propuesta de extensión.",
-        //        PdfDocumentPath = "path/to/document.pdf"
-        //    };
-        //}
-    }
+        public class Extensionist
+        {
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public string TipoNombramiento { get; set; }
+            public string Condicion { get; set; }
+            public DateTime FechaInicio { get; set; }
+            public DateTime FechaFin { get; set; }
+        }
 
-    public class Proposal
-    {
-        public string AgreementNumber { get; set; }
-        public string ApprovalDate { get; set; }
-        public string ProjectCondition { get; set; }
-        public string ProjectName { get; set; }
-        public string ExtensionType { get; set; }
-        public string SustainableGoals { get; set; }
-        public List<Extensionist> Extensionists { get; set; }
-        public List<Organization> Organizations { get; set; }
-        public string ProposalDescription { get; set; }
-        public string PdfDocumentPath { get; set; }
-    }
+        public class Organization
+        {
+            public string Organizacion { get; set; }
+            public string Contacto { get; set; }
+        }
 
-    public class Extensionist
-    {
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string TipoNombramiento { get; set; }
-        public string Condicion { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
-    }
+        public async Task OnGetAsync(int propuestaId)
+        {
+            string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-    public class Organization
-    {
-        public string Organizacion { get; set; }
-        public string Contacto { get; set; }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                Debug.WriteLine("Conexión a la base de datos abierta correctamente.");
+
+                using (SqlCommand command = new SqlCommand("ObtenerPropuestaDetalles", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@IdPropuesta", propuestaId);
+
+                    Debug.WriteLine($"Ejecutando el procedimiento almacenado con el IdPropuesta: {propuestaId}");
+
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        // Leer los detalles de la propuesta (primer conjunto de resultados)
+                        if (await reader.ReadAsync())
+                        {
+                            Propuesta.Id = reader.GetInt32(reader.GetOrdinal("ID"));
+                            Propuesta.NombreProyecto = reader.GetString(reader.GetOrdinal("NombrePropuesta"));
+                            Propuesta.IdentificacionAcuerdo = reader.GetString(reader.GetOrdinal("IdentificacionAcuerdo"));
+                            Propuesta.TipoExtension = reader.GetString(reader.GetOrdinal("TipoExtension"));
+                            Propuesta.Descripcion = reader.GetString(reader.GetOrdinal("Descripcion"));
+                            Propuesta.ObjetivoDesarrolloSostenible = reader.GetString(reader.GetOrdinal("ODS"));
+                            Propuesta.DeclaracionFinal = reader.GetString(reader.GetOrdinal("DeclaracionFinal"));
+                            Propuesta.FechaAprobacion = reader.GetDateTime(reader.GetOrdinal("FechaAprobacion"));
+                            Propuesta.FechaSolicitud = reader.GetDateTime(reader.GetOrdinal("FechaSolicitud"));
+                            Propuesta.RutaArchivo = reader.GetString(reader.GetOrdinal("RutaArchivo"));
+
+                            // Ajustar la RutaArchivo para la URL de GitHub
+                            Propuesta.RutaArchivo = Propuesta.RutaArchivo.Replace(@"Pages\PDF\", ""); // Eliminar 'Pages/PDF/' de la ruta
+                            Propuesta.UrlArchivo = $"https://raw.githubusercontent.com/fmasis25/DIS_prototipo/main/ProyectoVie/Pages/PDF/{Propuesta.RutaArchivo}";
+
+                            Debug.WriteLine($"Propuesta cargada: {Propuesta.NombreProyecto}, ID: {Propuesta.Id}, URL: {Propuesta.UrlArchivo}");
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"No se encontraron detalles para la propuesta con IdPropuesta: {propuestaId}");
+                        }
+
+                        // Mover al segundo conjunto de resultados: Extensionistas
+                        if (await reader.NextResultAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                var extensionist = new Extensionist
+                                {
+                                    Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
+                                    Apellido = reader.GetString(reader.GetOrdinal("Apellido")),
+                                    TipoNombramiento = reader.GetString(reader.GetOrdinal("Nombramiento")),
+                                    Condicion = reader.GetString(reader.GetOrdinal("Condicion")),
+                                    FechaInicio = reader.GetDateTime(reader.GetOrdinal("FechaInicio")),
+                                    FechaFin = reader.GetDateTime(reader.GetOrdinal("FechaFin"))
+                                };
+                                Extensionists.Add(extensionist);
+                                Debug.WriteLine($"Extensionista añadido: {extensionist.Nombre} {extensionist.Apellido}");
+                            }
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"No se encontraron extensionistas para la propuesta con IdPropuesta: {propuestaId}");
+                        }
+
+                        // Mover al tercer conjunto de resultados: Organizaciones
+                        if (await reader.NextResultAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                var organization = new Organization
+                                {
+                                    Organizacion = reader.GetString(reader.GetOrdinal("NombreInstitucion")),
+                                    Contacto = reader.GetString(reader.GetOrdinal("Contacto"))
+                                };
+                                Organizations.Add(organization);
+                                Debug.WriteLine($"Organización añadida: {organization.Organizacion}");
+                            }
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"No se encontraron organizaciones para la propuesta con IdPropuesta: {propuestaId}");
+                        }
+                    }
+                }
+            }
+        }
+
+        public async Task<IActionResult> OnGetVerPdfAsync(string rutaArchivo)
+        {
+            if (string.IsNullOrWhiteSpace(rutaArchivo))
+            {
+                return NotFound("La ruta del archivo está vacía.");
+            }
+
+            try
+            {
+                // Intentar descargar el archivo
+                var httpClient = new HttpClient();
+                var response = await httpClient.GetAsync(rutaArchivo);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var fileBytes = await response.Content.ReadAsByteArrayAsync();
+                    return File(fileBytes, "application/pdf", Path.GetFileName(rutaArchivo));
+                }
+                else
+                {
+                    Debug.WriteLine($"Error al descargar el archivo: {response.StatusCode}");
+                    return NotFound($"Error al descargar el archivo: {response.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Ocurrió un error: {ex.Message}");
+                return BadRequest($"Ocurrió un error: {ex.Message}");
+            }
+        }
     }
 }

@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "uwZBXaoElJwyRGp7WOIuiNfa7UdBvh1EP6vw9SL3uLY=",
-=======
   "Hash": "2rgHkOJHY7WcOuj4NyTtxzsr2IhocJF6nEqYiFCLA2Q=",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
   "Source": "ProyectoVie",
   "BasePath": "_content/ProyectoVie",
   "Mode": "Default",
@@ -14,28 +10,17 @@
     {
       "Name": "ProyectoVie\\wwwroot",
       "Source": "ProyectoVie",
-<<<<<<< HEAD
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProyectoVie.styles.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProyectoVie.styles.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "ProyectoVie.styles.css",
       "AssetKind": "All",
@@ -48,15 +33,6 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProyectoVie.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoVie.bundle.scp.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-=======
       "OriginalItemSpec": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProyectoVie.styles.css"
     },
     {
@@ -64,7 +40,6 @@
       "SourceId": "ProyectoVie",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "ProyectoVie.bundle.scp.css",
       "AssetKind": "All",
@@ -77,15 +52,6 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoVie.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\evaluadores.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "OriginalItemSpec": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoVie.bundle.scp.css"
     },
     {
@@ -93,7 +59,6 @@
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/evaluadores.css",
       "AssetKind": "All",
@@ -109,17 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\evaluadores.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\evaluar.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\evaluar.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/evaluar.css",
       "AssetKind": "All",
@@ -135,17 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\evaluar.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\fondo-tec.jpg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\fondo-tec.jpg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/fondo-tec.jpg",
       "AssetKind": "All",
@@ -161,17 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\fondo-tec.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\graficos.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\graficos.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/graficos.css",
       "AssetKind": "All",
@@ -187,17 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\graficos.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\eliminar.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\eliminar.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/eliminar.svg",
       "AssetKind": "All",
@@ -213,17 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\eliminar.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\estadisticas.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\estadisticas.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/estadisticas.svg",
       "AssetKind": "All",
@@ -239,17 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\estadisticas.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lapiz.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lapiz.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/lapiz.svg",
       "AssetKind": "All",
@@ -265,17 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\lapiz.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lupa.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\lupa.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/lupa.svg",
       "AssetKind": "All",
@@ -291,17 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\lupa.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\perfil.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\perfil.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/perfil.svg",
       "AssetKind": "All",
@@ -317,17 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\perfil.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\plus.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\plus.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/plus.svg",
       "AssetKind": "All",
@@ -343,17 +245,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\plus.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\propuesta.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\propuesta.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/propuesta.svg",
       "AssetKind": "All",
@@ -369,17 +264,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\propuesta.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\salir.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\salir.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/salir.svg",
       "AssetKind": "All",
@@ -395,17 +283,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\salir.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\usuarios.svg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\icons\\usuarios.svg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/icons/usuarios.svg",
       "AssetKind": "All",
@@ -421,17 +302,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icons\\usuarios.svg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Login.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Login.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/Login.css",
       "AssetKind": "All",
@@ -447,17 +321,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\logo-tec.png",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\logo-tec.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/logo-tec.png",
       "AssetKind": "All",
@@ -473,17 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\logo-tec.png"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Lupa.png",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Lupa.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/Lupa.png",
       "AssetKind": "All",
@@ -499,17 +359,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Lupa.png"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/menua.css",
       "AssetKind": "All",
@@ -525,17 +378,10 @@
       "OriginalItemSpec": "wwwroot\\css\\menua.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menue.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menue.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/menue.css",
       "AssetKind": "All",
@@ -551,17 +397,10 @@
       "OriginalItemSpec": "wwwroot\\css\\menue.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Pagina.png",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Pagina.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/Pagina.png",
       "AssetKind": "All",
@@ -577,17 +416,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Pagina.png"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\perfil.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\perfil.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/perfil.css",
       "AssetKind": "All",
@@ -603,17 +435,10 @@
       "OriginalItemSpec": "wwwroot\\css\\perfil.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\ProfilePic.png",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\ProfilePic.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/ProfilePic.png",
       "AssetKind": "All",
@@ -629,17 +454,10 @@
       "OriginalItemSpec": "wwwroot\\css\\ProfilePic.png"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Salir.png",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Salir.png",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/Salir.png",
       "AssetKind": "All",
@@ -655,17 +473,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Salir.png"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\site.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\site.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -681,17 +492,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.jpg",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.jpg",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/tec-logo.jpg",
       "AssetKind": "All",
@@ -707,17 +511,10 @@
       "OriginalItemSpec": "wwwroot\\css\\tec-logo.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\usuarios.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\usuarios.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "css/usuarios.css",
       "AssetKind": "All",
@@ -733,17 +530,10 @@
       "OriginalItemSpec": "wwwroot\\css\\usuarios.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\favicon.ico",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\favicon.ico",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -759,17 +549,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\js\\site.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\js\\site.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -785,17 +568,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -811,17 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -837,17 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -863,17 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -889,17 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -915,17 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -941,17 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -967,17 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -993,17 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1019,17 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1045,17 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1071,17 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1097,17 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1123,17 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1149,17 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1175,17 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1201,17 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1227,17 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1253,17 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1279,17 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1305,17 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1331,17 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1357,17 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1383,17 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1409,17 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1435,17 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1461,17 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1487,17 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1513,17 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1539,17 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1565,17 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1591,17 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1617,17 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1643,17 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1669,17 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1695,17 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1721,17 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1747,17 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1773,17 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1799,17 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1825,17 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1851,17 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1877,17 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1903,17 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1929,17 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1955,17 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1981,17 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2007,17 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2033,17 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2059,17 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2085,17 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2111,17 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2137,17 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2163,17 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2189,17 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2215,17 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2241,17 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "SourceId": "ProyectoVie",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
-=======
       "Identity": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ProyectoVie",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\wwwroot\\",
->>>>>>> 179ae2ae089b319e99c68d1c87ae08c3fa24c3ca
       "BasePath": "_content/ProyectoVie",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

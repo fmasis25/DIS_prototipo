@@ -305,7 +305,7 @@
         }
 
         function mostrarDatos(event) {
-            // event.preventDefault(); // Esto previene el envío por defecto
+            event.preventDefault(); // Esto previene el envío por defecto
             const formData = new FormData(document.getElementById('propuestaForm'));
             console.log([...formData.entries()]);
             alert("Datos enviados exitosamente");

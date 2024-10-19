@@ -1,5 +1,5 @@
 ﻿@page
-@model ProyectoVie.Pages.VieWeb.Pages_VieWeb_ConsultarPropuesta
+@model ProyectoVie.Pages.VieWeb.ConsultarPropuestaModel
 @{
     ViewData["Title"] = "Consulta de Propuestas";
 }
@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/ProposalRegistration.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <title>Sistema de Propuestas - Consulta</title>
     <style>
@@ -19,7 +18,6 @@
             overflow-y: scroll;
         }
 
-        /* Header Styles */
         .header {
             display: flex;
             justify-content: space-between;
@@ -34,46 +32,12 @@
             box-sizing: border-box;
         }
 
-            .header a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
         .tec-logo {
-            height: 20px; /* Ajusta la altura para que sea menos alta */
-            max-width: 100%; /* Mantiene el largo adecuado */
-            object-fit: contain; /* Asegura que no se distorsione */
-        }
-
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 70%; /* Aumenta el ancho de la barra de búsqueda */
-        }
-
-            .search-bar input {
-                width: 80%; /* Aprovecha el espacio disponible */
-                padding: 10px;
-                border-radius: 20px;
-                border: 1px solid #ccc;
-            }
-
-        .icon, .profile-pic {
-            width: 35px; /* Ajusta el tamaño de los íconos */
-            height: 35px; /* Asegura que tengan el mismo tamaño */
-            margin-left: 10px;
-        }
-
-        /* Responsiveness for the SVG icons */
-        .header img, .icon, .profile-pic {
+            height: 50px;
             max-width: 100%;
-            height: auto;
+            object-fit: contain;
         }
 
-        /* Sidebar Styles */
         .sidebar {
             width: 200px;
             background-color: #0a4275;
@@ -88,27 +52,24 @@
             align-items: center;
         }
 
-            .sidebar .option, .sidebar .exit-option {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 20px 0;
+        .option, .exit-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+            .option img, .exit-option img {
+                height: 70px;
+                width: auto;
             }
 
-                .sidebar .option img,
-                .sidebar .exit-option img {
-                    width: 80px;
-                    height: auto;
-                    margin-bottom: 5px;
-                }
+        .sidebar span {
+            font-size: 30px;
+            margin-top: 10px;
+        }
 
-                .sidebar .option span,
-                .sidebar .exit-option span {
-                    font-size: 23px;
-                    text-align: center;
-                }
-
-        /* Main Content Styles */
         .main-content {
             margin-left: 220px;
             padding: 20px;
@@ -117,7 +78,6 @@
             height: calc(100vh - 60px);
         }
 
-        /* Form Styles */
         .form-container {
             background-color: #ececec;
             border-radius: 10px;
@@ -125,52 +85,32 @@
         }
 
         .form-field {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-            .form-field label {
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            .form-field input,
-            .form-field select,
-            .form-field textarea {
-                width: 100%;
-                padding: 10px;
-                border-radius: 5px;
-                border: 1px solid #ccc;
-            }
-
-        .btn-container {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 10px;
-        }
-
-        button {
-            padding: 10px 15px;
-            border: none;
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
+            resize: vertical;
         }
 
-        .btn-add {
-            background-color: #5cb85c;
-            color: white;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
         }
 
-        .btn-remove {
-            background-color: #d9534f;
-            color: white;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
         }
 
-        .btn-submit {
-            background-color: #28a745;
-            color: white;
-            padding: 15px 20px;
-            font-size: 16px;
+        th {
+            background-color: #f2f2f2;
         }
 
         h1 {
@@ -178,118 +118,132 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
+        .btn-back {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="/">
-            <img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
-        </a>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar..." aria-label="Buscar propuestas">
-            <a href="/buscar">
-                <img src="~/css/icons/lupa.svg" alt="Buscar" class="icon" aria-hidden="true">
-            </a>
-            <a href="/perfil">
-                <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
-            </a>
-        </div>
+        <a href="/"><img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
     </header>
 
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
-            </a>
+            <a href="/propuestas"><img src="~/css/pagina.png" /></a>
             <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/salir">
-                <img src="~/css/icons/salir.svg" alt="Salir">
-            </a>
+            <a href="/salir"><img src="~/css/salir.png" /></a>
             <span>Salir</span>
         </div>
     </div>
+
     <div class="main-content">
         <div class="form-container">
-            <h1>Consulta de Propuestas de Extensión</h1>
-            <h2>DATOS INSTANCIA ACADÉMICA</h2>
-            <div class="form-field">
-                <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
-                <p id="agreement-number">12345</p>
-            </div>
-            <div class="form-field">
-                <label for="approval-date">Fecha de aprobación:</label>
-                <p id="approval-date">2024-01-01</p>
-            </div>
-            <div class="form-field">
-                <label for="project-condition">Condición actual del proyecto:</label>
-                <p id="project-condition">Activo</p>
-            </div>
+            <h1>Consulta de Propuesta</h1>
+            <form id="consultaForm" method="post">
+                <h2>DATOS INSTANCIA ACADÉMICA</h2>
+                <div class="form-field">
+                    <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="approval-date">Fecha de aprobación:</label>
+                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="project-description">Descripción del proyecto:</label>
+                    <textarea id="project-description" name="Descripcion" readonly>@Model.Propuesta.Descripcion</textarea>
+                </div>
 
-            <h2>DATOS DEL PROYECTO</h2>
-            <div class="form-field">
-                <label for="project-name">Nombre del proyecto:</label>
-                <p id="project-name">Proyecto de Ejemplo</p>
-            </div>
-            <div class="form-field">
-                <label for="extension-type">Tipo de extensión:</label>
-                <p id="extension-type">Educativa</p>
-            </div>
-            <div class="form-field">
-                <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                <textarea id="sustainable-goals" class="ods-description" readonly aria-label="Descripción del ODS">Reducción de la pobreza</textarea>
-            </div>
+                <h2>DATOS DEL PROYECTO</h2>
+                <div class="form-field">
+                    <label for="project-name">Nombre del proyecto:</label>
+                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="extension-type">Tipo de extensión:</label>
+                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly>@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                </div>
 
-            <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre y Apellidos</th>
-                        <th>Escuela/Instancia Académica</th>
-                        <th>Tipo de Nombramiento</th>
-                        <th>Condición</th>
-                        <th>Periodo de Participación</th>
-                    </tr>
-                </thead>
-                <tbody id="extensionist-table-body">
-                    <tr>
-                        <td><p>Juan Pérez</p></td>
-                        <td><p>Escuela de Ciencias</p></td>
-                        <td><p>Profesor</p></td>
-                        <td><p>Activo</p></td>
-                        <td><p>2024</p></td>
-                    </tr>
-                </tbody>
-            </table>
+                <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
+                <div id="extensionist-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Tipo de Nombramiento</th>
+                                <th>Condición</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
+                            </tr>
+                        </thead>
+                        <tbody id="extensionist-table-body">
+                            @foreach (var extensionista in Model.Extensionists)
+                            {
+                                <tr>
+                                    <td>@extensionista.Nombre</td>
+                                    <td>@extensionista.Apellido</td>
+                                    <td>@extensionista.TipoNombramiento</td>
+                                    <td>@extensionista.Condicion</td>
+                                    <td>@extensionista.FechaInicio.ToString("yyyy-MM-dd")</td>
+                                    <td>@extensionista.FechaFin.ToString("yyyy-MM-dd")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
 
-            <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre y Apellidos (Contacto Principal)</th>
-                        <th>Institución u Organización</th>
-                        <th>Contacto (Correo Electrónico y/o Teléfono)</th>
-                    </tr>
-                </thead>
-                <tbody id="organization-table-body">
-                    <tr>
-                        <td><p>María López</p></td>
-                        <td><p>Organización Ejemplo</p></td>
-                        <td><p>maria@example.com</p></td>
-                    </tr>
-                </tbody>
-            </table>
+                <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
+                <div id="organization-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Institución u Organización</th>
+                                <th>Contacto (Correo Electrónico y/o Teléfono)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="organization-table-body">
+                            @foreach (var organizacion in Model.Organizations)
+                            {
+                                <tr>
+                                    <td>@organizacion.Organizacion</td>
+                                    <td>@organizacion.Contacto</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
 
-            <h2>DESCRIPCIÓN BREVE DE LA PROPUESTA</h2>
-            <div class="form-field">
-                <textarea id="proposal-description" class="proposal-description" readonly aria-label="Descripción de la propuesta">Esta es una descripción breve de la propuesta de extensión.</textarea>
-            </div>
+                <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
+                <div class="form-field">
+                    <label for="proposal-final">Declaración final:</label>
+                    <textarea id="proposal-final" name="DeclaracionFinal" readonly>@Model.Propuesta.DeclaracionFinal</textarea>
+                </div>
 
-            <h2>DOCUMENTO ADJUNTO</h2>
-            <div class="form-field file-upload">
-                <p>Archivo PDF: <a href="path/to/document.pdf" target="_blank">Ver documento</a></p>
-            </div>
+                <div class="form-field">
+                    <label for="pdf-upload">Archivo PDF:</label>
+                    <a asp-page-handler="VerPdf" asp-route-rutaArchivo="@Model.Propuesta.UrlArchivo" class="btn btn-primary">Descargar PDF</a>
+                </div>
+
+
+                <div class="form-field">
+                    <a href="/propuestas" class="btn-back">Regresar</a>
+                </div>
+            </form>
         </div>
     </div>
 </body>
