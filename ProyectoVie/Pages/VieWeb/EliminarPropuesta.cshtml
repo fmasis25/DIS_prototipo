@@ -1,0 +1,268 @@
+﻿@page
+@model ProyectoVie.Pages.VieWeb.EliminarPropuestaModel
+@{
+    ViewData["Title"] = "Eliminar Propuesta";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <title>Sistema de Propuestas - Eliminar</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d9d9d9;
+            padding: 10px 20px;
+            border-bottom: 2px solid #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .tec-logo {
+            height: 50px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #0a4275;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option, .exit-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+            .option img, .exit-option img {
+                height: 70px;
+                width: auto;
+            }
+
+        .sidebar span {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            margin-top: 60px;
+            overflow-y: auto;
+            height: calc(100vh - 60px);
+        }
+
+        .form-container {
+            background-color: #ececec;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-delete {
+            background-color: #dc3545; /* Color rojo para eliminar */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .alert {
+            color: red; /* Estilo para mensajes de error */
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/"><img src="~/css/tec-logo.jpg" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
+    </header>
+
+    <div class="sidebar">
+        <div class="option">
+            <a href="/propuestas"><img src="~/css/pagina.png" /></a>
+            <span>Mis Propuestas</span>
+        </div>
+        <div class="exit-option">
+            <a href="/salir"><img src="~/css/salir.png" /></a>
+            <span>Salir</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Eliminar Propuesta</h1>
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert">
+                    @ViewData.ModelState[""].Errors[0].ErrorMessage
+                </div>
+            }
+            <form id="eliminarForm" method="post" asp-page-handler="EliminarPropuesta">
+                <input type="hidden" name="Id" value="@Model.Propuesta.Id" /> <!-- Campo oculto para el ID -->
+
+                <h2>DATOS INSTANCIA ACADÉMICA</h2>
+                <div class="form-field">
+                    <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="approval-date">Fecha de aprobación:</label>
+                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="project-description">Descripción del proyecto:</label>
+                    <textarea id="project-description" name="Descripcion" readonly>@Model.Propuesta.Descripcion</textarea>
+                </div>
+
+                <h2>DATOS DEL PROYECTO</h2>
+                <div class="form-field">
+                    <label for="project-name">Nombre del proyecto:</label>
+                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="extension-type">Tipo de extensión:</label>
+                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" readonly />
+                </div>
+                <div class="form-field">
+                    <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly>@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                </div>
+
+                <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
+                <div id="extensionist-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Tipo de Nombramiento</th>
+                                <th>Condición</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
+                            </tr>
+                        </thead>
+                        <tbody id="extensionist-table-body">
+                            @foreach (var extensionista in Model.Extensionists)
+                            {
+                                <tr>
+                                    <td>@extensionista.Nombre</td>
+                                    <td>@extensionista.Apellido</td>
+                                    <td>@extensionista.TipoNombramiento</td>
+                                    <td>@extensionista.Condicion</td>
+                                    <td>@extensionista.FechaInicio.ToString("yyyy-MM-dd")</td>
+                                    <td>@extensionista.FechaFin.ToString("yyyy-MM-dd")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
+                <div id="organization-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Institución u Organización</th>
+                                <th>Contacto (Correo Electrónico y/o Teléfono)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="organization-table-body">
+                            @foreach (var organizacion in Model.Organizations)
+                            {
+                                <tr>
+                                    <td>@organizacion.Organizacion</td>
+                                    <td>@organizacion.Contacto</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
+                <div class="form-field">
+                    <label for="proposal-final">Declaración final:</label>
+                    <textarea id="proposal-final" name="DeclaracionFinal" readonly>@Model.Propuesta.DeclaracionFinal</textarea>
+                </div>
+
+                <div class="form-field">
+                    <button type="submit" class="btn-delete">Eliminar Propuesta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
