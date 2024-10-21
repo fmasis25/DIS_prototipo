@@ -7,8 +7,6 @@ D:\Descargas\DIS_prototipo\ProyectoVie\bin\Debug\net8.0\ProyectoVie.runtimeconfi
 D:\Descargas\DIS_prototipo\ProyectoVie\bin\Debug\net8.0\ProyectoVie.dll
 D:\Descargas\DIS_prototipo\ProyectoVie\bin\Debug\net8.0\ProyectoVie.pdb
 D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.GeneratedMSBuildEditorConfig.editorconfig
-D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.AssemblyInfoInputs.cache
-D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.AssemblyInfo.cs
 D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.csproj.CoreCompileInputs.cache
 D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.MvcApplicationPartsAssemblyInfo.cache
 D:\Descargas\DIS_prototipo\ProyectoVie\obj\Debug\net8.0\ProyectoVie.RazorAssemblyInfo.cache

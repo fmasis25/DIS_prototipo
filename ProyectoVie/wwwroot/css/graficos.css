@@ -9,7 +9,7 @@
 
 .header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
     align-items: center;
     background-color: #d9d9d9;
     padding: 10px 20px;
@@ -28,38 +28,27 @@
     margin-right: 20px;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 100%; /* Aprovecha todo el espacio */
-    gap: 10px;
-}
-
-    .search-bar input {
-        padding: 8px;
-        border-radius: 20px;
-        border: 1px solid #ccc;
-        flex-grow: 1; /* Hace que la barra de búsqueda se ajuste a todo el espacio disponible */
-    }
-
-.icon, .profile-pic {
+.profile-pic {
     width: 40px;
     height: auto;
+    margin-left: auto;
+    margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
 }
 
 .sidebar {
-    width: 220px;
+    width: 200px;
     background-color: #0a4275;
     color: white;
     padding: 20px;
     position: fixed;
-    top: 60px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    box-sizing: border-box;
+    height: 100%;
+    top: 60px; /* Asegúrate de que comience justo debajo del header */
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
     .sidebar .option, .sidebar .exit-option {
