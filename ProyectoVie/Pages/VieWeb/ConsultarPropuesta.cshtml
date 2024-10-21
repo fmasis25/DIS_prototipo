@@ -15,12 +15,14 @@
             font-family: 'Nunito', sans-serif;
             margin: 0;
             padding: 0;
-            overflow-y: scroll;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
             align-items: center;
             background-color: #d9d9d9;
             padding: 10px 20px;
@@ -28,47 +30,61 @@
             position: fixed;
             width: 100%;
             top: 0;
+            height: 60px;
             z-index: 1000;
             box-sizing: border-box;
         }
 
         .tec-logo {
             height: 50px;
-            max-width: 100%;
-            object-fit: contain;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: auto;
+            margin-left: auto;
+            margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
         }
 
         .sidebar {
-            width: 200px;
+            width: 180px; /* Ajusto un poco el ancho */
             background-color: #0a4275;
             color: white;
-            padding: 20px;
+            padding: 15px;
             position: fixed;
             height: 100%;
             top: 60px;
+            left: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start; /* Distribuye bien las opciones */
+            align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
+            z-index: 1000;
         }
 
-        .option, .exit-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-            .option img, .exit-option img {
-                height: 70px;
-                width: auto;
+            .sidebar .option, .sidebar .exit-option {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 15px 0; /* Reducimos un poco el margen para compactar */
             }
 
-        .sidebar span {
-            font-size: 30px;
-            margin-top: 10px;
-        }
+            .sidebar .exit-option {
+                margin-bottom: 20px;
+            }
+
+                .sidebar .option a img, .sidebar .exit-option a img {
+                    width: 30px; /* Íconos más pequeños para un look más limpio */
+                    height: auto;
+                    margin-right: 10px; /* Espacio entre ícono y texto */
+                }
+
+                .sidebar .option span, .sidebar .exit-option span {
+                    font-size: 16px; /* Mantener el texto legible */
+                    text-align: left;
+                }
 
         .main-content {
             margin-left: 220px;
@@ -143,11 +159,15 @@
 
     <div class="sidebar">
         <div class="option">
-            <a href="/propuestas"><img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" /></a>
-            <span>Mis Propuestas</span>
+            <a href="/VieWeb/AgregarPropuesta">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" alt="Agregar Propuestas">
+            </a>
+            <span>Agregar Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/salir"><img src="~/css/icons/salir.svg" alt="Salir">
+            <a href="/salir">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
             <span>Salir</span>
         </div>
     </div>

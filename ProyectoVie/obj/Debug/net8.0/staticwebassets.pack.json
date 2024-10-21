@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\ProyectoVie.bundle.scp.css"
     },
     {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Lupa.svg",
+      "PackagePath": "staticwebassets\\css\\Lupa.svg"
+    },
+    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Pagina.svg",
       "PackagePath": "staticwebassets\\css\\Pagina.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\ProfilePic.svg",
+      "PackagePath": "staticwebassets\\css\\ProfilePic.svg"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\Salir.svg",
@@ -69,6 +77,10 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\logo-tec.png",
+      "PackagePath": "staticwebassets\\css\\logo-tec.png"
+    },
+    {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\menua.css",
       "PackagePath": "staticwebassets\\css\\menua.css"
     },
@@ -87,6 +99,10 @@
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\stats-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\css\\stats-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.jpg",
+      "PackagePath": "staticwebassets\\css\\tec-logo.jpg"
     },
     {
       "Id": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\tec-logo.png",

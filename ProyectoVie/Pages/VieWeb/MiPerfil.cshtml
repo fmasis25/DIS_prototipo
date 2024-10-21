@@ -26,48 +26,12 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        @if (Model.Rol == 1)
-        {
-            <div class="option">
-                <a href="/VieWeb/MenuExtensionista">
-                    <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
-                </a>
-                <span>Mis Propuestas</span>
-            </div>
-            <div class="exit-option">
-                <a href="/VieWeb/Login">
-                    <img src="~/css/icons/salir.svg" alt="Salir">
-                </a>
-                <span>Salir</span>
-            </div>
-        }
-        else if (Model.Rol == 2)
-        {
-            <div class="option">
-                <a href="/VieWeb/MenuAdmin">
-                    <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
-                </a>
-                <span>Propuestas</span>
-            </div>
-            <div class="option">
-                <a href="/VieWeb/Usuarios">
-                    <img src="~/css/icons/usuarios.svg" alt="Usuarios">
-                </a>
-                <span>Usuarios</span>
-            </div>
-            <div class="option">
-                <a href="/VieWeb/Graficos">
-                    <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
-                </a>
-                <span>Estadísticas</span>
-            </div>
-            <div class="exit-option">
-                <a href="/VieWeb/Login">
-                    <img src="~/css/icons/salir.svg" alt="Salir">
-                </a>
-                <span>Salir</span>
-            </div>
-        }
+        <div class="exit-option">
+            <a href="/VieWeb/Login">
+                <img src="~/css/icons/salir.svg" alt="Salir">
+            </a>
+            <span>Salir</span>
+        </div>
     </div>
 
     <!-- Main content -->

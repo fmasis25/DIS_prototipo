@@ -36,39 +36,52 @@
 }
 
 .sidebar {
-    width: 200px;
+    width: 180px; /* Ajusto un poco el ancho */
     background-color: #0a4275;
     color: white;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
     height: 100%;
-    top: 60px; /* Asegúrate de que comience justo debajo del header */
+    top: 60px;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Distribuye bien las opciones */
+    align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
     z-index: 1000;
 }
 
     .sidebar .option, .sidebar .exit-option {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        margin: 30px 0;
+        margin: 15px 0; /* Reducimos un poco el margen para compactar */
+    }
+
+    .sidebar .exit-option {
+        margin-bottom: 20px;
     }
 
         .sidebar .option a img, .sidebar .exit-option a img {
-            width: 80px;
-            max-width: 100%;
+            width: 30px; /* Íconos más pequeños para un look más limpio */
             height: auto;
-            margin-bottom: 5px;
+            margin-right: 10px; /* Espacio entre ícono y texto */
         }
 
         .sidebar .option span, .sidebar .exit-option span {
-            font-size: 18px;
-            text-align: center;
+            font-size: 16px; /* Mantener el texto legible */
+            text-align: left;
         }
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px; /* Sidebar más pequeño para pantallas pequeñas */
+    }
+
+        .sidebar img {
+            max-width: 25px; /* Tamaño más pequeño en pantallas chicas */
+        }
+}
 
 .main-content {
     margin-left: 240px;
@@ -119,8 +132,3 @@
     display: block;
 }
 
-@media (max-width: 768px) {
-    .sidebar img {
-        max-width: 40px;
-    }
-}
