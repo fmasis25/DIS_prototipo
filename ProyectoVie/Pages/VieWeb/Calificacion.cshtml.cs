@@ -75,10 +75,10 @@ namespace ProyectoVie.Pages.VieWeb
 
         public void OnGet()
         {
-            // Intenta obtener el parámetro de la URL
+          
             if (Request.Query.ContainsKey("propuestaId"))
             {
-                // Asegúrate de que el valor se puede convertir a un entero
+             
                 if (int.TryParse(Request.Query["propuestaId"], out var propuestaId))
                 {
                     PropuestaId = propuestaId; // Asigna el valor a la propiedad

@@ -1,19 +1,18 @@
-﻿/* Fondo gris para toda la página */
-body {
+﻿body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0; /* Color de fondo gris claro */
+    background-color: #f0f0f0; 
     font-family: 'Nunito', sans-serif;
     margin: 0;
 }
 
-/* Barra azul superior */
+
 .header-tec {
     width: 100%;
-    background-color: #0a4275; /* Color azul del fondo */
+    background-color: #0a4275; 
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -23,17 +22,17 @@ body {
     left: 0;
 }
 
-/* Estilos para el logo */
+
 .tec-barra-logo {
     max-width: 200px;
     height: auto;
-    background-color: #0a4275; /* Hacer el fondo del logo del mismo color que la barra */
-    padding: 5px; /* Añadir un pequeño margen interno si es necesario */
+    background-color: #0a4275; 
+    padding: 5px; 
     display: block;
 }
 
 
-/* Contenedor principal del login */
+
 .login-container {
     width: 420px;
     background: white;
@@ -41,24 +40,24 @@ body {
     padding: 0px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin-top: 120px; /* Mueve el cuadro de login hacia abajo para no superponerlo con la barra */
+    margin-top: 120px; 
 }
 
-/* Imagen dentro del formulario */
+
 .form-image {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ccc;
 }
 
-/* Estilo para el título dentro del formulario */
+
 .login-rectangulo h1 {
     font-size: 24px;
     text-align: center;
     margin: 20px 0;
 }
 
-/* Estilos para los campos de entrada */
+
 .input-box {
     position: relative;
     margin-bottom: 20px;
@@ -82,7 +81,7 @@ body {
         color: #333;
     }
 
-    /* Estilo de los íconos */
+
     .input-box i {
         position: absolute;
         left: 10px;
@@ -92,11 +91,11 @@ body {
         font-size: 20px;
     }
 
-/* Estilos del botón */
+
 .btn-ingresar {
     width: 100%;
     padding: 10px;
-    background-color: #0a4275; /* Color del botón más oscuro */
+    background-color: #0a4275; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -110,7 +109,6 @@ body {
         background-color: #08385f;
     }
 
-/* Estilos para el enlace de "¿Olvidaste tu contraseña?" */
 .contra-olvido {
     text-align: right;
     font-size: 14px;
@@ -126,7 +124,7 @@ body {
             text-decoration: underline;
         }
 
-/* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -135,7 +133,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .modal-content {

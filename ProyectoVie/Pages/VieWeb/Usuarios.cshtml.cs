@@ -89,7 +89,7 @@ namespace ProyectoVie.Pages.VieWeb
                     command.Parameters.AddWithValue("@InContrasena", NuevoUsuario.Contrasena);
                     command.Parameters.AddWithValue("@InID_rol", NuevoUsuario.Rol);
                     command.Parameters.AddWithValue("@InFecha_Registro", DateTime.Now);
-                    command.Parameters.AddWithValue("@InID_escuela", 1); // Ajusta según sea necesario
+                    command.Parameters.AddWithValue("@InID_escuela", 1); 
 
                     int rowsAffected = command.ExecuteNonQuery();
 

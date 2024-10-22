@@ -9,7 +9,7 @@
 
 .header {
     display: flex;
-    justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
+    justify-content: space-between; 
     align-items: center;
     background-color: #d9d9d9;
     padding: 10px 20px;
@@ -36,7 +36,7 @@
 }
 
 .sidebar {
-    width: 200px; /* Aumentar un poco el ancho para evitar que el contenido se vea muy pegado */
+    width: 200px; 
     background-color: #0a4275;
     color: white;
     padding: 15px;
@@ -84,13 +84,13 @@
 }
 
 .main-content {
-    margin-left: 220px; /* Ajustar el margen izquierdo para que el contenido no esté pegado al sidebar */
+    margin-left: 220px; 
     padding: 20px;
     margin-top: 80px;
-    width: calc(100% - 220px); /* Asegura que el contenido use el espacio correcto */
-    min-height: calc(100vh - 80px); /* Hace que ocupe toda la altura disponible */
+    width: calc(100% - 220px); 
+    min-height: calc(100vh - 80px); 
     box-sizing: border-box;
-    overflow-y: auto; /* Agregamos scroll si el contenido es muy grande */
+    overflow-y: auto; 
 }
 
 .usuarios-container {

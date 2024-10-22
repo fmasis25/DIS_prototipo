@@ -9,7 +9,7 @@
 
 .header {
     display: flex;
-    justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
+    justify-content: space-between; 
     align-items: center;
     background-color: #d9d9d9;
     padding: 10px 20px;
@@ -32,11 +32,11 @@
     width: 40px;
     height: auto;
     margin-left: auto;
-    margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
+    margin-right: 0; 
 }
 
 .sidebar {
-    width: 180px; /* Ajusto un poco el ancho */
+    width: 180px;
     background-color: #0a4275;
     color: white;
     padding: 15px;
@@ -46,8 +46,8 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Distribuye bien las opciones */
-    align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
+    justify-content: flex-start; 
+    align-items: flex-start; 
     z-index: 1000;
 }
 
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 15px 0; /* Reducimos un poco el margen para compactar */
+        margin: 15px 0;
     }
 
     .sidebar .exit-option {
@@ -63,23 +63,23 @@
     }
 
         .sidebar .option a img, .sidebar .exit-option a img {
-            width: 30px; /* Íconos más pequeños para un look más limpio */
+            width: 30px; 
             height: auto;
-            margin-right: 10px; /* Espacio entre ícono y texto */
+            margin-right: 10px;
         }
 
         .sidebar .option span, .sidebar .exit-option span {
-            font-size: 16px; /* Mantener el texto legible */
+            font-size: 16px; 
             text-align: left;
         }
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 150px; /* Sidebar más pequeño para pantallas pequeñas */
+        width: 150px; 
     }
 
         .sidebar img {
-            max-width: 25px; /* Tamaño más pequeño en pantallas chicas */
+            max-width: 25px; 
         }
 }
 
@@ -97,7 +97,7 @@ h1 {
     color: #0a4275;
 }
 
-/* Tabla para mostrar los datos del perfil */
+
 .perfil-table {
     width: 100%;
     border-collapse: collapse;
@@ -122,21 +122,20 @@ h1 {
         color: #333;
     }
 
-        /* Añadir un poco de estilo para la visualización de los datos */
+      
         .perfil-table td:first-child {
             font-weight: bold;
         }
 
-/* Estilo adicional para mantener la simetría y el balance */
+
 .perfil-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 80%; /* Ajusta el ancho para que se vea más centrado */
+    width: 80%; 
 }
 
-/* Estilo del contenedor de mensajes de error y éxito */
 .message-error {
     color: red;
     margin-bottom: 20px;

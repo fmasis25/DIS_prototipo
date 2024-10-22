@@ -90,7 +90,7 @@
     </main>
 
     <script>
-        // Simulación del evento Guardar
+  
         document.querySelectorAll('.btnGuardar').forEach(button => {
             button.addEventListener('click', function () {
                 let cedula = this.getAttribute('data-cedula');
@@ -99,18 +99,18 @@
                 let rol = fila.querySelector('input[name="Rol"]').value;
                 let contrasena = fila.querySelector('input[name="Contrasena"]').value;
 
-                // Actualizar visualmente los valores sin hacer petición al servidor
+               
                 alert('Usuario con cédula ' + cedula + ' actualizado. Correo: ' + correo + ', Rol: ' + rol + ', Contraseña: ' + contrasena);
             });
         });
 
-        // Simulación del evento Eliminar
+   
         document.querySelectorAll('.btnEliminar').forEach(button => {
             button.addEventListener('click', function () {
                 let cedula = this.getAttribute('data-cedula');
 
                 if (confirm('¿Estás seguro de eliminar este usuario?')) {
-                    // Eliminar visualmente la fila del usuario
+                
                     let fila = document.getElementById('fila_' + cedula);
                     fila.remove();
                     alert('Usuario con cédula ' + cedula + ' eliminado.');

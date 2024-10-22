@@ -14,7 +14,7 @@
 </head>
 <body>
     <style>
-        /* Añadir estilos para mejorar la visibilidad de la tabla */
+       
         table {
             width: 100%;
             border-collapse: collapse;
@@ -37,21 +37,21 @@
             padding: 6px;
         }
 
-        /* Hacer el checkbox más grande */
+    
         input[type="checkbox"] {
             width: 30px; /* Ajusta el tamaño del checkbox */
             height: 30px; /* Ajusta el tamaño del checkbox */
             margin: 0 auto; /* Centra el checkbox dentro de su contenedor */
-            display: block; /* Asegura que se comporte como un bloque y ocupe todo el ancho disponible */
+            display: block; 
         }
 
-        /* Hacer que la tabla sea scrolleable */
+     
         .rubrica-container {
             max-height: 400px;
             overflow-y: auto;
         }
 
-        /* Estilo para el total que no será editable */
+
         .total-input {
             background-color: #f9f9f9;
             text-align: center;
@@ -145,8 +145,7 @@
                             <td><input type="checkbox" name="CumpleProblema" disabled @(Model.CumpleProblema == 1 ? "checked" : "") aria-label="Cumple el problema que aborda"></td>
                             <td><input type="number" name="PorcentajeProblema" value="@Model.PorcentajeProblema.ToString("0.##")" readonly aria-label="Porcentaje del problema que aborda"></td>
                         </tr>
-                        <!-- Continuar con las demás filas de la tabla, aplicando el mismo patrón de accesibilidad -->
-                        <!-- Ejemplo: -->
+               
                         <tr>
                             <th scope="row">Estrategia de abordaje</th>
                             <td>

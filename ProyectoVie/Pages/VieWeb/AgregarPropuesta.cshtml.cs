@@ -84,9 +84,9 @@ namespace ProyectoVie.Pages.VieWeb
                 Debug.WriteLine("Archivo PDF detectado");
                 PrintModel();
 
-                // Define la ruta relativa donde se guardará el archivo
+              
                 string pdfDirectory = Path.Combine("Pages", "PDF");
-                RutaArchivo = Path.Combine(pdfDirectory, PdfFile.FileName); // Ajusta según tu estructura de carpetas
+                RutaArchivo = Path.Combine(pdfDirectory, PdfFile.FileName); 
 
                 try
                 {
@@ -184,7 +184,7 @@ namespace ProyectoVie.Pages.VieWeb
                                 Debug.WriteLine("No se encontraron extensionistas para insertar.");
                             }
 
-                            // ** Insertar cada Organización utilizando el ID_propuesta obtenido **
+                     
                             if (Organizations != null && Organizations.Count > 0)
                             {
                                 Debug.WriteLine($"Se encontraron {Organizations.Count} organizaciones para insertar.");
