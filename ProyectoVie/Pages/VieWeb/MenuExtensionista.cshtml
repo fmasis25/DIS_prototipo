@@ -38,16 +38,16 @@
         </div>
     </div>
 
-    <main class="main-content">
-        <h1>Mis Propuestas</h1>
+    <main class="main-content" role="main" aria-labelledby="propuestas-heading">
+        <h1 id="propuestas-heading">Mis Propuestas</h1>
 
-        <div class="propuestas-container">
+        <div class="propuestas-container" role="table" aria-label="Listado de propuestas">
             <table class="propuestas-table">
                 <thead>
                     <tr>
-                        <th>Nombre de la Propuesta</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
+                        <th scope="col">Nombre de la Propuesta</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,14 +56,14 @@
                         if ((string)propuesta["Estado"] == "Rechazada")
                         {
                             <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
+                                <td role="cell">@propuesta["NombrePropuesta"]</td>
+                                <td role="cell">@propuesta["Estado"]</td>
+                                <td role="cell">
+                                    <div class="dropdown" role="group" aria-label="Acciones para la propuesta @(propuesta["NombrePropuesta"])">
+                                        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Abrir opciones para la propuesta @(propuesta["NombrePropuesta"])">⋮</button>
                                         <div class="dropdown-content">
-                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]">Consultar</a>
-                                            <a href="/VieWeb/EliminarPropuesta?propuestaId=@propuesta["ID"]">Eliminar</a>
+                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Consultar propuesta @(propuesta["NombrePropuesta"])">Consultar</a>
+                                            <a href="/VieWeb/EliminarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Eliminar propuesta @(propuesta["NombrePropuesta"])">Eliminar</a>
                                         </div>
                                     </div>
                                 </td>
@@ -72,15 +72,15 @@
                         else if ((string)propuesta["Estado"] == "Recibida")
                         {
                             <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
+                                <td role="cell">@propuesta["NombrePropuesta"]</td>
+                                <td role="cell">@propuesta["Estado"]</td>
+                                <td role="cell">
+                                    <div class="dropdown" role="group" aria-label="Acciones para la propuesta @(propuesta["NombrePropuesta"])">
+                                        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Abrir opciones para la propuesta @(propuesta["NombrePropuesta"])">⋮</button>
                                         <div class="dropdown-content">
-                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]">Consultar</a>
-                                            <a href="/VieWeb/ModificarPropuesta?propuestaId=@propuesta["ID"]">Modificar</a>
-                                            <a href="/VieWeb/EliminarPropuesta?propuestaId=@propuesta["ID"]">Eliminar</a>
+                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Consultar propuesta @(propuesta["NombrePropuesta"])">Consultar</a>
+                                            <a href="/VieWeb/ModificarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Modificar propuesta @(propuesta["NombrePropuesta"])">Modificar</a>
+                                            <a href="/VieWeb/EliminarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Eliminar propuesta @(propuesta["NombrePropuesta"])">Eliminar</a>
                                         </div>
                                     </div>
                                 </td>
@@ -89,14 +89,14 @@
                         else if ((string)propuesta["Estado"] == "En revisión" || (string)propuesta["Estado"] == "Aceptada")
                         {
                             <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
+                                <td role="cell">@propuesta["NombrePropuesta"]</td>
+                                <td role="cell">@propuesta["Estado"]</td>
+                                <td role="cell">
+                                    <div class="dropdown" role="group" aria-label="Acciones para la propuesta @(propuesta["NombrePropuesta"])">
+                                        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Abrir opciones para la propuesta @(propuesta["NombrePropuesta"])">⋮</button>
                                         <div class="dropdown-content">
-                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]">Consultar</a>
-                                            <a href="/VieWeb/Calificacion?propuestaId=@propuesta["ID"]">Calificación</a>
+                                            <a href="/VieWeb/ConsultarPropuesta?propuestaId=@propuesta["ID"]" aria-label="Consultar propuesta @(propuesta["NombrePropuesta"])">Consultar</a>
+                                            <a href="/VieWeb/Calificacion?propuestaId=@propuesta["ID"]" aria-label="Ver calificación de la propuesta @(propuesta["NombrePropuesta"])">Calificación</a>
                                         </div>
                                     </div>
                                 </td>
@@ -107,6 +107,7 @@
             </table>
         </div>
     </main>
+
 
     <footer class="footer">
         © Tecnológico de Costa Rica

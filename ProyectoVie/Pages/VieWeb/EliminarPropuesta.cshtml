@@ -175,13 +175,13 @@
 
     <div class="sidebar">
         <div class="option">
-            <a href="/VieWeb/MenuExtensionista">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" alt="Agregar Propuestas">
+            <a href="/VieWeb/MenuExtensionista" aria-label="Mis Propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login">
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
@@ -203,34 +203,35 @@
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
                     <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
-                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" readonly />
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" readonly aria-readonly="true" />
                 </div>
                 <div class="form-field">
                     <label for="approval-date">Fecha de aprobación:</label>
-                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" readonly />
+                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" readonly aria-readonly="true" />
                 </div>
                 <div class="form-field">
                     <label for="project-description">Descripción del proyecto:</label>
-                    <textarea id="project-description" name="Descripcion" readonly>@Model.Propuesta.Descripcion</textarea>
+                    <textarea id="project-description" name="Descripcion" readonly aria-readonly="true">@Model.Propuesta.Descripcion</textarea>
                 </div>
 
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
                     <label for="project-name">Nombre del proyecto:</label>
-                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" readonly />
+                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" readonly aria-readonly="true" />
                 </div>
                 <div class="form-field">
                     <label for="extension-type">Tipo de extensión:</label>
-                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" readonly />
+                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" readonly aria-readonly="true" />
                 </div>
                 <div class="form-field">
                     <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly>@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly aria-readonly="true">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
                 </div>
 
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
                 <div id="extensionist-section">
                     <table>
+                        <caption>Datos del grupo extensionista</caption> <!-- Agregado para accesibilidad -->
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -260,6 +261,7 @@
                 <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
                 <div id="organization-section">
                     <table>
+                        <caption>Datos de instituciones, organizaciones o empresas participantes</caption> <!-- Agregado para accesibilidad -->
                         <thead>
                             <tr>
                                 <th>Institución u Organización</th>
@@ -281,11 +283,11 @@
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
                 <div class="form-field">
                     <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" readonly>@Model.Propuesta.DeclaracionFinal</textarea>
+                    <textarea id="proposal-final" name="DeclaracionFinal" readonly aria-readonly="true">@Model.Propuesta.DeclaracionFinal</textarea>
                 </div>
 
                 <div class="form-field">
-                    <button type="submit" class="btn-delete">Eliminar Propuesta</button>
+                    <button type="submit" class="btn-delete" aria-label="Eliminar esta propuesta">Eliminar Propuesta</button>
                 </div>
             </form>
         </div>

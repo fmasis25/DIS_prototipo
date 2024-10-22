@@ -22,48 +22,47 @@
             <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
         </a>
     </header>
-
     <!-- Sidebar izquierdo con opciones adicionales -->
-    <div class="sidebar">
+    <nav class="sidebar" role="navigation" aria-label="Menú de navegación principal">
         <div class="option">
             <!-- Mis Propuestas recarga la página actual -->
             <a href="/VieWeb/MenuAdmin">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" aria-label="Ver mis propuestas">
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="option">
             <!-- Estadísticas redirige a Gráficos -->
             <a href="/VieWeb/Graficos">
-                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas" aria-label="Ver estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
             <!-- Usuarios redirige a Usuarios -->
             <a href="/VieWeb/Usuarios">
-                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios" aria-label="Ver lista de usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
             <!-- Salir redirige a la página de Login -->
             <a href="/VieWeb/Login">
-                <img src="~/css/icons/salir.svg" alt="Salir">
+                <img src="~/css/icons/salir.svg" alt="Salir" aria-label="Cerrar sesión">
             </a>
             <span>Salir</span>
         </div>
-    </div>
+    </nav>
 
     <!-- Contenido principal -->
-    <div class="main-content">
+    <main class="main-content" role="main">
         <h1>Propuestas Recibidas</h1>
 
         <!-- Filtro por Estado o Asignaciones -->
         <div class="form-field">
             <label for="estado">Filtrar por estado:</label>
             <form method="get">
-                <select id="estado" name="estado" onchange="this.form.submit()">
+                <select id="estado" name="estado" onchange="this.form.submit()" aria-label="Filtrar propuestas por estado">
                     <option value="0">Todas</option>
                     @foreach (var estado in Model.EstadosPropuesta)
                     {
@@ -76,81 +75,55 @@
                             <option value="@estado["ID"]">@estado["Nombre"]</option>
                         }
                     }
-                    <option value="Asignadas" (Model.SelectedEstadoId = "Asignadas")>Asignadas</option> <!-- Opción "Asignadas" -->
+                    <option value="Asignadas">Asignadas</option>
                 </select>
             </form>
         </div>
 
-
         <!-- Tabla de Propuestas con scroll -->
         <div class="propuestas-container">
-            <table class="propuestas-table">
+            <table class="propuestas-table" role="table">
                 <thead>
                     <tr>
-                        <th>Nombre de la Propuesta</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
+                        <th scope="col">Nombre de la Propuesta</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var propuesta in Model.Propuestas)
                     {
-                        if ((string)propuesta["Estado"] == "Recibida") // Si el estado es 2, muestra ambos enlaces
-                        {
-                            <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
-                                        <div class="dropdown-content">
+                        <tr>
+                            <td>@propuesta["NombrePropuesta"]</td>
+                            <td>@propuesta["Estado"]</td>
+                            <td>
+                                <div class="dropdown" role="menu" aria-label="Opciones de acciones para propuesta">
+                                    <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Abrir opciones">⋮</button>
+                                    <div class="dropdown-content">
+                                        @if ((string)propuesta["Estado"] == "Recibida")
+                                        {
                                             <!-- Asignar redirige a Evaluadores -->
-                                            <a href="/VieWeb/Evaluadores?propuestaId=@propuesta["ID"]">Asignar</a>
+                                            <a href="/VieWeb/Evaluadores?propuestaId=@propuesta["ID"]" aria-label="Asignar evaluadores a la propuesta">Asignar</a>
                                             <!-- Evaluar redirige a la página de evaluación -->
-                                            <a href="/VieWeb/Evaluar?propuestaId=@propuesta["ID"]">Evaluar</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        }
-                        else if ((string)propuesta["Estado"] == "En revisión") // Si el estado es 3, muestra solo el enlace de Evaluar
-                        {
-                            <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
-                                        <div class="dropdown-content">
+                                            <a href="/VieWeb/Evaluar?propuestaId=@propuesta["ID"]" aria-label="Evaluar propuesta">Evaluar</a>
+                                        }
+                                        else if ((string)propuesta["Estado"] == "En revisión")
+                                        {
                                             <!-- Solo el enlace de Evaluar -->
-                                            <a href="/VieWeb/Evaluar?propuestaId=@propuesta["ID"]">Evaluar</a>
-                                        </div>
+                                            <a href="/VieWeb/Evaluar?propuestaId=@propuesta["ID"]" aria-label="Evaluar propuesta en revisión">Evaluar</a>
+                                        }
+                                        else if ((string)propuesta["Estado"] == "Rechazada" || (string)propuesta["Estado"] == "Aceptada")
+                                        {
+                                            <a href="/VieWeb/ConsultarNota?propuestaId=@propuesta["ID"]" aria-label="Consultar calificación de la propuesta">Calificación</a>
+                                        }
                                     </div>
-                                </td>
-                            </tr>
-                            
-                        }
-                        if ((string)propuesta["Estado"] == "Rechazada" || (string)propuesta["Estado"] == "Aceptada") // Si el estado es 2, muestra ambos enlaces
-                        {
-                            <tr>
-                                <td>@propuesta["NombrePropuesta"]</td>
-                                <td>@propuesta["Estado"]</td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">⋮</button>
-                                        <div class="dropdown-content">
-                                            <a href="/VieWeb/ConsultarNota?propuestaId=@propuesta["ID"]">Calificación</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        }
-
+                                </div>
+                            </td>
+                        </tr>
                     }
-
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
 </body>
 </html>

@@ -172,19 +172,19 @@
             <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
         </a>
         <a href="/VieWeb/MiPerfil">
-            <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
+            <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Mi Perfil">
         </a>
     </header>
 
     <div class="sidebar">
         <div class="option">
-            <a href="/VieWeb/MenuExtensionista">
-                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" alt="Mis Propuestas">
+            <a href="/VieWeb/MenuExtensionista" aria-label="Ver mis propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas" >
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login">
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
@@ -245,7 +245,8 @@
                                 <td><input type="text" name="Extensionists[0].Condicion" placeholder="Condición" required /></td>
                                 <td><input type="date" name="Extensionists[0].FechaInicio" required /></td>
                                 <td><input type="date" name="Extensionists[0].FechaFin" required /></td>
-                                <td><button type="button" class="btn-remove" onclick="removeExtensionistRow(this)">Quitar</button></td>
+                                <td><button type="button" class="btn-remove" onclick="removeExtensionistRow(this)" aria-label="Quitar extensionista">Quitar</button></td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -266,11 +267,11 @@
                             <tr>
                                 <td><input type="text" name="Organizations[0].Organizacion" placeholder="Institución u Organización" required /></td>
                                 <td><input type="text" name="Organizations[0].Contacto" placeholder="Correo Electrónico y/o Teléfono" required /></td>
-                                <td><button type="button" class="btn-remove" onclick="removeOrganizationRow(this)">Quitar</button></td>
+                                <td><button type="button" class="btn-remove" onclick="removeOrganizationRow(this)" aria-label="Quitar organización">Quitar</button></td>
                             </tr>
                         </tbody>
                     </table>
-                    <button type="button" class="btn-add" onclick="addOrganizationRow()">Agregar Organización</button>
+                    <button type="button" class="btn-add" onclick="addOrganizationRow()" aria-label="Agregar organización">Agregar Organización</button>
                 </div>
 
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
@@ -281,11 +282,12 @@
 
                 <div class="form-field">
                     <label for="pdf-upload">Subir archivo PDF:</label>
-                    <input type="file" id="pdf-upload" name="PdfFile" accept="application/pdf" required />
+                    <input type="file" id="pdf-upload" name="PdfFile" accept="application/pdf" aria-describedby="archivoAyuda" required />
+                    <span id="archivoAyuda">Sube un archivo en formato PDF.</span>
                 </div>
 
                 <div class="form-field">
-                    <button type="submit" class="btn-submit">Enviar Propuesta</button>
+                    <button type="submit" class="btn-submit" aria-label="Enviar propuesta">Enviar Propuesta</button>
                 </div>
             </form>
         </div>

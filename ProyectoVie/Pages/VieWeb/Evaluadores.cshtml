@@ -26,25 +26,25 @@
     <div class="sidebar">
         <div class="option">
             <a href="/VieWeb/MenuAdmin">
-                <img src="~/css/icons/propuesta.svg" alt="Propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Propuestas" aria-label="Ir a las Propuestas">
             </a>
             <span>Propuestas</span>
         </div>
         <div class="option">
             <a href="/VieWeb/Graficos">
-                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas" aria-label="Ver Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
             <a href="/VieWeb/Usuarios">
-                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios" aria-label="Administrar Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
             <a href="/VieWeb/Login">
-                <img src="~/css/icons/salir.svg" alt="Salir">
+                <img src="~/css/icons/salir.svg" alt="Salir" aria-label="Cerrar sesión">
             </a>
             <span>Salir</span>
         </div>
@@ -74,7 +74,7 @@
                                 <form method="post">
                                     <input type="hidden" name="usuarioId" value="@usuario.ID" />
                                     <input type="hidden" name="PropuestaId" value="@Model.PropuestaId" /> <!-- Campo oculto para PropuestaId -->
-                                    <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar">Asignar</button>
+                                    <button type="submit" class="assign-btn" formaction="/VieWeb/Evaluadores?handler=Asignar" aria-label="Asignar a @usuario.Nombre como evaluador">Asignar</button>
                                 </form>
                             </td>
                         </tr>

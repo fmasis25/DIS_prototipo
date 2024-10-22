@@ -21,48 +21,58 @@
     </header>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <nav class="sidebar" role="navigation" aria-label="Menú lateral">
         <div class="exit-option">
-            <a href="/VieWeb/Login"><img src="~/css/icons/salir.svg" alt="Salir"></a>
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión"><img src="~/css/icons/salir.svg" alt="Salir"></a>
             <span>Salir</span>
         </div>
-    </div>
+    </nav>
 
     <!-- Main content -->
-    <main class="main-content">
-        <h1>Mi Perfil</h1>
+    <main class="main-content" role="main" aria-labelledby="perfil-heading">
+        <h1 id="perfil-heading">Mi Perfil</h1>
 
         @if (!string.IsNullOrEmpty(Model.ErrorMessage))
         {
-            <div class="message-error">@Model.ErrorMessage</div>
+            <div class="message-error" role="alert">@Model.ErrorMessage</div>
         }
 
         @if (!string.IsNullOrEmpty(Model.SuccessMessage))
         {
-            <div class="message-success">@Model.SuccessMessage</div>
+            <div class="message-success" role="status">@Model.SuccessMessage</div>
         }
 
         <!-- Contenedor del perfil -->
-        <div class="perfil-container">
-            <table class="perfil-table">
-                <tr>
-                    <td>Nombre:</td>
-                    <td>@Model.Nombre</td>
-                </tr>
-                <tr>
-                    <td>Apellido:</td>
-                    <td>@Model.Apellido</td>
-                </tr>
-                <tr>
-                    <td>Correo:</td>
-                    <td>@Model.Correo</td>
-                </tr>
-                <tr>
-                    <td>Contraseña:</td>
-                    <td>@Model.Contrasena</td> <!-- Mostrar la contraseña visible -->
-                </tr>
+        <section class="perfil-container" aria-labelledby="perfil-info-heading">
+            <h2 id="perfil-info-heading" class="sr-only">Información del perfil</h2> <!-- Oculto visualmente pero accesible -->
+            <table class="perfil-table" role="table">
+                <thead class="sr-only">
+                    <!-- Ocultar visualmente el encabezado para usuarios de lectores de pantalla -->
+                    <tr>
+                        <th scope="col">Campo</th>
+                        <th scope="col">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">Nombre:</td>
+                        <td>@Model.Nombre</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Apellido:</td>
+                        <td>@Model.Apellido</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Correo:</td>
+                        <td>@Model.Correo</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Contraseña:</td>
+                        <td>@Model.Contrasena</td> <!-- Mostrar la contraseña visible -->
+                    </tr>
+                </tbody>
             </table>
-        </div>
+        </section>
     </main>
 </body>
 </html>

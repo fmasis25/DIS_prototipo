@@ -19,75 +19,75 @@
         <a href="/VieWeb/MiPerfil"><img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil"></a>
 
     </header>
-
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" role="navigation">
         <div class="option">
-            <a href="/VieWeb/MenuAdmin"><img src="~/css/icons/propuesta.svg" alt="Propuestas"></a>
+            <a href="/VieWeb/MenuAdmin" aria-label="Ir a la página de propuestas"><img src="~/css/icons/propuesta.svg" alt="Propuestas"></a>
             <span>Propuestas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Graficos"><img src="~/css/icons/estadisticas.svg" alt="Estadísticas"></a>
+            <a href="/VieWeb/Graficos" aria-label="Ir a la página de estadísticas"><img src="~/css/icons/estadisticas.svg" alt="Estadísticas"></a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Usuarios"><img src="~/css/icons/usuarios.svg" alt="Usuarios"></a>
+            <a href="/VieWeb/Usuarios" aria-label="Ir a la página de usuarios"><img src="~/css/icons/usuarios.svg" alt="Usuarios"></a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login"><img src="~/css/icons/salir.svg" alt="Salir"></a>
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión"><img src="~/css/icons/salir.svg" alt="Salir"></a>
             <span>Salir</span>
         </div>
     </div>
 
     <!-- Contenido principal -->
-    <div class="main-content">
-        <h1>Gestión de Usuarios</h1>
+    <main class="main-content" role="main" aria-labelledby="gestion-usuarios-heading">
+        <h1 id="gestion-usuarios-heading">Gestión de Usuarios</h1>
 
         <!-- Formulario para agregar usuario -->
-        <form method="post" asp-page-handler="AgregarUsuario">
-            <input type="text" name="NuevoUsuario.Nombre" placeholder="Nombre" required>
-            <input type="text" name="NuevoUsuario.Apellido" placeholder="Apellido" required>
-            <input type="number" name="NuevoUsuario.Cedula" placeholder="Cédula" required>
-            <input type="email" name="NuevoUsuario.Correo" placeholder="Correo" required>
-            <input type="password" name="NuevoUsuario.Contrasena" placeholder="Contraseña" required>
-            <select name="NuevoUsuario.Rol">
+        <form method="post" asp-page-handler="AgregarUsuario" aria-label="Formulario para agregar usuario">
+            <input type="text" name="NuevoUsuario.Nombre" placeholder="Nombre" required aria-required="true" aria-label="Nombre del usuario">
+            <input type="text" name="NuevoUsuario.Apellido" placeholder="Apellido" required aria-required="true" aria-label="Apellido del usuario">
+            <input type="number" name="NuevoUsuario.Cedula" placeholder="Cédula" required aria-required="true" aria-label="Cédula del usuario">
+            <input type="email" name="NuevoUsuario.Correo" placeholder="Correo" required aria-required="true" aria-label="Correo del usuario">
+            <input type="password" name="NuevoUsuario.Contrasena" placeholder="Contraseña" required aria-required="true" aria-label="Contraseña del usuario">
+            <select name="NuevoUsuario.Rol" aria-label="Seleccionar rol de usuario">
                 <option value="1">Admin</option>
                 <option value="2">Usuario</option>
             </select>
-            <button type="submit">Agregar Usuario</button>
+            <button type="submit" aria-label="Agregar nuevo usuario">Agregar Usuario</button>
         </form>
- <!-- Tabla de usuarios -->
-        <div class="usuarios-container">
+
+        <!-- Tabla de usuarios -->
+        <div class="usuarios-container" role="table" aria-label="Tabla de usuarios">
             <table class="usuarios-table">
                 <thead>
                     <tr>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Contraseña</th>
-                        <th>Acciones</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="tablaUsuarios">
                     @foreach (var usuario in Model.Usuarios)
                     {
                         <tr id="fila_@usuario.Cedula">
-                            <td><input type="text" name="Correo" value="@usuario.Correo" /></td>
-                            <td><input type="text" name="Rol" value="@usuario.Rol" /></td>
-                            <td><input type="text" name="Contrasena" value="@usuario.Contrasena" /></td>
+                            <td><input type="text" name="Correo" value="@usuario.Correo" aria-label="Correo del usuario" /></td>
+                            <td><input type="text" name="Rol" value="@usuario.Rol" aria-label="Rol del usuario" /></td>
+                            <td><input type="text" name="Contrasena" value="@usuario.Contrasena" aria-label="Contraseña del usuario" /></td>
                             <td>
                                 <!-- Botón para guardar cambios -->
-                                <button class="btnGuardar" data-cedula="@usuario.Cedula">Guardar</button>
+                                <button class="btnGuardar" data-cedula="@usuario.Cedula" aria-label="Guardar cambios para el usuario con cédula @usuario.Cedula">Guardar</button>
 
                                 <!-- Botón para eliminar usuario -->
-                                <button class="btnEliminar" data-cedula="@usuario.Cedula">Eliminar</button>
+                                <button class="btnEliminar" data-cedula="@usuario.Cedula" aria-label="Eliminar usuario con cédula @usuario.Cedula">Eliminar</button>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
 
     <script>
         // Simulación del evento Guardar

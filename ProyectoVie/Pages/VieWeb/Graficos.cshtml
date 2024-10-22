@@ -25,31 +25,27 @@
     </header>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" role="navigation" aria-label="Menú lateral">
         <div class="option">
-            <a href="/VieWeb/MenuAdmin">
-                <!-- Ajuste para el menú de propuestas -->
+            <a href="/VieWeb/MenuAdmin" aria-label="Ir a Mis Propuestas">
                 <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
             </a>
             <span>Mis Propuestas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Graficos">
-                <!-- Ajuste para ir a la página de gráficos -->
+            <a href="/VieWeb/Graficos" aria-label="Ir a la página de Estadísticas">
                 <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Usuarios">
-                <!-- Ruta para la página de usuarios -->
+            <a href="/VieWeb/Usuarios" aria-label="Ir a la página de Usuarios">
                 <img src="~/css/icons/usuarios.svg" alt="Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login">
-                <!-- Ruta para salir -->
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
@@ -57,23 +53,24 @@
     </div>
 
     <!-- Contenedor principal de gráficos -->
-    <div class="main-content">
+    <div class="main-content" role="main">
+        <h1>Gráficos de Propuestas</h1>
         <div class="graficos-container">
 
             <div class="grafico-wrapper">
-                <canvas id="graficoEscuelasPorPropuesta"></canvas>
+                <canvas id="graficoEscuelasPorPropuesta" aria-label="Gráfico de Total de Escuelas por Propuesta"></canvas>
             </div>
 
             <div class="grafico-wrapper">
-                <canvas id="graficoPropuestasPorEstado"></canvas>
+                <canvas id="graficoPropuestasPorEstado" aria-label="Gráfico de Propuestas por Estado"></canvas>
             </div>
 
             <div class="grafico-wrapper">
-                <canvas id="graficoEscuelasPorEstado"></canvas>
+                <canvas id="graficoEscuelasPorEstado" aria-label="Gráfico de Escuelas por Estado"></canvas>
             </div>
 
             <div class="grafico-wrapper">
-                <canvas id="graficoNotasPromedio"></canvas>
+                <canvas id="graficoNotasPromedio" aria-label="Gráfico de Notas Promedio por Escuela"></canvas>
             </div>
 
         </div>
@@ -100,6 +97,23 @@
                     y: {
                         beginAtZero: true
                     }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total de Escuelas por Propuesta',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
                 }
             }
         });
@@ -111,9 +125,38 @@
                 labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.PropuestasPorEstado.Select(p => p.EstadoProyecto))),
                 datasets: [{
                     data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.PropuestasPorEstado.Select(p => p.CantidadPropuestas))),
-                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
-                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',  // Rojo para "En revisión"
+                        'rgba(54, 162, 235, 0.2)',  // Azul para "Aceptada"
+                        'rgba(255, 206, 86, 0.2)',  // Amarillo para "Rechazada"
+                        'rgba(75, 192, 192, 0.2)'   // Verde para "Recibida"
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',    // Rojo para "En revisión"
+                        'rgba(54, 162, 235, 1)',    // Azul para "Aceptada"
+                        'rgba(255, 206, 86, 1)',    // Amarillo para "Rechazada"
+                        'rgba(75, 192, 192, 1)'     // Verde para "Recibida"
+                    ]
                 }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribución de Propuestas por Estado',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
             }
         });
 
@@ -128,6 +171,30 @@
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)'
                 }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Propuestas por Escuela y Estado',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
             }
         });
 
@@ -142,6 +209,25 @@
                     borderColor: 'rgba(75, 192, 192, 1)',
                     fill: false
                 }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Promedio de Notas por Escuela',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
             }
         });
     </script>

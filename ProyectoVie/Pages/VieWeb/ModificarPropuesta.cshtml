@@ -154,66 +154,66 @@
         </a>
     </header>
 
-    <div class="sidebar">
+    <nav class="sidebar" role="navigation" aria-label="Menú lateral">
         <div class="option">
-            <a href="/VieWeb/AgregarPropuesta">
+            <a href="/VieWeb/AgregarPropuesta" aria-label="Agregar Propuesta">
                 <img src="~/css/icons/propuesta.svg" alt="Agregar Propuestas">
             </a>
             <span>Agregar Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/salir">
+            <a href="/salir" aria-label="Cerrar sesión">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
         </div>
-    </div>
+    </nav>
 
-    <div class="main-content">
+    <main class="main-content" role="main" aria-labelledby="modificarPropuestaHeading">
         <div class="form-container">
-            <h1>Modificar Propuesta</h1>
+            <h1 id="modificarPropuestaHeading">Modificar Propuesta</h1>
             <form id="modificarForm" method="post">
                 <input type="hidden" name="IdPropuesta" value="@Model.Propuesta.Id" />
 
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
                     <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
-                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" required />
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" required aria-required="true" />
                 </div>
                 <div class="form-field">
                     <label for="approval-date">Fecha de aprobación:</label>
-                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" required />
+                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" required aria-required="true" />
                 </div>
                 <div class="form-field">
                     <label for="project-description">Descripción del proyecto:</label>
-                    <textarea id="project-description" name="Descripcion" required>@Model.Propuesta.Descripcion</textarea>
+                    <textarea id="project-description" name="Descripcion" required aria-required="true">@Model.Propuesta.Descripcion</textarea>
                 </div>
 
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
                     <label for="project-name">Nombre del proyecto:</label>
-                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" required />
+                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" required aria-required="true" />
                 </div>
                 <div class="form-field">
                     <label for="extension-type">Tipo de extensión:</label>
-                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" required />
+                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" required aria-required="true" />
                 </div>
                 <div class="form-field">
                     <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required>@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required aria-required="true">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
                 </div>
 
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
                 <div id="extensionist-section">
-                    <table>
+                    <table role="table" aria-label="Tabla de extensionistas">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Tipo de Nombramiento</th>
-                                <th>Condición</th>
-                                <th>Fecha Inicio</th>
-                                <th>Fecha Fin</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Tipo de Nombramiento</th>
+                                <th scope="col">Condición</th>
+                                <th scope="col">Fecha Inicio</th>
+                                <th scope="col">Fecha Fin</th>
                             </tr>
                         </thead>
                         <tbody id="extensionist-table-body">
@@ -234,11 +234,11 @@
 
                 <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
                 <div id="organization-section">
-                    <table>
+                    <table role="table" aria-label="Tabla de organizaciones participantes">
                         <thead>
                             <tr>
-                                <th>Institución u Organización</th>
-                                <th>Contacto (Correo Electrónico y/o Teléfono)</th>
+                                <th scope="col">Institución u Organización</th>
+                                <th scope="col">Contacto (Correo Electrónico y/o Teléfono)</th>
                             </tr>
                         </thead>
                         <tbody id="organization-table-body">
@@ -256,12 +256,12 @@
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
                 <div class="form-field">
                     <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" required>@Model.Propuesta.DeclaracionFinal</textarea>
+                    <textarea id="proposal-final" name="DeclaracionFinal" required aria-required="true">@Model.Propuesta.DeclaracionFinal</textarea>
                 </div>
 
-                <button type="submit" class="btn-submit">Modificar Propuesta</button>
+                <button type="submit" class="btn-submit" aria-label="Modificar propuesta">Modificar Propuesta</button>
             </form>
         </div>
-    </div>
+        </div>
 </body>
 </html>
