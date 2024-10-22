@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\",
+  "WorkspaceRootPath": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\wwwroot\\css\\perfil.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:wwwroot\\css\\perfil.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|d:\\descargas\\dis_prototipo\\proyectovie\\pages\\vieweb\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|c:\\users\\mjose\\onedrive\\documents\\github\\dis_prototipo\\proyectovie\\pages\\vieweb\\modificarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838884E8-97E7-4A99-994C-F7E8B2C189A8}|ProyectoVie.csproj|solutionrelative:pages\\vieweb\\modificarpropuesta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "perfil.css",
-              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\perfil.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\perfil.css",
-              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\wwwroot\\css\\perfil.css",
-              "RelativeToolTip": "wwwroot\\css\\perfil.css",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAUwFsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-21T22:42:11.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MiPerfil.cshtml",
-              "DocumentMoniker": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MiPerfil.cshtml",
-              "RelativeDocumentMoniker": "Pages\\VieWeb\\MiPerfil.cshtml",
-              "ToolTip": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\MiPerfil.cshtml",
-              "RelativeToolTip": "Pages\\VieWeb\\MiPerfil.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Title": "ModificarPropuesta.cshtml",
+              "DocumentMoniker": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ModificarPropuesta.cshtml",
+              "RelativeDocumentMoniker": "Pages\\VieWeb\\ModificarPropuesta.cshtml",
+              "ToolTip": "C:\\Users\\mjose\\OneDrive\\Documents\\GitHub\\DIS_prototipo\\ProyectoVie\\Pages\\VieWeb\\ModificarPropuesta.cshtml",
+              "RelativeToolTip": "Pages\\VieWeb\\ModificarPropuesta.cshtml",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAwwAsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-21T22:38:20.472Z"
+              "WhenOpened": "2024-10-22T03:12:53.894Z",
+              "EditorCaption": ""
             }
           ]
         }
