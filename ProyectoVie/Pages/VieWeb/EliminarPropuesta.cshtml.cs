@@ -121,7 +121,7 @@ namespace ProyectoVie.Pages.VieWeb
                     {
                         await command.ExecuteNonQueryAsync();
                         Debug.WriteLine($"Propuesta con ID: {Id} eliminada correctamente.");
-                        return RedirectToPage("/Propuestas"); // Redirigir después de la eliminación
+                        return RedirectToPage("/VieWeb/MenuExtensionista"); // Redirigir después de la eliminación
                     }
                     catch (SqlException ex)
                     {

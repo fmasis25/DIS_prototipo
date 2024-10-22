@@ -90,37 +90,59 @@
     width: calc(100% - 240px);
     box-sizing: border-box;
 }
-.form-field {
+
+h1 {
+    font-size: 24px;
     margin-bottom: 20px;
+    color: #0a4275;
 }
 
-    .form-field label {
-        display: block;
-        margin-bottom: 5px;
+/* Tabla para mostrar los datos del perfil */
+.perfil-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+    .perfil-table th, .perfil-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .perfil-table th {
+        background-color: #f2f2f2;
+        color: #333;
         font-weight: bold;
+    }
+
+    .perfil-table td {
+        background-color: #fff;
         color: #333;
     }
 
-    .form-field input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
+        /* Añadir un poco de estilo para la visualización de los datos */
+        .perfil-table td:first-child {
+            font-weight: bold;
+        }
 
-.btn-guardar {
-    background-color: #0a4275;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
+/* Estilo adicional para mantener la simetría y el balance */
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho para que se vea más centrado */
 }
 
-    .btn-guardar:hover {
-        background-color: #08385f;
-    }
+/* Estilo del contenedor de mensajes de error y éxito */
+.message-error {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.message-success {
+    color: green;
+    margin-bottom: 20px;
+}

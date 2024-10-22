@@ -236,7 +236,7 @@ namespace ProyectoVie.Pages.VieWeb
                         return Page();
                     }
 
-                    return RedirectToPage("/Success");
+                    return RedirectToPage("/VieWeb/MenuExtensionista");
                 }
                 catch (Exception ex)
                 {

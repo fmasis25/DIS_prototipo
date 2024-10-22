@@ -32,11 +32,11 @@
     width: 40px;
     height: auto;
     margin-left: auto;
-    margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
+    margin-right: 0;
 }
 
 .sidebar {
-    width: 180px; /* Ajusto un poco el ancho */
+    width: 200px; /* Aumentar un poco el ancho para evitar que el contenido se vea muy pegado */
     background-color: #0a4275;
     color: white;
     padding: 15px;
@@ -46,8 +46,8 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Distribuye bien las opciones */
-    align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
+    justify-content: flex-start;
+    align-items: flex-start;
     z-index: 1000;
 }
 
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 15px 0; /* Reducimos un poco el margen para compactar */
+        margin: 15px 0;
     }
 
     .sidebar .exit-option {
@@ -63,36 +63,38 @@
     }
 
         .sidebar .option a img, .sidebar .exit-option a img {
-            width: 30px; /* Íconos más pequeños para un look más limpio */
+            width: 30px;
             height: auto;
-            margin-right: 10px; /* Espacio entre ícono y texto */
+            margin-right: 10px;
         }
 
         .sidebar .option span, .sidebar .exit-option span {
-            font-size: 16px; /* Mantener el texto legible */
+            font-size: 16px;
             text-align: left;
         }
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 150px; /* Sidebar más pequeño para pantallas pequeñas */
+        width: 150px;
     }
 
         .sidebar img {
-            max-width: 25px; /* Tamaño más pequeño en pantallas chicas */
+            max-width: 25px;
         }
 }
 
 .main-content {
-    margin-left: 240px;
+    margin-left: 220px; /* Ajustar el margen izquierdo para que el contenido no esté pegado al sidebar */
     padding: 20px;
     margin-top: 80px;
-    width: calc(100% - 240px);
+    width: calc(100% - 220px); /* Asegura que el contenido use el espacio correcto */
+    min-height: calc(100vh - 80px); /* Hace que ocupe toda la altura disponible */
     box-sizing: border-box;
+    overflow-y: auto; /* Agregamos scroll si el contenido es muy grande */
 }
 
 .usuarios-container {
-    height: 400px;
+    height: auto;
     overflow-y: auto;
 }
 

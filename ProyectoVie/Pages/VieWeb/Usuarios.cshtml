@@ -15,38 +15,27 @@
 <body>
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
-            <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
-        </a>
-        <a href="/perfil">
-            <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
-        </a>
+        <a href="/"><img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
+        <a href="/VieWeb/MiPerfil"><img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil"></a>
+
     </header>
 
-    <!-- Sidebar izquierdo con opciones -->
+    <!-- Sidebar -->
     <div class="sidebar">
         <div class="option">
-            <a href="/VieWeb/MenuAdmin">
-                <img src="~/css/icons/propuesta.svg" alt="Propuestas">
-            </a>
+            <a href="/VieWeb/MenuAdmin"><img src="~/css/icons/propuesta.svg" alt="Propuestas"></a>
             <span>Propuestas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Graficos">
-                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas">
-            </a>
+            <a href="/VieWeb/Graficos"><img src="~/css/icons/estadisticas.svg" alt="Estadísticas"></a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Usuarios">
-                <img src="~/css/icons/usuarios.svg" alt="Usuarios">
-            </a>
+            <a href="/VieWeb/Usuarios"><img src="~/css/icons/usuarios.svg" alt="Usuarios"></a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login">
-                <img src="~/css/icons/salir.svg" alt="Salir">
-            </a>
+            <a href="/VieWeb/Login"><img src="~/css/icons/salir.svg" alt="Salir"></a>
             <span>Salir</span>
         </div>
     </div>
@@ -55,34 +44,43 @@
     <div class="main-content">
         <h1>Gestión de Usuarios</h1>
 
-        <!-- Tabla de usuarios -->
+        <!-- Formulario para agregar usuario -->
+        <form method="post" asp-page-handler="AgregarUsuario">
+            <input type="text" name="NuevoUsuario.Nombre" placeholder="Nombre" required>
+            <input type="text" name="NuevoUsuario.Apellido" placeholder="Apellido" required>
+            <input type="number" name="NuevoUsuario.Cedula" placeholder="Cédula" required>
+            <input type="email" name="NuevoUsuario.Correo" placeholder="Correo" required>
+            <input type="password" name="NuevoUsuario.Contrasena" placeholder="Contraseña" required>
+            <select name="NuevoUsuario.Rol">
+                <option value="1">Admin</option>
+                <option value="2">Usuario</option>
+            </select>
+            <button type="submit">Agregar Usuario</button>
+        </form>
+ <!-- Tabla de usuarios -->
         <div class="usuarios-container">
             <table class="usuarios-table">
                 <thead>
                     <tr>
                         <th>Correo</th>
                         <th>Rol</th>
-                        <th>Contraseña</th> <!-- Columna para la contraseña -->
+                        <th>Contraseña</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tablaUsuarios">
                     @foreach (var usuario in Model.Usuarios)
                     {
-                        <tr>
-                            <td>@usuario.Correo</td>
-                            <td>@usuario.Rol</td>
-                            <td>@usuario.Contrasena</td>
+                        <tr id="fila_@usuario.Cedula">
+                            <td><input type="text" name="Correo" value="@usuario.Correo" /></td>
+                            <td><input type="text" name="Rol" value="@usuario.Rol" /></td>
+                            <td><input type="text" name="Contrasena" value="@usuario.Contrasena" /></td>
                             <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn">⋮</button>
-                                    <div class="dropdown-content">
-                                        <!-- Ruta de editar usuario -->
-                                        <a asp-page-handler="Editar" asp-route-cedula="@usuario.Cedula">Editar</a>
-                                        <!-- Ruta de eliminar usuario -->
-                                        <a asp-page-handler="Eliminar" asp-route-cedula="@usuario.Cedula" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
-                                    </div>
-                                </div>
+                                <!-- Botón para guardar cambios -->
+                                <button class="btnGuardar" data-cedula="@usuario.Cedula">Guardar</button>
+
+                                <!-- Botón para eliminar usuario -->
+                                <button class="btnEliminar" data-cedula="@usuario.Cedula">Eliminar</button>
                             </td>
                         </tr>
                     }
@@ -90,6 +88,36 @@
             </table>
         </div>
     </div>
+
+    <script>
+        // Simulación del evento Guardar
+        document.querySelectorAll('.btnGuardar').forEach(button => {
+            button.addEventListener('click', function () {
+                let cedula = this.getAttribute('data-cedula');
+                let fila = document.getElementById('fila_' + cedula);
+                let correo = fila.querySelector('input[name="Correo"]').value;
+                let rol = fila.querySelector('input[name="Rol"]').value;
+                let contrasena = fila.querySelector('input[name="Contrasena"]').value;
+
+                // Actualizar visualmente los valores sin hacer petición al servidor
+                alert('Usuario con cédula ' + cedula + ' actualizado. Correo: ' + correo + ', Rol: ' + rol + ', Contraseña: ' + contrasena);
+            });
+        });
+
+        // Simulación del evento Eliminar
+        document.querySelectorAll('.btnEliminar').forEach(button => {
+            button.addEventListener('click', function () {
+                let cedula = this.getAttribute('data-cedula');
+
+                if (confirm('¿Estás seguro de eliminar este usuario?')) {
+                    // Eliminar visualmente la fila del usuario
+                    let fila = document.getElementById('fila_' + cedula);
+                    fila.remove();
+                    alert('Usuario con cédula ' + cedula + ' eliminado.');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

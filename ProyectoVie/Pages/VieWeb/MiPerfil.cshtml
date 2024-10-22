@@ -16,20 +16,14 @@
 
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/">
-            <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
-        </a>
-        <a href="/perfil">
-            <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
-        </a>
+        <a href="/"><img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
+        <a href="/perfil"><img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil"></a>
     </header>
 
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="exit-option">
-            <a href="/VieWeb/Login">
-                <img src="~/css/icons/salir.svg" alt="Salir">
-            </a>
+            <a href="/VieWeb/Login"><img src="~/css/icons/salir.svg" alt="Salir"></a>
             <span>Salir</span>
         </div>
     </div>
@@ -40,34 +34,35 @@
 
         @if (!string.IsNullOrEmpty(Model.ErrorMessage))
         {
-            <div style="color:red">@Model.ErrorMessage</div>
+            <div class="message-error">@Model.ErrorMessage</div>
         }
 
         @if (!string.IsNullOrEmpty(Model.SuccessMessage))
         {
-            <div style="color:green">@Model.SuccessMessage</div>
+            <div class="message-success">@Model.SuccessMessage</div>
         }
 
-        <form method="post">
-            <div class="form-field">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" id="Nombre" name="Nombre" value="@Model.Nombre" required />
-            </div>
-            <div class="form-field">
-                <label for="Apellido">Apellido:</label>
-                <input type="text" id="Apellido" name="Apellido" value="@Model.Apellido" required />
-            </div>
-            <div class="form-field">
-                <label for="Correo">Correo:</label>
-                <input type="email" id="Correo" name="Correo" value="@Model.Correo" required />
-            </div>
-            <div class="form-field">
-                <label for="Contrasena">Contraseña:</label>
-                <input type="password" id="Contrasena" name="Contrasena" value="@Model.Contrasena" required />
-            </div>
-
-            <button type="submit" class="btn-guardar">Guardar Cambios</button>
-        </form>
+        <!-- Contenedor del perfil -->
+        <div class="perfil-container">
+            <table class="perfil-table">
+                <tr>
+                    <td>Nombre:</td>
+                    <td>@Model.Nombre</td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                    <td>@Model.Apellido</td>
+                </tr>
+                <tr>
+                    <td>Correo:</td>
+                    <td>@Model.Correo</td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td>@Model.Contrasena</td> <!-- Mostrar la contraseña visible -->
+                </tr>
+            </table>
+        </div>
     </main>
 </body>
 </html>

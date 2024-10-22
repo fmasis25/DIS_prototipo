@@ -223,7 +223,7 @@ namespace ProyectoVie.Pages.VieWeb
                 return Page();
             }
 
-            return RedirectToPage("ConsultarPropuesta", new { propuestaId = Propuesta.Id });
+            return RedirectToPage("/VieWeb/MenuExtensionista", new { propuestaId = Propuesta.Id });
         }
     }
 }
