@@ -17,10 +17,11 @@
         <!-- Cambiar el logo del TEC -->
         <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-barra-logo" aria-label="Logo del Tecnológico de Costa Rica">
     </header>
+
     <!-- Contenedor del login -->
     <div class="login-container" role="main" aria-labelledby="loginFormTitle">
         <!-- Imagen en el formulario de login -->
-        <img src="~/css/fondo-tec.jpg" alt="Imagen del campus" class="form-image">
+        <img src="~/css/fondo-tec.jpg" alt="Imagen del campus del TEC" class="form-image">
 
         <div class="login-rectangulo">
             <h1 id="loginFormTitle">Sistema de Propuestas</h1>
@@ -30,9 +31,9 @@
                 <!-- Campo de correo con ícono accesible -->
                 <div class="input-box">
                     <label for="Email" id="emailLabel">Correo</label>
-                    <input type="text" asp-for="Email" id="Email" placeholder="Correo" required aria-required="true" aria-labelledby="emailLabel">
+                    <input type="email" asp-for="Email" id="Email" placeholder="Correo" required aria-required="true" aria-labelledby="emailLabel">
                     <!-- Ícono accesible -->
-                    <i class="bx bx-user" aria-label="Icono de usuario"></i>
+                    <i class="bx bx-user" aria-hidden="true"></i>
                 </div>
 
                 <!-- Campo de contraseña con ícono accesible -->
@@ -40,10 +41,10 @@
                     <label for="Password" id="passwordLabel">Contraseña</label>
                     <input type="password" asp-for="Password" id="Password" placeholder="Contraseña" required aria-required="true" aria-labelledby="passwordLabel">
                     <!-- Ícono accesible -->
-                    <i class="bx bxs-lock" aria-label="Icono de candado"></i>
+                    <i class="bx bxs-lock" aria-hidden="true"></i>
 
                     <!-- Feedback de la contraseña accesible con aria-live -->
-                    <div id="passwordFeedback" aria-live="assertive" class="sr-only"></div>
+                    <div id="passwordFeedback" aria-live="polite" class="sr-only"></div>
                 </div>
 
                 <!-- Script para validar la contraseña y proporcionar retroalimentación -->
@@ -62,7 +63,7 @@
 
                 <!-- Enlace accesible para "Olvidaste tu contraseña" -->
                 <div class="contra-olvido">
-                    <a href="#" aria-label="Recupera tu contraseña aquí" onclick="openModal()">¿Olvidaste tu contraseña?</a>
+                    <a href="#" aria-label="Recuperar tu contraseña aquí" onclick="openModal()">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <!-- Botón accesible -->
@@ -77,7 +78,7 @@
             <button class="close" aria-label="Cerrar modal" onclick="closeModal()">&times;</button>
             <h2 id="modalTitle">Recuperar contraseña</h2>
             <p id="modalDesc">Para recuperar la contraseña del dominio "<strong>estudiantec.cr</strong>" debe dirigirse al sistema de</p>
-            <a href="https://aplics.tec.ac.cr/MiCuentaTEC" target="_blank">Mi CuentaTEC</a>
+            <a href="https://aplics.tec.ac.cr/MiCuentaTEC" target="_blank" aria-label="Ir a la página de recuperación de contraseña del TEC">Mi CuentaTEC</a>
         </div>
     </div>
 

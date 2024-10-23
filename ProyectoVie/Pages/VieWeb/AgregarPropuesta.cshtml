@@ -64,27 +64,27 @@
             z-index: 1000;
         }
 
-            .sidebar .option, .sidebar .exit-option {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin: 15px 0; 
-            }
+        .sidebar .option, .sidebar .exit-option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 15px 0; 
+        }
 
-            .sidebar .exit-option {
-                margin-bottom: 20px;
-            }
+        .sidebar .exit-option {
+            margin-bottom: 20px;
+        }
 
-                .sidebar .option a img, .sidebar .exit-option a img {
-                    width: 30px; 
-                    height: auto;
-                    margin-right: 10px; 
-                }
+        .sidebar .option a img, .sidebar .exit-option a img {
+            width: 30px; 
+            height: auto;
+            margin-right: 10px; 
+        }
 
-                .sidebar .option span, .sidebar .exit-option span {
-                    font-size: 16px;
-                    text-align: left;
-                }
+        .sidebar .option span, .sidebar .exit-option span {
+            font-size: 16px;
+            text-align: left;
+        }
 
         .main-content {
             margin-left: 220px;
@@ -198,29 +198,35 @@
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
                     <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
-                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" required />
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" required aria-describedby="agreementHelp" />
+                    <span id="agreementHelp">Introduce el número del acuerdo de la escuela coordinadora.</span>
                 </div>
                 <div class="form-field">
                     <label for="approval-date">Fecha de aprobación:</label>
-                    <input type="date" id="approval-date" name="FechaAprobacion" required />
+                    <input type="date" id="approval-date" name="FechaAprobacion" required aria-describedby="approvalDateHelp" />
+                    <span id="approvalDateHelp">Selecciona la fecha de aprobación del proyecto.</span>
                 </div>
                 <div class="form-field">
                     <label for="project-description">Descripción del proyecto:</label>
-                    <textarea id="project-description" name="Descripcion" required></textarea>
+                    <textarea id="project-description" name="Descripcion" required aria-describedby="projectDescriptionHelp"></textarea>
+                    <span id="projectDescriptionHelp">Describe los detalles principales del proyecto de extensión.</span>
                 </div>
 
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
                     <label for="project-name">Nombre del proyecto:</label>
-                    <input type="text" id="project-name" name="NombreProyecto" required />
+                    <input type="text" id="project-name" name="NombreProyecto" required aria-describedby="projectNameHelp" />
+                    <span id="projectNameHelp">Introduce el nombre del proyecto de extensión.</span>
                 </div>
                 <div class="form-field">
                     <label for="extension-type">Tipo de extensión:</label>
-                    <input type="text" id="extension-type" name="TipoExtension" required />
+                    <input type="text" id="extension-type" name="TipoExtension" required aria-describedby="extensionTypeHelp" />
+                    <span id="extensionTypeHelp">Especifica el tipo de extensión del proyecto.</span>
                 </div>
                 <div class="form-field">
                     <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required></textarea>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required aria-describedby="sustainableGoalsHelp"></textarea>
+                    <span id="sustainableGoalsHelp">Describe los objetivos de desarrollo sostenible del proyecto.</span>
                 </div>
 
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
@@ -239,18 +245,17 @@
                         </thead>
                         <tbody id="extensionist-table-body">
                             <tr>
-                                <td><input type="text" name="Extensionists[0].Nombre" placeholder="Nombre" required /></td>
-                                <td><input type="text" name="Extensionists[0].Apellido" placeholder="Apellido" required /></td>
-                                <td><input type="text" name="Extensionists[0].TipoNombramiento" placeholder="Tipo de Nombramiento" required /></td>
-                                <td><input type="text" name="Extensionists[0].Condicion" placeholder="Condición" required /></td>
-                                <td><input type="date" name="Extensionists[0].FechaInicio" required /></td>
-                                <td><input type="date" name="Extensionists[0].FechaFin" required /></td>
+                                <td><input type="text" name="Extensionists[0].Nombre" placeholder="Nombre" required aria-label="Nombre del extensionista" /></td>
+                                <td><input type="text" name="Extensionists[0].Apellido" placeholder="Apellido" required aria-label="Apellido del extensionista" /></td>
+                                <td><input type="text" name="Extensionists[0].TipoNombramiento" placeholder="Tipo de Nombramiento" required aria-label="Tipo de nombramiento" /></td>
+                                <td><input type="text" name="Extensionists[0].Condicion" placeholder="Condición" required aria-label="Condición del extensionista" /></td>
+                                <td><input type="date" name="Extensionists[0].FechaInicio" required aria-label="Fecha de inicio del nombramiento" /></td>
+                                <td><input type="date" name="Extensionists[0].FechaFin" required aria-label="Fecha de fin del nombramiento" /></td>
                                 <td><button type="button" class="btn-remove" onclick="removeExtensionistRow(this)" aria-label="Quitar extensionista">Quitar</button></td>
-
                             </tr>
                         </tbody>
                     </table>
-                    <button type="button" class="btn-add" onclick="addExtensionistRow()">Agregar Extensionista</button>
+                    <button type="button" class="btn-add" onclick="addExtensionistRow()" aria-label="Agregar extensionista">Agregar Extensionista</button>
                 </div>
 
                 <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
@@ -265,8 +270,8 @@
                         </thead>
                         <tbody id="organization-table-body">
                             <tr>
-                                <td><input type="text" name="Organizations[0].Organizacion" placeholder="Institución u Organización" required /></td>
-                                <td><input type="text" name="Organizations[0].Contacto" placeholder="Correo Electrónico y/o Teléfono" required /></td>
+                                <td><input type="text" name="Organizations[0].Organizacion" placeholder="Institución u Organización" required aria-label="Nombre de la organización" /></td>
+                                <td><input type="text" name="Organizations[0].Contacto" placeholder="Correo Electrónico y/o Teléfono" required aria-label="Contacto de la organización" /></td>
                                 <td><button type="button" class="btn-remove" onclick="removeOrganizationRow(this)" aria-label="Quitar organización">Quitar</button></td>
                             </tr>
                         </tbody>
@@ -277,7 +282,8 @@
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
                 <div class="form-field">
                     <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" required></textarea>
+                    <textarea id="proposal-final" name="DeclaracionFinal" required aria-describedby="finalDeclarationHelp"></textarea>
+                    <span id="finalDeclarationHelp">Escribe una declaración final para la propuesta.</span>
                 </div>
 
                 <div class="form-field">
@@ -299,13 +305,13 @@
             const tableBody = document.getElementById('extensionist-table-body');
             const newRow = document.createElement('tr');
             newRow.innerHTML =
-                `<td><input type="text" name="Extensionists[${extensionistCount}].Nombre" placeholder="Nombre" required /></td>
-                <td><input type="text" name="Extensionists[${extensionistCount}].Apellido" placeholder="Apellido" required /></td>
-                <td><input type="text" name="Extensionists[${extensionistCount}].TipoNombramiento" placeholder="Tipo de Nombramiento" required /></td>
-                <td><input type="text" name="Extensionists[${extensionistCount}].Condicion" placeholder="Condición" required /></td>
-                <td><input type="date" name="Extensionists[${extensionistCount}].FechaInicio" required /></td>
-                <td><input type="date" name="Extensionists[${extensionistCount}].FechaFin" required /></td>
-                <td><button type="button" class="btn-remove" onclick="removeExtensionistRow(this)">Quitar</button></td>`;
+                `<td><input type="text" name="Extensionists[${extensionistCount}].Nombre" placeholder="Nombre" required aria-label="Nombre del extensionista"/></td>
+                <td><input type="text" name="Extensionists[${extensionistCount}].Apellido" placeholder="Apellido" required aria-label="Apellido del extensionista"/></td>
+                <td><input type="text" name="Extensionists[${extensionistCount}].TipoNombramiento" placeholder="Tipo de Nombramiento" required aria-label="Tipo de nombramiento"/></td>
+                <td><input type="text" name="Extensionists[${extensionistCount}].Condicion" placeholder="Condición" required aria-label="Condición del extensionista"/></td>
+                <td><input type="date" name="Extensionists[${extensionistCount}].FechaInicio" required aria-label="Fecha de inicio del nombramiento"/></td>
+                <td><input type="date" name="Extensionists[${extensionistCount}].FechaFin" required aria-label="Fecha de fin del nombramiento"/></td>
+                <td><button type="button" class="btn-remove" onclick="removeExtensionistRow(this)" aria-label="Quitar extensionista">Quitar</button></td>`;
             tableBody.appendChild(newRow);
             extensionistCount++;
         }
@@ -320,9 +326,9 @@
             const tableBody = document.getElementById('organization-table-body');
             const newRow = document.createElement('tr');
             newRow.innerHTML =
-                `<td><input type="text" name="Organizations[${organizationCount}].Organizacion" placeholder="Institución u Organización" required /></td>
-                <td><input type="text" name="Organizations[${organizationCount}].Contacto" placeholder="Correo Electrónico y/o Teléfono" required /></td>
-                <td><button type="button" class="btn-remove" onclick="removeOrganizationRow(this)">Quitar</button></td>`;
+                `<td><input type="text" name="Organizations[${organizationCount}].Organizacion" placeholder="Institución u Organización" required aria-label="Nombre de la organización"/></td>
+                <td><input type="text" name="Organizations[${organizationCount}].Contacto" placeholder="Correo Electrónico y/o Teléfono" required aria-label="Contacto de la organización"/></td>
+                <td><button type="button" class="btn-remove" onclick="removeOrganizationRow(this)" aria-label="Quitar organización">Quitar</button></td>`;
             tableBody.appendChild(newRow);
             organizationCount++;
         }
