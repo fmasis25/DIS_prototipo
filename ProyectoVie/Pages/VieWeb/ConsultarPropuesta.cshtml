@@ -22,7 +22,7 @@
 
         .header {
             display: flex;
-            justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
+            justify-content: space-between;
             align-items: center;
             background-color: #d9d9d9;
             padding: 10px 20px;
@@ -45,11 +45,11 @@
             width: 40px;
             height: auto;
             margin-left: auto;
-            margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
+            margin-right: 0;
         }
 
         .sidebar {
-            width: 180px; /* Ajusto un poco el ancho */
+            width: 180px;
             background-color: #0a4275;
             color: white;
             padding: 15px;
@@ -59,8 +59,8 @@
             left: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Distribuye bien las opciones */
-            align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
+            justify-content: flex-start;
+            align-items: flex-start;
             z-index: 1000;
         }
 
@@ -68,7 +68,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                margin: 15px 0; /* Reducimos un poco el margen para compactar */
+                margin: 15px 0;
             }
 
             .sidebar .exit-option {
@@ -76,13 +76,13 @@
             }
 
                 .sidebar .option a img, .sidebar .exit-option a img {
-                    width: 30px; /* Íconos más pequeños para un look más limpio */
+                    width: 30px;
                     height: auto;
-                    margin-right: 10px; /* Espacio entre ícono y texto */
+                    margin-right: 10px;
                 }
 
                 .sidebar .option span, .sidebar .exit-option span {
-                    font-size: 16px; /* Mantener el texto legible */
+                    font-size: 16px;
                     text-align: left;
                 }
 
@@ -176,6 +176,7 @@
         <div class="form-container">
             <h1>Consulta de Propuesta</h1>
             <form id="consultaForm" method="post">
+                <!-- DATOS INSTANCIA ACADÉMICA -->
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
                     <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
@@ -190,6 +191,7 @@
                     <textarea id="project-description" name="Descripcion" readonly aria-readonly="true">@Model.Propuesta.Descripcion</textarea>
                 </div>
 
+                <!-- DATOS DEL PROYECTO -->
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
                     <label for="project-name">Nombre del proyecto:</label>
@@ -203,7 +205,36 @@
                     <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
                     <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly aria-readonly="true">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
                 </div>
+                <div class="form-field">
+                    <label for="introduction">Introducción:</label>
+                    <textarea id="introduction" name="Introduccion" readonly aria-readonly="true">@Model.Propuesta.Introduccion</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="professional-profiles">Perfiles Profesionales:</label>
+                    <textarea id="professional-profiles" name="PerfilesProfesionales" readonly aria-readonly="true">@Model.Propuesta.PerfilesProfesionales</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="student-participation">Participación Estudiantil:</label>
+                    <textarea id="student-participation" name="ParticipacionEstudiantil" readonly aria-readonly="true">@Model.Propuesta.ParticipacionEstudiantil</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="compliance-risks">Riesgos de Cumplimiento:</label>
+                    <textarea id="compliance-risks" name="RiesgosCumplimiento" readonly aria-readonly="true">@Model.Propuesta.RiesgosCumplimiento</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="financial-feasibility">Viabilidad Financiera:</label>
+                    <textarea id="financial-feasibility" name="ViabilidadFinanciera" readonly aria-readonly="true">@Model.Propuesta.ViabilidadFinanciera</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="social-impact">Impacto Social:</label>
+                    <textarea id="social-impact" name="ImpactoSocial" readonly aria-readonly="true">@Model.Propuesta.ImpactoSocial</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="academic-impact">Impacto Académico:</label>
+                    <textarea id="academic-impact" name="ImpactoAcademico" readonly aria-readonly="true">@Model.Propuesta.ImpactoAcademico</textarea>
+                </div>
 
+                <!-- DATOS DEL GRUPO EXTENSIONISTA -->
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
                 <div id="extensionist-section">
                     <table>
@@ -234,6 +265,7 @@
                     </table>
                 </div>
 
+                <!-- DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES -->
                 <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
                 <div id="organization-section">
                     <table>
@@ -256,17 +288,20 @@
                     </table>
                 </div>
 
+                <!-- DECLARACIÓN FINAL DE LA PROPUESTA -->
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
                 <div class="form-field">
                     <label for="proposal-final">Declaración final:</label>
                     <textarea id="proposal-final" name="DeclaracionFinal" readonly aria-readonly="true">@Model.Propuesta.DeclaracionFinal</textarea>
                 </div>
 
+                <!-- DESCARGA PDF -->
                 <div class="form-field">
                     <label for="pdf-upload">Archivo PDF:</label>
                     <a asp-page-handler="VerPdf" asp-route-rutaArchivo="@Model.Propuesta.UrlArchivo" class="btn btn-primary" aria-label="Descargar PDF">Descargar PDF</a>
                 </div>
 
+                <!-- BOTÓN REGRESAR -->
                 <div class="form-field">
                     <a href="/VieWeb/MenuExtensionista" class="btn-back" aria-label="Regresar al menú principal">Regresar</a>
                 </div>

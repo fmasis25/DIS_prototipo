@@ -201,15 +201,92 @@
                     <input type="text" id="agreement-number" name="IdentificacionAcuerdo" required aria-describedby="agreementHelp" />
                     <span id="agreementHelp">Introduce el número del acuerdo de la escuela coordinadora.</span>
                 </div>
+
+                <div class="form-field">
+                    <label for="school">Escuela:</label>
+                    <select id="school" name="Escuela" required aria-describedby="schoolHelp">
+                        <option value="Escuela de Ingeniería Civil">Escuela de Ingeniería Civil</option>
+                        <option value="Escuela de Ingeniería Eléctrica">Escuela de Ingeniería Eléctrica</option>
+                        <option value="Escuela de Ingeniería Mecánica">Escuela de Ingeniería Mecánica</option>
+                        <option value="Escuela de Ingeniería en Computación">Escuela de Ingeniería en Computación</option>
+                        <option value="Escuela de Ciencias de la Computación">Escuela de Ciencias de la Computación</option>
+                        <option value="Escuela de Ingeniería Industrial">Escuela de Ingeniería Industrial</option>
+                        <option value="Escuela de Ingeniería Química">Escuela de Ingeniería Química</option>
+                        <option value="Escuela de Ingeniería en Construcción">Escuela de Ingeniería en Construcción</option>
+                        <option value="Escuela de Arquitectura">Escuela de Arquitectura</option>
+                        <option value="Escuela de Física">Escuela de Física</option>
+                        <option value="Escuela de Matemática">Escuela de Matemática</option>
+                        <option value="Escuela de Estadística">Escuela de Estadística</option>
+                        <option value="Escuela de Química">Escuela de Química</option>
+                        <option value="Escuela de Biología">Escuela de Biología</option>
+                        <option value="Escuela de Ciencias de la Tierra">Escuela de Ciencias de la Tierra</option>
+                        <option value="Escuela de Administración de Empresas">Escuela de Administración de Empresas</option>
+                        <option value="Escuela de Contaduría Pública">Escuela de Contaduría Pública</option>
+                        <option value="Escuela de Economía">Escuela de Economía</option>
+                        <option value="Escuela de Psicología">Escuela de Psicología</option>
+                        <option value="Escuela de Filosofía">Escuela de Filosofía</option>
+                        <option value="Escuela de Historia">Escuela de Historia</option>
+                        <option value="Escuela de Literatura">Escuela de Literatura</option>
+                        <option value="Escuela de Ciencias Políticas">Escuela de Ciencias Políticas</option>
+                        <option value="Escuela de Relaciones Internacionales">Escuela de Relaciones Internacionales</option>
+                        <option value="Escuela de Derecho">Escuela de Derecho</option>
+                    </select>
+                    <span id="schoolHelp">Selecciona la escuela a la que está asociada el proyecto.</span>
+                </div>
+
                 <div class="form-field">
                     <label for="approval-date">Fecha de aprobación:</label>
                     <input type="date" id="approval-date" name="FechaAprobacion" required aria-describedby="approvalDateHelp" />
                     <span id="approvalDateHelp">Selecciona la fecha de aprobación del proyecto.</span>
                 </div>
+
+                <h2>Descripción y Generalidades</h2>
                 <div class="form-field">
                     <label for="project-description">Descripción del proyecto:</label>
                     <textarea id="project-description" name="Descripcion" required aria-describedby="projectDescriptionHelp"></textarea>
                     <span id="projectDescriptionHelp">Describe los detalles principales del proyecto de extensión.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="introduction">Introducción:</label>
+                    <textarea id="introduction" name="Introduccion" required aria-describedby="introductionHelp"></textarea>
+                    <span id="introductionHelp">Introduce los antecedentes y el contexto del proyecto de extensión.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="professional-profiles">Perfiles Profesionales:</label>
+                    <textarea id="professional-profiles" name="PerfilesProfesionales" required aria-describedby="professionalProfilesHelp"></textarea>
+                    <span id="professionalProfilesHelp">Describe los perfiles profesionales necesarios para el proyecto.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="student-participation">Participación Estudiantil:</label>
+                    <textarea id="student-participation" name="ParticipacionEstudiantil" required aria-describedby="studentParticipationHelp"></textarea>
+                    <span id="studentParticipationHelp">Explica la participación estudiantil en el proyecto de extensión.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="compliance-risks">Riesgos de Cumplimiento:</label>
+                    <textarea id="compliance-risks" name="RiesgosCumplimiento" required aria-describedby="complianceRisksHelp"></textarea>
+                    <span id="complianceRisksHelp">Identifica posibles riesgos de cumplimiento para el proyecto.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="financial-viability">Viabilidad Financiera:</label>
+                    <textarea id="financial-viability" name="ViabilidadFinanciera" required aria-describedby="financialViabilityHelp"></textarea>
+                    <span id="financialViabilityHelp">Explica la viabilidad financiera del proyecto.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="social-impact">Impacto Social:</label>
+                    <textarea id="social-impact" name="ImpactoSocial" required aria-describedby="socialImpactHelp"></textarea>
+                    <span id="socialImpactHelp">Describe el impacto social esperado del proyecto.</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="academic-impact">Impacto Académico:</label>
+                    <textarea id="academic-impact" name="ImpactoAcademico" required aria-describedby="academicImpactHelp"></textarea>
+                    <span id="academicImpactHelp">Describe el impacto académico esperado del proyecto.</span>
                 </div>
 
                 <h2>DATOS DEL PROYECTO</h2>
@@ -223,12 +300,32 @@
                     <input type="text" id="extension-type" name="TipoExtension" required aria-describedby="extensionTypeHelp" />
                     <span id="extensionTypeHelp">Especifica el tipo de extensión del proyecto.</span>
                 </div>
+
                 <div class="form-field">
-                    <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required aria-describedby="sustainableGoalsHelp"></textarea>
-                    <span id="sustainableGoalsHelp">Describe los objetivos de desarrollo sostenible del proyecto.</span>
+                    <label for="sustainable-goals">Objetivos de Desarrollo Sostenible (ODS):</label>
+                    <select id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required aria-describedby="sustainableGoalsHelp">
+                        <option value="ODS 1 - Fin de la pobreza">ODS 1 - Fin de la pobreza</option>
+                        <option value="ODS 2 - Hambre cero">ODS 2 - Hambre cero</option>
+                        <option value="ODS 3 - Salud y bienestar">ODS 3 - Salud y bienestar</option>
+                        <option value="ODS 4 - Educación de calidad">ODS 4 - Educación de calidad</option>
+                        <option value="ODS 5 - Igualdad de género">ODS 5 - Igualdad de género</option>
+                        <option value="ODS 6 - Agua limpia y saneamiento">ODS 6 - Agua limpia y saneamiento</option>
+                        <option value="ODS 7 - Energía asequible y no contaminante">ODS 7 - Energía asequible y no contaminante</option>
+                        <option value="ODS 8 - Trabajo decente y crecimiento económico">ODS 8 - Trabajo decente y crecimiento económico</option>
+                        <option value="ODS 9 - Industria, innovación e infraestructura">ODS 9 - Industria, innovación e infraestructura</option>
+                        <option value="ODS 10 - Reducción de las desigualdades">ODS 10 - Reducción de las desigualdades</option>
+                        <option value="ODS 11 - Ciudades y comunidades sostenibles">ODS 11 - Ciudades y comunidades sostenibles</option>
+                        <option value="ODS 12 - Producción y consumo responsables">ODS 12 - Producción y consumo responsables</option>
+                        <option value="ODS 13 - Acción por el clima">ODS 13 - Acción por el clima</option>
+                        <option value="ODS 14 - Vida submarina">ODS 14 - Vida submarina</option>
+                        <option value="ODS 15 - Vida de ecosistemas terrestres">ODS 15 - Vida de ecosistemas terrestres</option>
+                        <option value="ODS 16 - Paz, justicia e instituciones sólidas">ODS 16 - Paz, justicia e instituciones sólidas</option>
+                        <option value="ODS 17 - Alianzas para lograr los objetivos">ODS 17 - Alianzas para lograr los objetivos</option>
+                    </select>
+                    <span id="sustainableGoalsHelp">Selecciona el ODS relacionado con el proyecto.</span>
                 </div>
 
+    
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
                 <div id="extensionist-section">
                     <table>
@@ -282,9 +379,18 @@
                 <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
                 <div class="form-field">
                     <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" required aria-describedby="finalDeclarationHelp"></textarea>
-                    <span id="finalDeclarationHelp">Escribe una declaración final para la propuesta.</span>
+                    <textarea id="proposal-final" name="DeclaracionFinal" readonly aria-describedby="finalDeclarationHelp">
+El presente proyecto de extensión no ha sido presentado a otra institución nacional e internacional, salvo su cofinanciamiento, por lo que, se declara que es de autoría propia y no transgrede norma ética y moral alguna, en razón de ello no causa perjurio ni al ITCR, ni a terceros. Igualmente, en el presente acto, los autores del presente proyecto de extensión, se hacen responsables por las posibles sanciones civiles o penales que se lleguen a determinar a través del proceso administrativo o judicial correspondiente, en caso de que, un tercero así alegue y se demuestre la titularidad de los derechos intelectuales de éste; en razón de lo anterior, el autor (es) exonera de toda pena y responsabilidad a la Dirección de Extensión y al Tecnológico de Costa Rica de cualquier evento que pueda presentarse.
+    </textarea>
+                    <span id="finalDeclarationHelp">Esta declaración es requerida para la propuesta.</span>
                 </div>
+
+                <div class="form-field">
+                    <input type="checkbox" id="declaration-confirm" required aria-describedby="confirmHelp">
+                    <label for="declaration-confirm">He leído y acepto la declaración final.</label>
+                    <span id="confirmHelp">Debe aceptar la declaración antes de enviar el formulario.</span>
+                </div>
+
 
                 <div class="form-field">
                     <label for="pdf-upload">Subir archivo PDF:</label>

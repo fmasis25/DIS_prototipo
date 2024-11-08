@@ -30,6 +30,14 @@ namespace ProyectoVie.Pages.VieWeb
             public DateTime FechaSolicitud { get; set; }
             public string RutaArchivo { get; set; } // Ruta al archivo PDF
             public string UrlArchivo { get; set; } // URL completa del archivo PDF
+            public string Escuela { get; set; }
+            public string Introduccion { get; set; }
+            public string PerfilesProfesionales { get; set; }
+            public string ParticipacionEstudiantil { get; set; }
+            public string RiesgosCumplimiento { get; set; }
+            public string ViabilidadFinanciera { get; set; }
+            public string ImpactoSocial { get; set; }
+            public string ImpactoAcademico { get; set; }
         }
 
         public class Extensionist
@@ -57,10 +65,10 @@ namespace ProyectoVie.Pages.VieWeb
                 await connection.OpenAsync();
                 Debug.WriteLine("Conexión a la base de datos abierta correctamente.");
 
-                using (SqlCommand command = new SqlCommand("ObtenerPropuestaDetalles", connection))
+                using (SqlCommand command = new SqlCommand("ConsultarPropuesta", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@IdPropuesta", propuestaId);
+                    command.Parameters.AddWithValue("@InID", propuestaId);
 
                     Debug.WriteLine($"Ejecutando el procedimiento almacenado con el IdPropuesta: {propuestaId}");
 
@@ -72,13 +80,21 @@ namespace ProyectoVie.Pages.VieWeb
                             Propuesta.Id = reader.GetInt32(reader.GetOrdinal("ID"));
                             Propuesta.NombreProyecto = reader.GetString(reader.GetOrdinal("NombrePropuesta"));
                             Propuesta.IdentificacionAcuerdo = reader.GetString(reader.GetOrdinal("IdentificacionAcuerdo"));
-                            Propuesta.TipoExtension = reader.GetString(reader.GetOrdinal("TipoExtension"));
                             Propuesta.Descripcion = reader.GetString(reader.GetOrdinal("Descripcion"));
+                            Propuesta.TipoExtension = reader.GetString(reader.GetOrdinal("TipoExtension"));
                             Propuesta.ObjetivoDesarrolloSostenible = reader.GetString(reader.GetOrdinal("ODS"));
                             Propuesta.DeclaracionFinal = reader.GetString(reader.GetOrdinal("DeclaracionFinal"));
                             Propuesta.FechaAprobacion = reader.GetDateTime(reader.GetOrdinal("FechaAprobacion"));
                             Propuesta.FechaSolicitud = reader.GetDateTime(reader.GetOrdinal("FechaSolicitud"));
                             Propuesta.RutaArchivo = reader.GetString(reader.GetOrdinal("RutaArchivo"));
+                            Propuesta.Escuela = reader.GetString(reader.GetOrdinal("Escuela"));
+                            Propuesta.Introduccion = reader.GetString(reader.GetOrdinal("Introduccion"));
+                            Propuesta.PerfilesProfesionales = reader.GetString(reader.GetOrdinal("PerfilesProfesionales"));
+                            Propuesta.ParticipacionEstudiantil = reader.GetString(reader.GetOrdinal("ParticipacionEstudiantil"));
+                            Propuesta.RiesgosCumplimiento = reader.GetString(reader.GetOrdinal("RiesgosCumplimiento"));
+                            Propuesta.ViabilidadFinanciera = reader.GetString(reader.GetOrdinal("ViabilidadFinanciera"));
+                            Propuesta.ImpactoSocial = reader.GetString(reader.GetOrdinal("ImpactoSocial"));
+                            Propuesta.ImpactoAcademico = reader.GetString(reader.GetOrdinal("ImpactoAcademico"));
 
                             // Ajustar la RutaArchivo para la URL de GitHub
                             Propuesta.RutaArchivo = Propuesta.RutaArchivo.Replace(@"Pages\PDF\", ""); // Eliminar 'Pages/PDF/' de la ruta
