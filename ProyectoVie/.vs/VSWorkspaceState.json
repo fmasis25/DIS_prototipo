@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pages\\VieWeb"
+    "\\wwwroot",
+    "\\wwwroot\\css"
   ],
   "SelectedNode": "\\ProyectoVie.sln",
   "PreviewInSolutionExplorer": false

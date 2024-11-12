@@ -110,67 +110,153 @@
                 <table class="rubrica-table">
                     <thead>
                         <tr>
-                            <th scope="col">VARIABLE</th>
-                            <th scope="col">DESCRIPCIÓN</th>
-                            <th scope="col">No cumple</th>
-                            <th scope="col">Cumple parcial</th>
-                            <th scope="col">Cumple</th>
-                            <th scope="col">Porcentaje</th>
+                            <th>VARIABLE</th>
+                            <th>DESCRIPCIÓN</th>
+                            <th>No cumple</th>
+                            <th>Cumple parcial</th>
+                            <th>Cumple</th>
+                            <th>Comentario</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Afinidad de disciplinas</th>
+                            <td>Afinidad de disciplinas</td>
                             <td>
                                 El equipo de trabajo cumple con:<br>
                                 a. Explica la articulación de las áreas de conocimiento participantes.<br>
                                 b. Especifica la participación de cada integrante del equipo.<br>
                                 c. Tiene una conformación interdisciplinaria.
                             </td>
-                            <td><input type="checkbox" name="NoCumpleAfinidad" disabled @(Model.NoCumpleAfinidad == 1 ? "checked" : "") aria-label="No cumple afinidad de disciplinas"></td>
-                            <td><input type="checkbox" name="CumpleParcialAfinidad" disabled @(Model.CumpleParcialAfinidad == 1 ? "checked" : "") aria-label="Cumple parcialmente afinidad de disciplinas"></td>
-                            <td><input type="checkbox" name="CumpleAfinidad" disabled @(Model.CumpleAfinidad == 1 ? "checked" : "") aria-label="Cumple afinidad de disciplinas"></td>
-                            <td><input type="number" name="PorcentajeAfinidad" value="@Model.PorcentajeAfinidad.ToString("0.##")" readonly aria-label="Porcentaje afinidad de disciplinas"></td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleAfinidad" disabled aria-label="No cumple con afinidad de disciplinas" @(Model.NoCumpleAfinidad == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialAfinidad" disabled aria-label="Cumple parcialmente con afinidad de disciplinas" @(Model.CumpleParcialAfinidad == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">5%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleAfinidad" disabled aria-label="Cumple con afinidad de disciplinas" @(Model.CumpleAfinidad == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeAfinidad" value="@Model.PorcentajeAfinidad" readonly aria-readonly="true"></td>
                         </tr>
                         <tr>
-                            <th scope="row">El problema que aborda</th>
+                            <td>El problema que aborda</td>
                             <td>
                                 El problema que aborda cumple con:<br>
                                 a. Se encuentra justificado con fuentes de información con referencias actualizadas y dentro de las políticas nacionales vigentes.<br>
                                 b. Se vincula con los ejes del conocimiento estratégicos del ITCR.<br>
                                 c. Hay explicación sobre su correspondencia con los ODS.
                             </td>
-                            <td><input type="checkbox" name="NoCumpleProblema" disabled @(Model.NoCumpleProblema == 1 ? "checked" : "") aria-label="No cumple el problema que aborda"></td>
-                            <td><input type="checkbox" name="CumpleParcialProblema" disabled @(Model.CumpleParcialProblema == 1 ? "checked" : "") aria-label="Cumple parcialmente el problema que aborda"></td>
-                            <td><input type="checkbox" name="CumpleProblema" disabled @(Model.CumpleProblema == 1 ? "checked" : "") aria-label="Cumple el problema que aborda"></td>
-                            <td><input type="number" name="PorcentajeProblema" value="@Model.PorcentajeProblema.ToString("0.##")" readonly aria-label="Porcentaje del problema que aborda"></td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleProblema" disabled aria-label="No cumple con el problema que aborda" @(Model.NoCumpleProblema == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialProblema" disabled aria-label="Cumple parcialmente con el problema que aborda" @(Model.CumpleParcialProblema == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleProblema" disabled aria-label="Cumple con el problema que aborda" @(Model.CumpleProblema == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeProblema" value="@Model.PorcentajeProblema" readonly aria-readonly="true"></td>
                         </tr>
-               
                         <tr>
-                            <th scope="row">Estrategia de abordaje</th>
+                            <td>Estrategia de abordaje</td>
                             <td>
                                 La estrategia de abordaje cumple con:<br>
                                 a. Describe el proceso para la obtención de los resultados esperados.<br>
-                                b. Especifica las metodologías y técnicas acorde al tipo de proyecto.<br>
+                                b. Especifica las metodologías y técnicas acorde al tipo de proyecto (extensión docente, transferencia tecnológica y acción participativa).<br>
                                 c. Especifica la relación del eje de conocimiento y su propuesta.
                             </td>
-                            <td><input type="checkbox" name="NoCumpleEstrategia" disabled @(Model.NoCumpleEstrategia == 1 ? "checked" : "") aria-label="No cumple la estrategia de abordaje"></td>
-                            <td><input type="checkbox" name="CumpleParcialEstrategia" disabled @(Model.CumpleParcialEstrategia == 1 ? "checked" : "") aria-label="Cumple parcialmente la estrategia de abordaje"></td>
-                            <td><input type="checkbox" name="CumpleEstrategia" disabled @(Model.CumpleEstrategia == 1 ? "checked" : "") aria-label="Cumple la estrategia de abordaje"></td>
-                            <td><input type="number" name="PorcentajeEstrategia" value="@Model.PorcentajeEstrategia.ToString("0.##")" readonly aria-label="Porcentaje estrategia de abordaje"></td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleEstrategia" disabled aria-label="No cumple con estrategia de abordaje" @(Model.NoCumpleEstrategia == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialEstrategia" disabled aria-label="Cumple parcialmente con estrategia de abordaje" @(Model.CumpleParcialEstrategia == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleEstrategia" disabled aria-label="Cumple con estrategia de abordaje" @(Model.CumpleEstrategia == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeEstrategia" value="@Model.PorcentajeEstrategia" readonly aria-readonly="true"></td>
                         </tr>
                         <tr>
-                            <th scope="row">Viabilidad financiera</th>
+                            <td>Información técnica</td>
+                            <td>
+                                La información técnica cumple con:<br>
+                                a. Los objetivos específicos tienen resultados esperados.<br>
+                                b. Los objetivos específicos tienen actividades con indicadores y su respectivo medio de verificación.<br>
+                                c. Cuenta con un cronograma.<br>
+                                d. Presenta un análisis de los riesgos y mitigaciones.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleInformacion" disabled aria-label="No cumple con información técnica" @(Model.NoCumpleInformacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialInformacion" disabled aria-label="Cumple parcialmente con información técnica" @(Model.CumpleParcialInformacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleInformacion" disabled aria-label="Cumple con información técnica" @(Model.CumpleInformacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeInformacion" value="@Model.PorcentajeInformacion" readonly aria-readonly="true"></td>
+                        </tr>
+                        <tr>
+                            <td>Viabilidad financiera</td>
                             <td>
                                 En cuanto a los recursos cumple con:<br>
                                 a. Están debidamente justificados.<br>
                                 b. Se detallan ingresos y egresos.<br>
-                                c. Hay una distribución de los recursos que responden a las actividades del proyecto.
+                                c. Hay una distribución de los recursos que responden a las actividades de proyecto.
                             </td>
-                            <td><input type="checkbox" name="NoCumpleFinanciera" disabled @(Model.NoCumpleFinanciera == 1 ? "checked" : "") aria-label="No cumple viabilidad financiera"></td>
-                            <td><input type="checkbox" name="CumpleParcialFinanciera" disabled @(Model.CumpleParcialFinanciera == 1 ? "checked" : "") aria-label="Cumple parcialmente viabilidad financiera"></td>
-                            <td><input type="checkbox" name="CumpleFinanciera" disabled @(Model.CumpleFinanciera == 1 ? "checked" : "") aria-label="Cumple viabilidad financiera"></td>
-                            <td><input type="number" name="PorcentajeFinanciera" value="@Model.PorcentajeFinanciera.ToString("0.##")" readonly aria-label="Porcentaje viabilidad financiera"></td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleFinanciera" disabled aria-label="No cumple con viabilidad financiera" @(Model.NoCumpleFinanciera == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialFinanciera" disabled aria-label="Cumple parcialmente con viabilidad financiera" @(Model.CumpleParcialFinanciera == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleFinanciera" disabled aria-label="Cumple con viabilidad financiera" @(Model.CumpleFinanciera == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeFinanciera" value="@Model.PorcentajeFinanciera" readonly aria-readonly="true"></td>
+                        </tr>
+                        <tr>
+                            <td>Participación</td>
+                            <td>
+                                La participación cumple con:<br>
+                                a. Tiene el respaldo de los actores participantes.<br>
+                                b. Están debidamente justificados.<br>
+                                c. Está acorde al tipo de intervención.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="NoCumpleParticipacion" disabled aria-label="No cumple con participación" @(Model.NoCumpleParticipacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParcialParticipacion" disabled aria-label="Cumple parcialmente con participación" @(Model.CumpleParcialParticipacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">5%</span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="CumpleParticipacion" disabled aria-label="Cumple con participación" @(Model.CumpleParticipacion == 1 ? "checked" : "")>
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
+                            </td>
+                            <td><input type="text" name="PorcentajeParticipacion" value="@Model.PorcentajeParticipacion" readonly aria-readonly="true"></td>
+                        </tr>
+                        <tr>
+                            <td class="total-input"><strong>Total</strong></td>
+                            <td colspan="5">
+                                <input type="text" name="PorcentajeTotal" value="@Model.PorcentajeTotal" class="total-input" readonly aria-readonly="true">
+                            </td>
                         </tr>
                     </tbody>
                 </table>

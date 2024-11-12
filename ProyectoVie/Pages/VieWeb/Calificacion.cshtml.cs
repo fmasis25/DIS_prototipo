@@ -17,7 +17,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleAfinidad { get; set; }
         [BindProperty]
-        public decimal PorcentajeAfinidad { get; set; }
+        public string? PorcentajeAfinidad { get; set; }
 
         // Problema
         [BindProperty]
@@ -27,7 +27,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleProblema { get; set; }
         [BindProperty]
-        public decimal PorcentajeProblema { get; set; }
+        public string? PorcentajeProblema { get; set; }
 
         // Estrategia
         [BindProperty]
@@ -37,7 +37,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleEstrategia { get; set; }
         [BindProperty]
-        public decimal PorcentajeEstrategia { get; set; }
+        public string? PorcentajeEstrategia { get; set; }
 
         // Información técnica
         [BindProperty]
@@ -47,7 +47,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleInformacion { get; set; }
         [BindProperty]
-        public decimal PorcentajeInformacion { get; set; }
+        public string? PorcentajeInformacion { get; set; }
 
         // Viabilidad financiera
         [BindProperty]
@@ -57,7 +57,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleFinanciera { get; set; }
         [BindProperty]
-        public decimal PorcentajeFinanciera { get; set; }
+        public string? PorcentajeFinanciera { get; set; }
 
         // Participación estudiantil
         [BindProperty]
@@ -67,7 +67,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleParticipacion { get; set; }
         [BindProperty]
-        public decimal PorcentajeParticipacion { get; set; }
+        public string? PorcentajeParticipacion { get; set; }
 
         // Total
         [BindProperty]
@@ -103,32 +103,32 @@ namespace ProyectoVie.Pages.VieWeb
                                     NoCumpleAfinidad = (bool)reader["No_Cumple_Afinidad"] ? 1 : 0;
                                     CumpleParcialAfinidad = (bool)reader["Cumple_Parcial_Afinidad"] ? 1 : 0;
                                     CumpleAfinidad = (bool)reader["Cumple_Afinidad"] ? 1 : 0;
-                                    PorcentajeAfinidad = reader["Porcentaje_Afinidad"] != DBNull.Value ? (decimal)reader["Porcentaje_Afinidad"] : 0;
+                                    PorcentajeAfinidad = reader["Comentario_Afinidad"] != DBNull.Value ? (string)reader["Comentario_Afinidad"] : "Sin comentario";
 
                                     NoCumpleProblema = (bool)reader["No_Cumple_Problema"] ? 1 : 0;
                                     CumpleParcialProblema = (bool)reader["Cumple_Parcial_Problema"] ? 1 : 0;
                                     CumpleProblema = (bool)reader["Cumple_Problema"] ? 1 : 0;
-                                    PorcentajeProblema = reader["Porcentaje_Problema"] != DBNull.Value ? (decimal)reader["Porcentaje_Problema"] : 0;
+                                    PorcentajeProblema = reader["Comentario_Problema"] != DBNull.Value ? (string)reader["Comentario_Problema"] : "Sin comentario";
 
                                     NoCumpleEstrategia = (bool)reader["No_Cumple_Estrategia"] ? 1 : 0;
                                     CumpleParcialEstrategia = (bool)reader["Cumple_Parcial_Estrategia"] ? 1 : 0;
                                     CumpleEstrategia = (bool)reader["Cumple_Estrategia"] ? 1 : 0;
-                                    PorcentajeEstrategia = reader["Porcentaje_Estrategia"] != DBNull.Value ? (decimal)reader["Porcentaje_Estrategia"] : 0;
+                                    PorcentajeEstrategia = reader["Comentario_Estrategia"] != DBNull.Value ? (string)reader["Comentario_Estrategia"] : "Sin comentario";
 
                                     NoCumpleInformacion = (bool)reader["No_Cumple_Informacion"] ? 1 : 0;
                                     CumpleParcialInformacion = (bool)reader["Cumple_Parcial_Informacion"] ? 1 : 0;
                                     CumpleInformacion = (bool)reader["Cumple_Informacion"] ? 1 : 0;
-                                    PorcentajeInformacion = reader["Porcentaje_Informacion"] != DBNull.Value ? (decimal)reader["Porcentaje_Informacion"] : 0;
+                                    PorcentajeInformacion = reader["Comentario_Informacion"] != DBNull.Value ? (string)reader["Comentario_Informacion"] : "Sin comentario";
 
                                     NoCumpleFinanciera = (bool)reader["No_Cumple_Financiera"] ? 1 : 0;
                                     CumpleParcialFinanciera = (bool)reader["Cumple_Parcial_Financiera"] ? 1 : 0;
                                     CumpleFinanciera = (bool)reader["Cumple_Financiera"] ? 1 : 0;
-                                    PorcentajeFinanciera = reader["Porcentaje_Financiera"] != DBNull.Value ? (decimal)reader["Porcentaje_Financiera"] : 0;
+                                    PorcentajeFinanciera = reader["Comentario_Financiera"] != DBNull.Value ? (string)reader["Comentario_Financiera"] : "Sin comentario";
 
                                     NoCumpleParticipacion = (bool)reader["No_Cumple_Participacion"] ? 1 : 0;
                                     CumpleParcialParticipacion = (bool)reader["Cumple_Parcial_Participacion"] ? 1 : 0;
                                     CumpleParticipacion = (bool)reader["Cumple_Participacion"] ? 1 : 0;
-                                    PorcentajeParticipacion = reader["Porcentaje_Participacion"] != DBNull.Value ? (decimal)reader["Porcentaje_Participacion"] : 0;
+                                    PorcentajeParticipacion = reader["Comentario_Participacion"] != DBNull.Value ? (string)reader["Comentario_Participacion"] : "Sin comentario";
                                 }
                                 else
                                 {

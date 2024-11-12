@@ -17,7 +17,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleAfinidad { get; set; }
         [BindProperty]
-        public int PorcentajeAfinidad { get; set; }
+        public string? PorcentajeAfinidad { get; set; }
 
         // Problema
         [BindProperty]
@@ -27,7 +27,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleProblema { get; set; }
         [BindProperty]
-        public int PorcentajeProblema { get; set; }
+        public string? PorcentajeProblema { get; set; }
 
         // Estrategia
         [BindProperty]
@@ -37,7 +37,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleEstrategia { get; set; }
         [BindProperty]
-        public int PorcentajeEstrategia { get; set; }
+        public string? PorcentajeEstrategia { get; set; }
 
         // Información técnica
         [BindProperty]
@@ -47,7 +47,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleInformacion { get; set; }
         [BindProperty]
-        public int PorcentajeInformacion { get; set; }
+        public string? PorcentajeInformacion { get; set; }
 
         // Viabilidad financiera
         [BindProperty]
@@ -57,7 +57,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleFinanciera { get; set; }
         [BindProperty]
-        public int PorcentajeFinanciera { get; set; }
+        public string? PorcentajeFinanciera { get; set; }
 
         // Participación estudiantil
         [BindProperty]
@@ -67,7 +67,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public int CumpleParticipacion { get; set; }
         [BindProperty]
-        public int PorcentajeParticipacion { get; set; }
+        public string? PorcentajeParticipacion { get; set; }
 
         // Total
         [BindProperty]
@@ -97,19 +97,7 @@ namespace ProyectoVie.Pages.VieWeb
 
         public IActionResult OnPost()
         {
-            // Los porcentajes ya son de tipo decimal
-
-            decimal porcentajeAfinidad = PorcentajeAfinidad;
-            decimal porcentajeProblema = PorcentajeProblema;
-            decimal porcentajeEstrategia = PorcentajeEstrategia;
-            decimal porcentajeInformacion = PorcentajeInformacion;
-            decimal porcentajeFinanciera = PorcentajeFinanciera;
-            decimal porcentajeParticipacion = PorcentajeParticipacion;
-            decimal porcentajeTotal = PorcentajeTotal;
-
-
-
-
+            
             // Cadena de conexión a la base de datos
             string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
@@ -124,14 +112,17 @@ namespace ProyectoVie.Pages.VieWeb
                               No_Cumple_Estrategia, Cumple_Parcial_Estrategia, Cumple_Estrategia, Porcentaje_Estrategia,
                               No_Cumple_Informacion, Cumple_Parcial_Informacion, Cumple_Informacion, Porcentaje_Informacion,
                               No_Cumple_Financiera, Cumple_Parcial_Financiera, Cumple_Financiera, Porcentaje_Financiera,
-                              No_Cumple_Participacion, Cumple_Parcial_Participacion, Cumple_Participacion, Porcentaje_Participacion) 
+                              No_Cumple_Participacion, Cumple_Parcial_Participacion, Cumple_Participacion, Porcentaje_Participacion,
+                              Comentario_Afinidad, Comentario_Problema, Comentario_Estrategia, Comentario_Informacion, Comentario_Financiera, Comentario_Participacion) 
                              VALUES 
-                             (@PorcentajeTotal, GETDATE(), @PropuestaId, @NoCumpleAfinidad, @CumpleParcialAfinidad, @CumpleAfinidad, @PorcentajeAfinidad, 
-                              @NoCumpleProblema, @CumpleParcialProblema, @CumpleProblema, @PorcentajeProblema, 
-                              @NoCumpleEstrategia, @CumpleParcialEstrategia, @CumpleEstrategia, @PorcentajeEstrategia, 
-                              @NoCumpleInformacion, @CumpleParcialInformacion, @CumpleInformacion, @PorcentajeInformacion, 
-                              @NoCumpleFinanciera, @CumpleParcialFinanciera, @CumpleFinanciera, @PorcentajeFinanciera, 
-                              @NoCumpleParticipacion, @CumpleParcialParticipacion, @CumpleParticipacion, @PorcentajeParticipacion)";
+                             (@PorcentajeTotal, GETDATE(), @PropuestaId, @NoCumpleAfinidad, @CumpleParcialAfinidad, @CumpleAfinidad, NULL, 
+                              @NoCumpleProblema, @CumpleParcialProblema, @CumpleProblema, NULL, 
+                              @NoCumpleEstrategia, @CumpleParcialEstrategia, @CumpleEstrategia, NULL, 
+                              @NoCumpleInformacion, @CumpleParcialInformacion, @CumpleInformacion, NULL, 
+                              @NoCumpleFinanciera, @CumpleParcialFinanciera, @CumpleFinanciera, NULL, 
+                              @NoCumpleParticipacion, @CumpleParcialParticipacion, @CumpleParticipacion,NULL,  
+                              @PorcentajeAfinidad, @PorcentajeProblema, @PorcentajeEstrategia, @PorcentajeInformacion, @PorcentajeFinanciera,
+                              @PorcentajeParticipacion)";
 
                     
                     // Actualiza el estado en la tabla PROPUESTA
@@ -142,40 +133,40 @@ namespace ProyectoVie.Pages.VieWeb
                     SqlCommand command = new SqlCommand(query, connection);
                     SqlCommand command2 = new SqlCommand(query2, connection);
 
-                    command.Parameters.AddWithValue("@PorcentajeTotal", porcentajeTotal);
+                    command.Parameters.AddWithValue("@PorcentajeTotal", PorcentajeTotal);
                     command.Parameters.AddWithValue("@PropuestaId", PropuestaId);
                     command.Parameters.AddWithValue("@NoCumpleAfinidad", NoCumpleAfinidad);
                     command.Parameters.AddWithValue("@CumpleParcialAfinidad", CumpleParcialAfinidad);
                     command.Parameters.AddWithValue("@CumpleAfinidad", CumpleAfinidad);
-                    command.Parameters.AddWithValue("@PorcentajeAfinidad", porcentajeAfinidad);
+                    command.Parameters.AddWithValue("@PorcentajeAfinidad", PorcentajeAfinidad);
 
                     command.Parameters.AddWithValue("@NoCumpleProblema", NoCumpleProblema);
                     command.Parameters.AddWithValue("@CumpleParcialProblema", CumpleParcialProblema);
                     command.Parameters.AddWithValue("@CumpleProblema", CumpleProblema);
-                    command.Parameters.AddWithValue("@PorcentajeProblema", porcentajeProblema);
+                    command.Parameters.AddWithValue("@PorcentajeProblema", PorcentajeProblema);
 
                     command.Parameters.AddWithValue("@NoCumpleEstrategia", NoCumpleEstrategia);
                     command.Parameters.AddWithValue("@CumpleParcialEstrategia", CumpleParcialEstrategia);
                     command.Parameters.AddWithValue("@CumpleEstrategia", CumpleEstrategia);
-                    command.Parameters.AddWithValue("@PorcentajeEstrategia", porcentajeEstrategia);
+                    command.Parameters.AddWithValue("@PorcentajeEstrategia", PorcentajeEstrategia);
 
                     command.Parameters.AddWithValue("@NoCumpleInformacion", NoCumpleInformacion);
                     command.Parameters.AddWithValue("@CumpleParcialInformacion", CumpleParcialInformacion);
                     command.Parameters.AddWithValue("@CumpleInformacion", CumpleInformacion);
-                    command.Parameters.AddWithValue("@PorcentajeInformacion", porcentajeInformacion);
+                    command.Parameters.AddWithValue("@PorcentajeInformacion", PorcentajeInformacion);
 
                     command.Parameters.AddWithValue("@NoCumpleFinanciera", NoCumpleFinanciera);
                     command.Parameters.AddWithValue("@CumpleParcialFinanciera", CumpleParcialFinanciera);
                     command.Parameters.AddWithValue("@CumpleFinanciera", CumpleFinanciera);
-                    command.Parameters.AddWithValue("@PorcentajeFinanciera", porcentajeFinanciera);
+                    command.Parameters.AddWithValue("@PorcentajeFinanciera", PorcentajeFinanciera);
 
                     command.Parameters.AddWithValue("@NoCumpleParticipacion", NoCumpleParticipacion);
                     command.Parameters.AddWithValue("@CumpleParcialParticipacion", CumpleParcialParticipacion);
                     command.Parameters.AddWithValue("@CumpleParticipacion", CumpleParticipacion);
-                    command.Parameters.AddWithValue("@PorcentajeParticipacion", porcentajeParticipacion);
+                    command.Parameters.AddWithValue("@PorcentajeParticipacion", PorcentajeParticipacion);
 
                     // Determina el nuevo estado según el porcentaje
-                    int nuevoEstado = porcentajeTotal >= 70 ? 4 : 1;
+                    int nuevoEstado = PorcentajeTotal >= 70 ? 4 : 1;
                     command2.Parameters.AddWithValue("@nuevoEstado", nuevoEstado);
                     command2.Parameters.AddWithValue("@PropuestaId", PropuestaId); 
                     command2.ExecuteNonQuery();

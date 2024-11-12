@@ -143,16 +143,18 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleAfinidad" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Afinidad">
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialAfinidad" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Afinidad">
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">5%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleAfinidad" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Afinidad">
+                                <span id="porcentajeAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeAfinidad" min="0" max="10" aria-describedby="porcentajeAyuda" oninput="calculateTotal()">
-                                <span id="porcentajeAyuda">Porcentaje entre 0 y 10</span>
+                                <input type="text" name="PorcentajeAfinidad" aria-describedby="porcentajeAyuda">
                             </td>
                         </tr>
                         <tr>
@@ -165,16 +167,18 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleProblema" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Problema">
+                                <span id="problemaAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialProblema" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Problema">
+                                <span id="problemaAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleProblema" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Problema">
+                                <span id="problemaAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeProblema" min="0" max="20" aria-describedby="problemaAyuda" oninput="calculateTotal()">
-                                <span id="problemaAyuda">Porcentaje entre 0 y 20</span>
+                                <input type="text" name="PorcentajeProblema" aria-describedby="porcentajeAyuda">
                             </td>
                         </tr>
                         <tr>
@@ -187,16 +191,18 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleEstrategia" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Estrategia">
+                                <span id="estrategiaAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialEstrategia" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Estrategia">
+                                <span id="estrategiaAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleEstrategia" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Estrategia">
+                                <span id="estrategiaAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeEstrategia" min="0" max="20" aria-describedby="estrategiaAyuda" oninput="calculateTotal()">
-                                <span id="estrategiaAyuda">Porcentaje entre 0 y 20</span>
+                                <input type="text" name="PorcentajeEstrategia" aria-describedby="porcentajeAyuda">
                             </td>
                         </tr>
                         <tr>
@@ -210,16 +216,19 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleInformacion" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Información">
+                                <span id="informacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialInformacion" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Información">
+                                <span id="informacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleInformacion" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Información">
+                                <span id="informacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeInformacion" min="0" max="20" aria-describedby="informacionAyuda" oninput="calculateTotal()">
-                                <span id="informacionAyuda">Porcentaje entre 0 y 20</span>
+                                <input type="text" name="PorcentajeInformacion" aria-describedby="porcentajeAyuda">
+                            </td>
                             </td>
                         </tr>
                         <tr>
@@ -232,16 +241,18 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleFinanciera" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Viabilidad Financiera">
+                                <span id="financieraAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialFinanciera" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Viabilidad Financiera">
+                                <span id="financieraAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleFinanciera" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Viabilidad Financiera">
+                                <span id="financieraAyuda" style="font-size: 0.8em; text-align: center; display: block;">20%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeFinanciera" min="0" max="20" aria-describedby="financieraAyuda" oninput="calculateTotal()">
-                                <span id="financieraAyuda">Porcentaje entre 0 y 20</span>
+                                <input type="text" name="PorcentajeFinanciera" aria-describedby="porcentajeAyuda">
                             </td>
                         </tr>
                         <tr>
@@ -254,16 +265,18 @@
                             </td>
                             <td>
                                 <input type="checkbox" name="NoCumpleParticipacion" value="1" onclick="toggleCheckboxes(this)" aria-label="No cumple Participación">
+                                <span id="participacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">0%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParcialParticipacion" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple parcialmente Participación">
+                                <span id="participacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">5%</span>
                             </td>
                             <td>
                                 <input type="checkbox" name="CumpleParticipacion" value="1" onclick="toggleCheckboxes(this)" aria-label="Cumple Participación">
+                                <span id="participacionAyuda" style="font-size: 0.8em; text-align: center; display: block;">10%</span>
                             </td>
                             <td>
-                                <input type="number" name="PorcentajeParticipacion" min="0" max="10" aria-describedby="participacionAyuda" oninput="calculateTotal()">
-                                <span id="participacionAyuda">Porcentaje entre 0 y 10</span>
+                                <input type="text" name="PorcentajeParticipacion" aria-describedby="porcentajeAyuda">
                             </td>
                         </tr>
                         <tr>
@@ -289,55 +302,59 @@
     </div>
 
     <script>
-        // Función para manejar la selección de checkboxes
-        function toggleCheckboxes(currentCheckbox) {
-            const row = currentCheckbox.closest('tr');
-            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+    function toggleCheckboxes(currentCheckbox) {
+        const row = currentCheckbox.closest('tr');
+        const checkboxes = row.querySelectorAll('input[type="checkbox"]');
 
-            checkboxes.forEach(checkbox => {
-                if (checkbox !== currentCheckbox) {
-                    checkbox.checked = false;
-                }
-            });
-
-            calculateTotal();
-        }
-
-        // Función para calcular el total
-        function calculateTotal() {
-            let total = 0;
-            let warningMessage = '';
-
-            document.querySelectorAll('input[type="number"]').forEach(input => {
-                let value = parseFloat(input.value) || 0;
-
-                if (input.name.includes('PorcentajeAfinidad') && (value < 0 || value > 10)) {
-                    warningMessage = 'El porcentaje de Afinidad debe estar entre 0 y 10.';
-                } else if (input.name.includes('PorcentajeProblema') && (value < 0 || value > 20)) {
-                    warningMessage = 'El porcentaje de Problema debe estar entre 0 y 20.';
-                } else if (input.name.includes('PorcentajeEstrategia') && (value < 0 || value > 20)) {
-                    warningMessage = 'El porcentaje de Estrategia debe estar entre 0 y 20.';
-                } else if (input.name.includes('PorcentajeInformacion') && (value < 0 || value > 20)) {
-                    warningMessage = 'El porcentaje de Información debe estar entre 0 y 20.';
-                } else if (input.name.includes('PorcentajeFinanciera') && (value < 0 || value > 20)) {
-                    warningMessage = 'El porcentaje de Viabilidad Financiera debe estar entre 0 y 20.';
-                } else if (input.name.includes('PorcentajeParticipacion') && (value < 0 || value > 10)) {
-                    warningMessage = 'El porcentaje de Participación debe estar entre 0 y 10.';
-                }
-
-                total += value;
-            });
-
-            document.querySelector('input[name="PorcentajeTotal"]').value = total;
-
-            const warningDiv = document.getElementById('warning-message');
-            if (warningMessage) {
-                warningDiv.textContent = warningMessage;
-                warningDiv.style.display = 'block';
-            } else {
-                warningDiv.style.display = 'none';
+        checkboxes.forEach(checkbox => {
+            if (checkbox !== currentCheckbox) {
+                checkbox.checked = false;
             }
+        });
+
+        calculateTotal();
+    }
+
+    function calculateTotal() {
+        let total = 0;
+        let warningMessage = '';
+
+        
+        // Sumar valores de los checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            if (checkbox.checked) {
+                if (checkbox.name.includes("NoCumple")) {
+                    total += 0;
+                }
+                else if (checkbox.name.includes("CumpleParcial")) {
+                    if (checkbox.name === "CumpleParcialAfinidad" || checkbox.name === "CumpleParcialParticipacion") {
+                        total += 5;
+                    } else {
+                        total += 10;
+                    }
+                }
+                else if (checkbox.name.includes("Cumple")) {
+                    if (checkbox.name === "CumpleAfinidad" || checkbox.name === "CumpleParticipacion") {
+                        total += 10;
+                    } else {
+                        total += 20;
+                    }
+                }
+            }
+
+        });
+
+        document.querySelector('input[name="PorcentajeTotal"]').value = total;
+
+        const warningDiv = document.getElementById('warning-message');
+        if (warningMessage) {
+            warningDiv.textContent = warningMessage;
+            warningDiv.style.display = 'block';
+        } else {
+            warningDiv.style.display = 'none';
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
