@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <title>Sistema de Propuestas - Eliminar</title>
     <style>
+        /* Estilos de la página */
         body {
             font-family: 'Nunito', sans-serif;
             margin: 0;
@@ -22,7 +23,7 @@
 
         .header {
             display: flex;
-            justify-content: space-between; /* Asegura que el logo y el ícono del perfil estén en lados opuestos */
+            justify-content: space-between;
             align-items: center;
             background-color: #d9d9d9;
             padding: 10px 20px;
@@ -45,11 +46,10 @@
             width: 40px;
             height: auto;
             margin-left: auto;
-            margin-right: 0; /* Asegúrate de que no haya margen derecho que desplace el ícono */
         }
 
         .sidebar {
-            width: 180px; /* Ajusto un poco el ancho */
+            width: 180px;
             background-color: #0a4275;
             color: white;
             padding: 15px;
@@ -59,8 +59,8 @@
             left: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Distribuye bien las opciones */
-            align-items: flex-start; /* Alineado a la izquierda para mejor lectura */
+            justify-content: flex-start;
+            align-items: flex-start;
             z-index: 1000;
         }
 
@@ -68,22 +68,13 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                margin: 15px 0; /* Reducimos un poco el margen para compactar */
-            }
-
-            .sidebar .exit-option {
-                margin-bottom: 20px;
+                margin: 15px 0;
             }
 
                 .sidebar .option a img, .sidebar .exit-option a img {
-                    width: 30px; /* Íconos más pequeños para un look más limpio */
+                    width: 30px;
                     height: auto;
-                    margin-right: 10px; /* Espacio entre ícono y texto */
-                }
-
-                .sidebar .option span, .sidebar .exit-option span {
-                    font-size: 16px; /* Mantener el texto legible */
-                    text-align: left;
+                    margin-right: 10px;
                 }
 
         .main-content {
@@ -135,18 +126,8 @@
             margin-bottom: 20px;
         }
 
-        .btn-back {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
         .btn-delete {
-            background-color: #dc3545; /* Color rojo para eliminar */
+            background-color: #dc3545;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -156,14 +137,13 @@
         }
 
         .alert {
-            color: red; /* Estilo para mensajes de error */
+            color: red;
             font-weight: bold;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Header general del sistema -->
     <header class="header">
         <a href="/">
             <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
@@ -198,7 +178,7 @@
                 </div>
             }
             <form id="eliminarForm" method="post" asp-page-handler="EliminarPropuesta">
-                <input type="hidden" name="Id" value="@Model.Propuesta.Id" /> <!-- Campo oculto para el ID -->
+                <input type="hidden" name="Id" value="@Model.Propuesta.Id" />
 
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
@@ -210,84 +190,92 @@
                     <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" readonly aria-readonly="true" />
                 </div>
                 <div class="form-field">
-                    <label for="project-description">Descripción del proyecto:</label>
-                    <textarea id="project-description" name="Descripcion" readonly aria-readonly="true">@Model.Propuesta.Descripcion</textarea>
+                    <label for="project-ods">Objetivo de Desarrollo Sostenible (ODS):</label>
+                    <input type="text" id="project-ods" name="ObjetivoDesarrolloSostenible" value="@Model.Propuesta.ObjetivoDesarrolloSostenible" readonly aria-readonly="true" />
                 </div>
 
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
-                    <label for="project-name">Nombre del proyecto:</label>
-                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" readonly aria-readonly="true" />
+                    <label for="introduction">Introducción:</label>
+                    <textarea id="introduction" name="Introduccion" readonly aria-readonly="true">@Model.Propuesta.Introduccion</textarea>
                 </div>
                 <div class="form-field">
-                    <label for="extension-type">Tipo de extensión:</label>
-                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" readonly aria-readonly="true" />
+                    <label for="project-description">Descripción del proyecto:</label>
+                    <textarea id="project-description" name="Descripcion" readonly aria-readonly="true">@Model.Propuesta.Descripcion</textarea>
                 </div>
                 <div class="form-field">
-                    <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" readonly aria-readonly="true">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                    <label for="professional-profiles">Perfiles Profesionales:</label>
+                    <textarea id="professional-profiles" name="PerfilesProfesionales" readonly aria-readonly="true">@Model.Propuesta.PerfilesProfesionales</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="student-participation">Participación Estudiantil:</label>
+                    <textarea id="student-participation" name="ParticipacionEstudiantil" readonly aria-readonly="true">@Model.Propuesta.ParticipacionEstudiantil</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="compliance-risks">Riesgos de Cumplimiento:</label>
+                    <textarea id="compliance-risks" name="RiesgosCumplimiento" readonly aria-readonly="true">@Model.Propuesta.RiesgosCumplimiento</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="financial-viability">Viabilidad Financiera:</label>
+                    <textarea id="financial-viability" name="ViabilidadFinanciera" readonly aria-readonly="true">@Model.Propuesta.ViabilidadFinanciera</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="social-impact">Impacto Social:</label>
+                    <textarea id="social-impact" name="ImpactoSocial" readonly aria-readonly="true">@Model.Propuesta.ImpactoSocial</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="academic-impact">Impacto Académico:</label>
+                    <textarea id="academic-impact" name="ImpactoAcademico" readonly aria-readonly="true">@Model.Propuesta.ImpactoAcademico</textarea>
                 </div>
 
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
-                <div id="extensionist-section">
-                    <table>
-                        <caption>Datos del grupo extensionista</caption> <!-- Agregado para accesibilidad -->
-                        <thead>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Tipo de Nombramiento</th>
+                            <th>Condición</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var extensionista in Model.Extensionists)
+                        {
                             <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Tipo de Nombramiento</th>
-                                <th>Condición</th>
-                                <th>Fecha Inicio</th>
-                                <th>Fecha Fin</th>
+                                <td>@extensionista.Nombre</td>
+                                <td>@extensionista.Apellido</td>
+                                <td>@extensionista.TipoNombramiento</td>
+                                <td>@extensionista.Condicion</td>
+                                <td>@extensionista.FechaInicio.ToString("yyyy-MM-dd")</td>
+                                <td>@extensionista.FechaFin.ToString("yyyy-MM-dd")</td>
                             </tr>
-                        </thead>
-                        <tbody id="extensionist-table-body">
-                            @foreach (var extensionista in Model.Extensionists)
-                            {
-                                <tr>
-                                    <td>@extensionista.Nombre</td>
-                                    <td>@extensionista.Apellido</td>
-                                    <td>@extensionista.TipoNombramiento</td>
-                                    <td>@extensionista.Condicion</td>
-                                    <td>@extensionista.FechaInicio.ToString("yyyy-MM-dd")</td>
-                                    <td>@extensionista.FechaFin.ToString("yyyy-MM-dd")</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                        }
+                    </tbody>
+                </table>
 
-                <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
-                <div id="organization-section">
-                    <table>
-                        <caption>Datos de instituciones, organizaciones o empresas participantes</caption> <!-- Agregado para accesibilidad -->
-                        <thead>
+                <h2>DATOS DE ORGANIZACIONES</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre de la Organizacion</th>
+                            <th>Contacto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var organizacion in Model.Organizations)
+                        {
                             <tr>
-                                <th>Institución u Organización</th>
-                                <th>Contacto (Correo Electrónico y/o Teléfono)</th>
+                                <td>@organizacion.Organizacion</td>
+                                <td>@organizacion.Contacto</td>
                             </tr>
-                        </thead>
-                        <tbody id="organization-table-body">
-                            @foreach (var organizacion in Model.Organizations)
-                            {
-                                <tr>
-                                    <td>@organizacion.Organizacion</td>
-                                    <td>@organizacion.Contacto</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
-                <div class="form-field">
-                    <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" readonly aria-readonly="true">@Model.Propuesta.DeclaracionFinal</textarea>
-                </div>
+                        }
+                    </tbody>
+                </table>
 
                 <div class="form-field">
-                    <button type="submit" class="btn-delete" aria-label="Eliminar esta propuesta">Eliminar Propuesta</button>
+                    <button type="submit" class="btn-delete">Eliminar Propuesta</button>
                 </div>
             </form>
         </div>

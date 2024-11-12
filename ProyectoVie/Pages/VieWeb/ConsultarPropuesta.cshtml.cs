@@ -65,10 +65,10 @@ namespace ProyectoVie.Pages.VieWeb
                 await connection.OpenAsync();
                 Debug.WriteLine("Conexión a la base de datos abierta correctamente.");
 
-                using (SqlCommand command = new SqlCommand("ConsultarPropuesta", connection))
+                using (SqlCommand command = new SqlCommand("ObtenerPropuestaDetalles", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@InID", propuestaId);
+                    command.Parameters.AddWithValue("@IdPropuesta", propuestaId);  // Cambiar a @IdPropuesta
 
                     Debug.WriteLine($"Ejecutando el procedimiento almacenado con el IdPropuesta: {propuestaId}");
 

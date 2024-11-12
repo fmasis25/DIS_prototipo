@@ -1,7 +1,7 @@
 ﻿@page
 @model ProyectoVie.Pages.VieWeb.ModificarPropuestaModel
 @{
-    ViewData["Title"] = "Modificar Propuestas";
+    ViewData["Title"] = "Modificar Propuesta";
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-    <title>Sistema de Propuestas - Modificar</title>
+    <title>Sistema de Propuestas - Modificación</title>
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -135,88 +135,121 @@
             margin-bottom: 20px;
         }
 
-        .btn-submit {
-            background-color: #28a745;
+        .btn-back {
+            background-color: #007bff;
             color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <!-- Header general del sistema -->
     <header class="header">
-        <a href="/"><img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
+        <a href="/">
+            <img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo">
+        </a>
         <a href="/VieWeb/MiPerfil">
             <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
         </a>
     </header>
 
-    <nav class="sidebar" role="navigation" aria-label="Menú lateral">
+    <div class="sidebar">
         <div class="option">
-            <a href="/VieWeb/AgregarPropuesta" aria-label="Agregar Propuesta">
-                <img src="~/css/icons/propuesta.svg" alt="Agregar Propuestas">
+            <a href="/VieWeb/MenuExtensionista" aria-label="Ver propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Mis Propuestas">
             </a>
-            <span>Agregar Propuestas</span>
+            <span>Mis Propuestas</span>
         </div>
         <div class="exit-option">
-            <a href="/salir" aria-label="Cerrar sesión">
+            <a href="/VieWeb/Login" aria-label="Cerrar sesión">
                 <img src="~/css/icons/salir.svg" alt="Salir">
             </a>
             <span>Salir</span>
         </div>
-    </nav>
+    </div>
 
-    <main class="main-content" role="main" aria-labelledby="modificarPropuestaHeading">
+    <div class="main-content">
         <div class="form-container">
-            <h1 id="modificarPropuestaHeading">Modificar Propuesta</h1>
+            <h1>Modificar Propuesta</h1>
             <form id="modificarForm" method="post">
-                <input type="hidden" name="IdPropuesta" value="@Model.Propuesta.Id" />
-
+                <!-- DATOS INSTANCIA ACADÉMICA -->
                 <h2>DATOS INSTANCIA ACADÉMICA</h2>
                 <div class="form-field">
                     <label for="agreement-number">Número acuerdo de escuela coordinadora:</label>
-                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" required aria-required="true" />
+                    <input type="text" id="agreement-number" name="IdentificacionAcuerdo" value="@Model.Propuesta.IdentificacionAcuerdo" />
                 </div>
                 <div class="form-field">
                     <label for="approval-date">Fecha de aprobación:</label>
-                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" required aria-required="true" />
+                    <input type="date" id="approval-date" name="FechaAprobacion" value="@Model.Propuesta.FechaAprobacion.ToString("yyyy-MM-dd")" />
                 </div>
                 <div class="form-field">
                     <label for="project-description">Descripción del proyecto:</label>
-                    <textarea id="project-description" name="Descripcion" required aria-required="true">@Model.Propuesta.Descripcion</textarea>
+                    <textarea id="project-description" name="Descripcion">@Model.Propuesta.Descripcion</textarea>
                 </div>
 
+                <!-- DATOS DEL PROYECTO -->
                 <h2>DATOS DEL PROYECTO</h2>
                 <div class="form-field">
                     <label for="project-name">Nombre del proyecto:</label>
-                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" required aria-required="true" />
+                    <input type="text" id="project-name" name="NombreProyecto" value="@Model.Propuesta.NombreProyecto" />
                 </div>
                 <div class="form-field">
                     <label for="extension-type">Tipo de extensión:</label>
-                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" required aria-required="true" />
+                    <input type="text" id="extension-type" name="TipoExtension" value="@Model.Propuesta.TipoExtension" />
                 </div>
                 <div class="form-field">
                     <label for="sustainable-goals">Objetivo de Desarrollo Sostenible (ODS):</label>
-                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible" required aria-required="true">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                    <textarea id="sustainable-goals" name="ObjetivoDesarrolloSostenible">@Model.Propuesta.ObjetivoDesarrolloSostenible</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="introduction">Introducción:</label>
+                    <textarea id="introduction" name="Introduccion">@Model.Propuesta.Introduccion</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="professional-profiles">Perfiles Profesionales:</label>
+                    <textarea id="professional-profiles" name="PerfilesProfesionales">@Model.Propuesta.PerfilesProfesionales</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="student-participation">Participación Estudiantil:</label>
+                    <textarea id="student-participation" name="ParticipacionEstudiantil">@Model.Propuesta.ParticipacionEstudiantil</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="compliance-risks">Riesgos de Cumplimiento:</label>
+                    <textarea id="compliance-risks" name="RiesgosCumplimiento">@Model.Propuesta.RiesgosCumplimiento</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="financial-feasibility">Viabilidad Financiera:</label>
+                    <textarea id="financial-feasibility" name="ViabilidadFinanciera">@Model.Propuesta.ViabilidadFinanciera</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="social-impact">Impacto Social:</label>
+                    <textarea id="social-impact" name="ImpactoSocial">@Model.Propuesta.ImpactoSocial</textarea>
+                </div>
+                <div class="form-field">
+                    <label for="academic-impact">Impacto Académico:</label>
+                    <textarea id="academic-impact" name="ImpactoAcademico">@Model.Propuesta.ImpactoAcademico</textarea>
                 </div>
 
+                <!-- DATOS DEL GRUPO EXTENSIONISTA -->
                 <h2>DATOS DEL GRUPO EXTENSIONISTA</h2>
                 <div id="extensionist-section">
-                    <table role="table" aria-label="Tabla de extensionistas">
+                    <table>
+                        <caption>Listado del grupo extensionista</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Tipo de Nombramiento</th>
-                                <th scope="col">Condición</th>
-                                <th scope="col">Fecha Inicio</th>
-                                <th scope="col">Fecha Fin</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Tipo de Nombramiento</th>
+                                <th>Condición</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
                             </tr>
                         </thead>
-                        <tbody id="extensionist-table-body">
+                        <tbody>
                             @foreach (var extensionista in Model.Extensionists)
                             {
                                 <tr>
@@ -232,36 +265,34 @@
                     </table>
                 </div>
 
-                <h2>DATOS DE INSTITUCIONES, ORGANIZACIONES O EMPRESAS PARTICIPANTES</h2>
-                <div id="organization-section">
-                    <table role="table" aria-label="Tabla de organizaciones participantes">
+                <!-- DATOS DE LA INSTITUCIÓN -->
+                <h2>DATOS DE LA INSTITUCIÓN EXTENSIONISTA</h2>
+                <div id="institution-section">
+                    <table>
+                        <caption>Listado de instituciones</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Institución u Organización</th>
-                                <th scope="col">Contacto (Correo Electrónico y/o Teléfono)</th>
+                                <th>Nombre</th>
+                                <th>Contacto</th>
+                                <th>Correo</th>
                             </tr>
                         </thead>
-                        <tbody id="organization-table-body">
-                            @foreach (var organizacion in Model.Organizations)
+                        <tbody>
+                            @foreach (var institucion in Model.Organizations)
                             {
                                 <tr>
-                                    <td>@organizacion.Organizacion</td>
-                                    <td>@organizacion.Contacto</td>
+                                    <td>@institucion.Organizacion</td>
+                                    <td>@institucion.Contacto</td>
                                 </tr>
                             }
                         </tbody>
                     </table>
                 </div>
 
-                <h2>DECLARACIÓN FINAL DE LA PROPUESTA</h2>
-                <div class="form-field">
-                    <label for="proposal-final">Declaración final:</label>
-                    <textarea id="proposal-final" name="DeclaracionFinal" required aria-required="true">@Model.Propuesta.DeclaracionFinal</textarea>
-                </div>
-
-                <button type="submit" class="btn-submit" aria-label="Modificar propuesta">Modificar Propuesta</button>
+                <button type="submit" class="btn-back">Guardar Cambios</button>
+                <a href="/VieWeb/MenuExtensionista" class="btn-back">Volver</a>
             </form>
         </div>
-        </div>
+    </div>
 </body>
 </html>

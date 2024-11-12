@@ -32,6 +32,13 @@ namespace ProyectoVie.Pages.VieWeb
             public DateTime FechaSolicitud { get; set; }
             public string RutaArchivo { get; set; } // Ruta al archivo PDF
             public string UrlArchivo { get; set; } // URL completa del archivo PDF
+            public string Introduccion { get; set; } // Nuevo campo
+            public string PerfilesProfesionales { get; set; } // Nuevo campo
+            public string ParticipacionEstudiantil { get; set; } // Nuevo campo
+            public string RiesgosCumplimiento { get; set; } // Nuevo campo
+            public string ViabilidadFinanciera { get; set; } // Nuevo campo
+            public string ImpactoSocial { get; set; } // Nuevo campo
+            public string ImpactoAcademico { get; set; } // Nuevo campo
         }
 
         public class Extensionist
@@ -83,6 +90,15 @@ namespace ProyectoVie.Pages.VieWeb
                                 Propuesta.FechaAprobacion = reader.GetDateTime(reader.GetOrdinal("FechaAprobacion"));
                                 Propuesta.FechaSolicitud = reader.GetDateTime(reader.GetOrdinal("FechaSolicitud"));
                                 Propuesta.RutaArchivo = reader.GetString(reader.GetOrdinal("RutaArchivo"));
+
+                                // Nuevos campos
+                                Propuesta.Introduccion = reader.GetString(reader.GetOrdinal("Introduccion"));
+                                Propuesta.PerfilesProfesionales = reader.GetString(reader.GetOrdinal("PerfilesProfesionales"));
+                                Propuesta.ParticipacionEstudiantil = reader.GetString(reader.GetOrdinal("ParticipacionEstudiantil"));
+                                Propuesta.RiesgosCumplimiento = reader.GetString(reader.GetOrdinal("RiesgosCumplimiento"));
+                                Propuesta.ViabilidadFinanciera = reader.GetString(reader.GetOrdinal("ViabilidadFinanciera"));
+                                Propuesta.ImpactoSocial = reader.GetString(reader.GetOrdinal("ImpactoSocial"));
+                                Propuesta.ImpactoAcademico = reader.GetString(reader.GetOrdinal("ImpactoAcademico"));
 
                                 // Ajustar la RutaArchivo para la URL de GitHub
                                 Propuesta.RutaArchivo = Propuesta.RutaArchivo.Replace(@"Pages\PDF\", ""); // Eliminar 'Pages/PDF/' de la ruta
@@ -169,8 +185,17 @@ namespace ProyectoVie.Pages.VieWeb
             Propuesta.ObjetivoDesarrolloSostenible = Request.Form["ObjetivoDesarrolloSostenible"];
             Propuesta.DeclaracionFinal = Request.Form["DeclaracionFinal"];
 
-            string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            // Nuevos campos
+            Propuesta.Introduccion = Request.Form["Introduccion"];
+            Propuesta.PerfilesProfesionales = Request.Form["PerfilesProfesionales"];
+            Propuesta.ParticipacionEstudiantil = Request.Form["ParticipacionEstudiantil"];
+            Propuesta.RiesgosCumplimiento = Request.Form["RiesgosCumplimiento"];
+            Propuesta.ViabilidadFinanciera = Request.Form["ViabilidadFinanciera"];
+            Propuesta.ImpactoSocial = Request.Form["ImpactoSocial"];
+            Propuesta.ImpactoAcademico = Request.Form["ImpactoAcademico"];
 
+            // Procedimiento para actualizar la propuesta
+            string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -180,33 +205,25 @@ namespace ProyectoVie.Pages.VieWeb
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        // Asegúrate de que el ID de la propuesta esté disponible
+                        // Parámetros para la actualización de los datos de la propuesta
                         command.Parameters.AddWithValue("@IdPropuesta", Propuesta.Id);
-                        Debug.WriteLine($"@IdPropuesta: {Propuesta.Id}");
-
-                        command.Parameters.AddWithValue("@IdentificacionAcuerdo", Propuesta.IdentificacionAcuerdo);
-                        Debug.WriteLine($"@IdentificacionAcuerdo: {Propuesta.IdentificacionAcuerdo}");
-
-                        command.Parameters.AddWithValue("@FechaAprobacion", Propuesta.FechaAprobacion);
-                        Debug.WriteLine($"@FechaAprobacion: {Propuesta.FechaAprobacion}");
-
-                        command.Parameters.AddWithValue("@Descripcion", Propuesta.Descripcion);
-                        Debug.WriteLine($"@Descripcion: {Propuesta.Descripcion}");
-
                         command.Parameters.AddWithValue("@NombreProyecto", Propuesta.NombreProyecto);
-                        Debug.WriteLine($"@NombreProyecto: {Propuesta.NombreProyecto}");
-
+                        command.Parameters.AddWithValue("@IdentificacionAcuerdo", Propuesta.IdentificacionAcuerdo);
+                        command.Parameters.AddWithValue("@Descripcion", Propuesta.Descripcion);
                         command.Parameters.AddWithValue("@TipoExtension", Propuesta.TipoExtension);
-                        Debug.WriteLine($"@TipoExtension: {Propuesta.TipoExtension}");
+                        command.Parameters.AddWithValue("@ObjetivoDesarrolloSostenible", Propuesta.ObjetivoDesarrolloSostenible);
+                        command.Parameters.AddWithValue("@FechaAprobacion", Propuesta.FechaAprobacion);
+                        command.Parameters.AddWithValue("@Introduccion", Propuesta.Introduccion);
+                        command.Parameters.AddWithValue("@PerfilesProfesionales", Propuesta.PerfilesProfesionales);
+                        command.Parameters.AddWithValue("@ParticipacionEstudiantil", Propuesta.ParticipacionEstudiantil);
+                        command.Parameters.AddWithValue("@RiesgosCumplimiento", Propuesta.RiesgosCumplimiento);
+                        command.Parameters.AddWithValue("@ViabilidadFinanciera", Propuesta.ViabilidadFinanciera);
+                        command.Parameters.AddWithValue("@ImpactoSocial", Propuesta.ImpactoSocial);
+                        command.Parameters.AddWithValue("@ImpactoAcademico", Propuesta.ImpactoAcademico);
 
-                        command.Parameters.AddWithValue("@ODS", Propuesta.ObjetivoDesarrolloSostenible);
-                        Debug.WriteLine($"@ODS: {Propuesta.ObjetivoDesarrolloSostenible}");
-
-                        command.Parameters.AddWithValue("@DeclaracionFinal", Propuesta.DeclaracionFinal);
-                        Debug.WriteLine($"@DeclaracionFinal: {Propuesta.DeclaracionFinal}");
-
-                        // Ejecutar el comando
+                        // Ejecutar el procedimiento
                         await command.ExecuteNonQueryAsync();
+                        return RedirectToPage("/VieWeb/ConsultarPropuesta", new { propuestaId = Propuesta.Id });
                     }
                 }
             }
@@ -214,16 +231,13 @@ namespace ProyectoVie.Pages.VieWeb
             {
                 Debug.WriteLine($"Error en la base de datos: {ex.Message}");
                 ErrorMessage = "Ocurrió un error al intentar actualizar la propuesta.";
-                return Page();
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error inesperado: {ex.Message}");
                 ErrorMessage = "Ocurrió un error inesperado.";
-                return Page();
             }
-
-            return RedirectToPage("/VieWeb/MenuExtensionista", new { propuestaId = Propuesta.Id });
+            return Page(); // Si hay error, recarga la página actual
         }
     }
 }
