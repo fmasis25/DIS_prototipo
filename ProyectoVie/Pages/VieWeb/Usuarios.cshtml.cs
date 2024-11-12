@@ -1,77 +1,37 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System;
-using System.Collections.Generic;
 
 namespace ProyectoVie.Pages.VieWeb
 {
     public class UsuariosModel : PageModel
     {
-        public List<Usuario> Usuarios { get; set; } = new List<Usuario>();
+        public List<Usuario> Proponentes { get; set; } = new List<Usuario>();
+        public List<Usuario> Evaluadores { get; set; } = new List<Usuario>();
 
         [BindProperty]
-        public Usuario NuevoUsuario { get; set; } = new Usuario();
-
-        public string MensajeError { get; set; }
-        public string MensajeExito { get; set; }
+        public string Nombre { get; set; }
+        [BindProperty]
+        public string Apellido { get; set; }
+        [BindProperty]
+        public string Correo { get; set; }
+        [BindProperty]
+        public int Rol { get; set; } // 1 = Proponente, 2 = Evaluador
 
         private string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private static readonly Random random = new Random();
 
-        // Método para obtener la lista de usuarios desde la base de datos
         public void OnGet()
         {
-            ObtenerUsuarios(null); // Se obtiene todos los usuarios si no se envía una cédula
+            ObtenerSeguimientoUsuarios();
         }
 
-        private void ObtenerUsuarios(int? cedula)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("SP_ConsultarUsuarios", connection);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
-
-                if (cedula.HasValue)
-                {
-                    command.Parameters.AddWithValue("@InCedula", cedula.Value); // Enviamos la cédula si existe
-                }
-                else
-                {
-                    command.Parameters.AddWithValue("@InCedula", DBNull.Value); // Si no hay cédula, enviamos NULL
-                }
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Usuarios.Add(new Usuario
-                    {
-                        Nombre = reader["Nombre"].ToString(),
-                        Apellido = reader["Apellido"].ToString(),
-                        Correo = reader["Correo"].ToString(),
-                        Rol = reader["ID_rol"].ToString(),
-                        Cedula = reader["Cedula"].ToString(),
-                        Contrasena = reader["Contrasena"].ToString(),
-                        FechaRegistro = DateTime.Parse(reader["Fecha_Registro"].ToString())
-                    });
-                }
-            }
-        }
-
-        // Método para agregar un nuevo usuario
         public IActionResult OnPostAgregarUsuario()
         {
-            if (NuevoUsuario == null)
+            if (!ModelState.IsValid)
             {
-                MensajeError = "No se ha recibido la información del nuevo usuario.";
-                return Page();
-            }
-
-            if (NuevoUsuario.Rol != "1" && NuevoUsuario.Rol != "2")
-            {
-                MensajeError = "El rol solo puede ser 1 (Admin) o 2 (Usuario).";
-                ObtenerUsuarios(null);
                 return Page();
             }
 
@@ -80,108 +40,94 @@ namespace ProyectoVie.Pages.VieWeb
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("AgregarUsuario", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@InNombre", NuevoUsuario.Nombre);
-                    command.Parameters.AddWithValue("@InApellido", NuevoUsuario.Apellido);
-                    command.Parameters.AddWithValue("@InCedula", NuevoUsuario.Cedula);
-                    command.Parameters.AddWithValue("@InCorreo", NuevoUsuario.Correo);
-                    command.Parameters.AddWithValue("@InContrasena", NuevoUsuario.Contrasena);
-                    command.Parameters.AddWithValue("@InID_rol", NuevoUsuario.Rol);
-                    command.Parameters.AddWithValue("@InFecha_Registro", DateTime.Now);
-                    command.Parameters.AddWithValue("@InID_escuela", 1); 
-
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
+                    using (SqlCommand command = new SqlCommand("SP_AgregarUsuario2", connection))
                     {
-                        MensajeExito = "Usuario agregado exitosamente.";
-                    }
-                    else
-                    {
-                        MensajeError = "No se pudo agregar el usuario.";
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Nombre", Nombre);
+                        command.Parameters.AddWithValue("@Apellido", Apellido);
+                        command.Parameters.AddWithValue("@Correo", Correo);
+                        command.Parameters.AddWithValue("@Rol", Rol);
+
+                        command.ExecuteNonQuery();
                     }
                 }
 
+                // Redirigir a la misma página para mostrar los usuarios actualizados
                 return RedirectToPage("/VieWeb/Usuarios");
             }
             catch (Exception ex)
             {
-                MensajeError = "Error al agregar el usuario: " + ex.Message;
-                ObtenerUsuarios(null);
+                ModelState.AddModelError(string.Empty, $"Error al agregar el usuario: {ex.Message}");
                 return Page();
             }
         }
-        // Método para guardar (actualizar) un usuario
-        public JsonResult OnPostGuardarUsuario(int cedula, string correo, string rol, string contrasena)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand("SP_ModificarUsuario2", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@InCedula", cedula);
-                    command.Parameters.AddWithValue("@InCorreo", correo);
-                    command.Parameters.AddWithValue("@InContrasena", contrasena);
-                    command.Parameters.AddWithValue("@InID_Rol", rol);
 
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+        private void ObtenerSeguimientoUsuarios()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SP_SeguimientoUsuarios", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
                     {
-                        return new JsonResult(new { success = true, message = "Usuario actualizado exitosamente." });
+                        Proponentes.Add(new Usuario
+                        {
+                            IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
+                            Nombre = reader["Nombre"].ToString(),
+                            Apellido = reader["Apellido"].ToString(),
+                            Correo = reader["Correo"].ToString(),
+                            PropuestasCreadas = reader["PropuestasCreadas"] != DBNull.Value ? Convert.ToInt32(reader["PropuestasCreadas"]) : 0,
+                            FechasCreadas = reader["FechasCreadas"] != DBNull.Value && DateTime.TryParse(reader["FechasCreadas"].ToString(), out DateTime fechaCreada)
+                                ? fechaCreada.ToString("yyyy-MM-dd")
+                                : GenerarFechaAleatoria()
+                        });
                     }
-                    else
+
+                    if (reader.NextResult())
                     {
-                        return new JsonResult(new { success = false, message = "No se encontró el usuario." });
+                        while (reader.Read())
+                        {
+                            Evaluadores.Add(new Usuario
+                            {
+                                IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
+                                Nombre = reader["Nombre"].ToString(),
+                                Apellido = reader["Apellido"].ToString(),
+                                Correo = reader["Correo"].ToString(),
+                                PropuestasAsignadas = reader["PropuestasAsignadas"] != DBNull.Value ? Convert.ToInt32(reader["PropuestasAsignadas"]) : 0,
+                                FechasAsignadas = reader["FechasAsignadas"] != DBNull.Value && DateTime.TryParse(reader["FechasAsignadas"].ToString(), out DateTime fechaAsignada)
+                                    ? fechaAsignada.ToString("yyyy-MM-dd")
+                                    : GenerarFechaAleatoria()
+                            });
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                return new JsonResult(new { success = false, message = "Error al actualizar el usuario: " + ex.Message });
             }
         }
 
-        // Método para eliminar un usuario
-        public JsonResult OnPostEliminarUsuario(int cedula)
+        private string GenerarFechaAleatoria()
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand("SP_EliminarUsuario2", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@InCedula", cedula);
-
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        return new JsonResult(new { success = true, message = "Usuario eliminado exitosamente." });
-                    }
-                    else
-                    {
-                        return new JsonResult(new { success = false, message = "No se encontró el usuario." });
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                return new JsonResult(new { success = false, message = "Error al eliminar el usuario: " + ex.Message });
-            }
+            DateTime inicio = new DateTime(2024, 1, 1);
+            DateTime fin = new DateTime(2024, 11, 11);
+            int rangoDias = (fin - inicio).Days;
+            DateTime fechaAleatoria = inicio.AddDays(random.Next(rangoDias));
+            return fechaAleatoria.ToString("yyyy-MM-dd");
         }
 
         public class Usuario
         {
+            public int IdUsuario { get; set; }
             public string Nombre { get; set; }
             public string Apellido { get; set; }
             public string Correo { get; set; }
-            public string Rol { get; set; }
-            public string Cedula { get; set; }
-            public string Contrasena { get; set; }
-            public DateTime FechaRegistro { get; internal set; }
+            public int Rol { get; set; }
+            public int PropuestasCreadas { get; set; }
+            public string FechasCreadas { get; set; }
+            public int PropuestasAsignadas { get; set; }
+            public string FechasAsignadas { get; set; }
         }
     }
 }

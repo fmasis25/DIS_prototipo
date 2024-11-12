@@ -13,111 +13,89 @@
     <link rel="stylesheet" href="../css/usuarios.css">
 </head>
 <body>
-    <!-- Header general del sistema -->
     <header class="header">
         <a href="/"><img src="~/css/tec-logo.png" alt="Logo del Tecnológico de Costa Rica" class="tec-logo"></a>
-        <a href="/VieWeb/MiPerfil"><img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil"></a>
-
+        <a href="/VieWeb/MiPerfil"><img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic"></a>
     </header>
-    <!-- Sidebar -->
-    <div class="sidebar" role="navigation">
+
+    <div class="sidebar">
         <div class="option">
-            <a href="/VieWeb/MenuAdmin" aria-label="Ir a la página de propuestas"><img src="~/css/icons/propuesta.svg" alt="Propuestas"></a>
+            <a href="/VieWeb/MenuAdmin"><img src="~/css/icons/propuesta.svg" alt="Propuestas"></a>
             <span>Propuestas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Graficos" aria-label="Ir a la página de estadísticas"><img src="~/css/icons/estadisticas.svg" alt="Estadísticas"></a>
+            <a href="/VieWeb/Graficos"><img src="~/css/icons/estadisticas.svg" alt="Estadísticas"></a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
-            <a href="/VieWeb/Usuarios" aria-label="Ir a la página de usuarios"><img src="~/css/icons/usuarios.svg" alt="Usuarios"></a>
+            <a href="/VieWeb/Usuarios"><img src="~/css/icons/usuarios.svg" alt="Usuarios"></a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
-            <a href="/VieWeb/Login" aria-label="Cerrar sesión"><img src="~/css/icons/salir.svg" alt="Salir"></a>
+            <a href="/VieWeb/Login"><img src="~/css/icons/salir.svg" alt="Salir"></a>
             <span>Salir</span>
         </div>
     </div>
 
-    <!-- Contenido principal -->
-    <main class="main-content" role="main" aria-labelledby="gestion-usuarios-heading">
-        <h1 id="gestion-usuarios-heading">Gestión de Usuarios</h1>
+    <main class="main-content">
+        <h1>Gestión de Usuarios</h1>
 
-        <!-- Formulario para agregar usuario -->
-        <form method="post" asp-page-handler="AgregarUsuario" aria-label="Formulario para agregar usuario">
-            <input type="text" name="NuevoUsuario.Nombre" placeholder="Nombre" required aria-required="true" aria-label="Nombre del usuario">
-            <input type="text" name="NuevoUsuario.Apellido" placeholder="Apellido" required aria-required="true" aria-label="Apellido del usuario">
-            <input type="number" name="NuevoUsuario.Cedula" placeholder="Cédula" required aria-required="true" aria-label="Cédula del usuario">
-            <input type="email" name="NuevoUsuario.Correo" placeholder="Correo" required aria-required="true" aria-label="Correo del usuario">
-            <input type="password" name="NuevoUsuario.Contrasena" placeholder="Contraseña" required aria-required="true" aria-label="Contraseña del usuario">
-            <select name="NuevoUsuario.Rol" aria-label="Seleccionar rol de usuario">
-                <option value="1">Admin</option>
-                <option value="2">Usuario</option>
-            </select>
-            <button type="submit" aria-label="Agregar nuevo usuario">Agregar Usuario</button>
-        </form>
-
-        <!-- Tabla de usuarios -->
-        <div class="usuarios-container" role="table" aria-label="Tabla de usuarios">
+        <!-- Tabla de Evaluadores (Rol 2) -->
+        <h2>Evaluadores</h2>
+        <div class="usuarios-container">
             <table class="usuarios-table">
                 <thead>
                     <tr>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Rol</th>
-                        <th scope="col">Contraseña</th>
-                        <th scope="col">Acciones</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Propuestas Asignadas</th>
+                        <th>Fechas Asignadas</th>
                     </tr>
                 </thead>
-                <tbody id="tablaUsuarios">
-                    @foreach (var usuario in Model.Usuarios)
+                <tbody>
+                    @foreach (var usuario in Model.Evaluadores)
                     {
-                        <tr id="fila_@usuario.Cedula">
-                            <td><input type="text" name="Correo" value="@usuario.Correo" aria-label="Correo del usuario" /></td>
-                            <td><input type="text" name="Rol" value="@usuario.Rol" aria-label="Rol del usuario" /></td>
-                            <td><input type="text" name="Contrasena" value="@usuario.Contrasena" aria-label="Contraseña del usuario" /></td>
-                            <td>
-                                <!-- Botón para guardar cambios -->
-                                <button class="btnGuardar" data-cedula="@usuario.Cedula" aria-label="Guardar cambios para el usuario con cédula @usuario.Cedula">Guardar</button>
+                        <tr>
+                            <td>@usuario.Nombre</td>
+                            <td>@usuario.Apellido</td>
+                            <td>@usuario.Correo</td>
+                            <td>@usuario.PropuestasAsignadas</td>
+                            <td>@usuario.FechasAsignadas</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
-                                <!-- Botón para eliminar usuario -->
-                                <button class="btnEliminar" data-cedula="@usuario.Cedula" aria-label="Eliminar usuario con cédula @usuario.Cedula">Eliminar</button>
-                            </td>
+        <!-- Tabla de Proponentes (Rol 1) -->
+        <h2>Proponentes</h2>
+        <div class="usuarios-container">
+            <table class="usuarios-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Propuestas Creadas</th>
+                        <th>Fechas Creadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var usuario in Model.Proponentes)
+                    {
+                        <tr>
+                            <td>@usuario.Nombre</td>
+                            <td>@usuario.Apellido</td>
+                            <td>@usuario.Correo</td>
+                            <td>@usuario.PropuestasCreadas</td>
+                            <td>@usuario.FechasCreadas</td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
     </main>
-
-    <script>
-  
-        document.querySelectorAll('.btnGuardar').forEach(button => {
-            button.addEventListener('click', function () {
-                let cedula = this.getAttribute('data-cedula');
-                let fila = document.getElementById('fila_' + cedula);
-                let correo = fila.querySelector('input[name="Correo"]').value;
-                let rol = fila.querySelector('input[name="Rol"]').value;
-                let contrasena = fila.querySelector('input[name="Contrasena"]').value;
-
-               
-                alert('Usuario con cédula ' + cedula + ' actualizado. Correo: ' + correo + ', Rol: ' + rol + ', Contraseña: ' + contrasena);
-            });
-        });
-
-   
-        document.querySelectorAll('.btnEliminar').forEach(button => {
-            button.addEventListener('click', function () {
-                let cedula = this.getAttribute('data-cedula');
-
-                if (confirm('¿Estás seguro de eliminar este usuario?')) {
-                
-                    let fila = document.getElementById('fila_' + cedula);
-                    fila.remove();
-                    alert('Usuario con cédula ' + cedula + ' eliminado.');
-                }
-            });
-        });
-    </script>
-
 </body>
 </html>
+
