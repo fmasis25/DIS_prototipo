@@ -85,13 +85,13 @@ namespace ProyectoVie.Pages.VieWeb
                 else
                 {
                     // Manejo de errores si no se puede convertir
-                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es v�lido.");
+                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es válido.");
                 }
             }
             else
             {
                 // Manejo de errores si el par�metro no existe
-                ModelState.AddModelError(string.Empty, "No se encontr� el ID de propuesta.");
+                ModelState.AddModelError(string.Empty, "No se encontró el ID de propuesta.");
             }
         }
 

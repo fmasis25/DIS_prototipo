@@ -10,9 +10,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar Nota</title>
-    <link rel="stylesheet" href="../css/menue.css">
+    <link rel="stylesheet" href="../css/usuarios2.css"> <!-- Usando el mismo CSS que para Evaluar -->
+</head>
+<body>
     <style>
-
+        /* Añadir estilos para mejorar la visibilidad de la tabla */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -35,21 +37,21 @@
             padding: 6px;
         }
 
-
+        /* Hacer el checkbox más grande */
         input[type="checkbox"] {
             width: 30px; /* Ajusta el tamaño del checkbox */
             height: 30px; /* Ajusta el tamaño del checkbox */
             margin: 0 auto; /* Centra el checkbox dentro de su contenedor */
-            display: block;
+            display: block; /* Asegura que se comporte como un bloque y ocupe todo el ancho disponible */
         }
 
-
+        /* Hacer que la tabla sea scrolleable */
         .rubrica-container {
             max-height: 400px;
             overflow-y: auto;
         }
 
-
+        /* Estilo para el total que no será editable */
         .total-input {
             background-color: #f9f9f9;
             text-align: center;
@@ -74,8 +76,6 @@
                 background-color: #45a049;
             }
     </style>
-</head>
-<body>
     <!-- Header general del sistema -->
     <header class="header">
         <a href="/">
@@ -255,7 +255,7 @@
                         <tr>
                             <td class="total-input"><strong>Total</strong></td>
                             <td colspan="5">
-                                <input type="text" name="PorcentajeTotal" value="@Model.PorcentajeTotal" class="total-input" readonly aria-readonly="true">
+                                <input type="text" name="PorcentajzeTotal" value="@Model.PorcentajeTotal" class="total-input" readonly aria-readonly="true">
                             </td>
                         </tr>
                     </tbody>
