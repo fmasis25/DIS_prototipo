@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+ï»¿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
 using Microsoft.Data.SqlClient;
@@ -39,7 +39,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public string? PorcentajeEstrategia { get; set; }
 
-        // Información técnica
+        // Informaciï¿½n tï¿½cnica
         [BindProperty]
         public int NoCumpleInformacion { get; set; }
         [BindProperty]
@@ -59,7 +59,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public string? PorcentajeFinanciera { get; set; }
 
-        // Participación estudiantil
+        // Participaciï¿½n estudiantil
         [BindProperty]
         public int NoCumpleParticipacion { get; set; }
         [BindProperty]
@@ -74,10 +74,10 @@ namespace ProyectoVie.Pages.VieWeb
         public int PorcentajeTotal { get; set; }
         public void OnGet()
         {
-            // Intenta obtener el parámetro de la URL
+            // Intenta obtener el parï¿½metro de la URL
             if (Request.Query.ContainsKey("propuestaId"))
             {
-                // Asegúrate de que el valor se puede convertir a un entero
+                // Asegï¿½rate de que el valor se puede convertir a un entero
                 if (int.TryParse(Request.Query["propuestaId"], out var propuestaId))
                 {
                     PropuestaId = propuestaId; // Asigna el valor a la propiedad
@@ -85,20 +85,20 @@ namespace ProyectoVie.Pages.VieWeb
                 else
                 {
                     // Manejo de errores si no se puede convertir
-                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es válido.");
+                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es vï¿½lido.");
                 }
             }
             else
             {
-                // Manejo de errores si el parámetro no existe
-                ModelState.AddModelError(string.Empty, "No se encontró el ID de propuesta.");
+                // Manejo de errores si el parï¿½metro no existe
+                ModelState.AddModelError(string.Empty, "No se encontrï¿½ el ID de propuesta.");
             }
         }
 
         public IActionResult OnPost()
         {
-            
-            // Cadena de conexión a la base de datos
+
+            // Cadena de conexiï¿½n a la base de datos
             string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             try
@@ -124,7 +124,7 @@ namespace ProyectoVie.Pages.VieWeb
                               @PorcentajeAfinidad, @PorcentajeProblema, @PorcentajeEstrategia, @PorcentajeInformacion, @PorcentajeFinanciera,
                               @PorcentajeParticipacion)";
 
-                    
+
                     // Actualiza el estado en la tabla PROPUESTA
                     string query2 = @"UPDATE PROPUESTA 
                       SET ID_Estado = @nuevoEstado 
@@ -165,13 +165,13 @@ namespace ProyectoVie.Pages.VieWeb
                     command.Parameters.AddWithValue("@CumpleParticipacion", CumpleParticipacion);
                     command.Parameters.AddWithValue("@PorcentajeParticipacion", PorcentajeParticipacion);
 
-                    // Determina el nuevo estado según el porcentaje
+                    // Determina el nuevo estado segï¿½n el porcentaje
                     int nuevoEstado = PorcentajeTotal >= 70 ? 4 : 1;
                     command2.Parameters.AddWithValue("@nuevoEstado", nuevoEstado);
-                    command2.Parameters.AddWithValue("@PropuestaId", PropuestaId); 
+                    command2.Parameters.AddWithValue("@PropuestaId", PropuestaId);
                     command2.ExecuteNonQuery();
                     Console.WriteLine("Estado actualizado correctamente.");
-                    
+
 
                     command.ExecuteNonQuery();
                     Console.WriteLine("Datos insertados exitosamente.");

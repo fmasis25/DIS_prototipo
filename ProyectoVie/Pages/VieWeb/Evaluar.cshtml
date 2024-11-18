@@ -3,14 +3,14 @@
 @{
     ViewData["Title"] = "Evaluación de Propuesta";
 }
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/menua.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <title>Evaluar Propuesta</title>
-    <link rel="stylesheet" href="../css/usuarios.css"> <!-- Usando el mismo CSS que para Usuarios -->
     <style>
         /* Añadir estilos para mejorar la visibilidad de la tabla */
         table {
@@ -85,30 +85,29 @@
             <img src="~/css/icons/perfil.svg" alt="Perfil" class="profile-pic" aria-label="Perfil">
         </a>
     </header>
-
-    <!-- Sidebar izquierdo con opciones -->
+    <!-- Sidebar izquierdo -->
     <div class="sidebar">
         <div class="option">
             <a href="/VieWeb/MenuAdmin">
-                <img src="~/css/icons/propuesta.svg" alt="Propuestas" aria-label="Propuestas">
+                <img src="~/css/icons/propuesta.svg" alt="Propuestas" aria-label="Ir a las Propuestas">
             </a>
             <span>Propuestas</span>
         </div>
         <div class="option">
             <a href="/VieWeb/Graficos">
-                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas" aria-label="Estadísticas">
+                <img src="~/css/icons/estadisticas.svg" alt="Estadísticas" aria-label="Ver Estadísticas">
             </a>
             <span>Estadísticas</span>
         </div>
         <div class="option">
             <a href="/VieWeb/Usuarios">
-                <img src="~/css/icons/usuarios.svg" alt="Usuarios" aria-label="Usuarios">
+                <img src="~/css/icons/usuarios.svg" alt="Usuarios" aria-label="Administrar Usuarios">
             </a>
             <span>Usuarios</span>
         </div>
         <div class="exit-option">
             <a href="/VieWeb/Login">
-                <img src="~/css/icons/salir.svg" alt="Salir" aria-label="Salir">
+                <img src="~/css/icons/salir.svg" alt="Salir" aria-label="Cerrar sesión">
             </a>
             <span>Salir</span>
         </div>
@@ -129,7 +128,7 @@
                             <th>No cumple</th>
                             <th>Cumple parcial</th>
                             <th>Cumple</th>
-                            <th>Porcentaje</th>
+                            <th>Comentario</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -302,59 +301,59 @@
     </div>
 
     <script>
-    function toggleCheckboxes(currentCheckbox) {
-        const row = currentCheckbox.closest('tr');
-        const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+        function toggleCheckboxes(currentCheckbox) {
+            const row = currentCheckbox.closest('tr');
+            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
 
-        checkboxes.forEach(checkbox => {
-            if (checkbox !== currentCheckbox) {
-                checkbox.checked = false;
-            }
-        });
-
-        calculateTotal();
-    }
-
-    function calculateTotal() {
-        let total = 0;
-        let warningMessage = '';
-
-        
-        // Sumar valores de los checkboxes
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            if (checkbox.checked) {
-                if (checkbox.name.includes("NoCumple")) {
-                    total += 0;
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== currentCheckbox) {
+                    checkbox.checked = false;
                 }
-                else if (checkbox.name.includes("CumpleParcial")) {
-                    if (checkbox.name === "CumpleParcialAfinidad" || checkbox.name === "CumpleParcialParticipacion") {
-                        total += 5;
-                    } else {
-                        total += 10;
-                    }
-                }
-                else if (checkbox.name.includes("Cumple")) {
-                    if (checkbox.name === "CumpleAfinidad" || checkbox.name === "CumpleParticipacion") {
-                        total += 10;
-                    } else {
-                        total += 20;
-                    }
-                }
-            }
+            });
 
-        });
-
-        document.querySelector('input[name="PorcentajeTotal"]').value = total;
-
-        const warningDiv = document.getElementById('warning-message');
-        if (warningMessage) {
-            warningDiv.textContent = warningMessage;
-            warningDiv.style.display = 'block';
-        } else {
-            warningDiv.style.display = 'none';
+            calculateTotal();
         }
-    }
-</script>
+
+        function calculateTotal() {
+            let total = 0;
+            let warningMessage = '';
+
+
+            // Sumar valores de los checkboxes
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.checked) {
+                    if (checkbox.name.includes("NoCumple")) {
+                        total += 0;
+                    }
+                    else if (checkbox.name.includes("CumpleParcial")) {
+                        if (checkbox.name === "CumpleParcialAfinidad" || checkbox.name === "CumpleParcialParticipacion") {
+                            total += 5;
+                        } else {
+                            total += 10;
+                        }
+                    }
+                    else if (checkbox.name.includes("Cumple")) {
+                        if (checkbox.name === "CumpleAfinidad" || checkbox.name === "CumpleParticipacion") {
+                            total += 10;
+                        } else {
+                            total += 20;
+                        }
+                    }
+                }
+
+            });
+
+            document.querySelector('input[name="PorcentajeTotal"]').value = total;
+
+            const warningDiv = document.getElementById('warning-message');
+            if (warningMessage) {
+                warningDiv.textContent = warningMessage;
+                warningDiv.style.display = 'block';
+            } else {
+                warningDiv.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>

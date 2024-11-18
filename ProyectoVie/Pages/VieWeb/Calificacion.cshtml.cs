@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+ï»¿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 
@@ -39,7 +39,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public string? PorcentajeEstrategia { get; set; }
 
-        // Información técnica
+        // Informaciï¿½n tï¿½cnica
         [BindProperty]
         public int NoCumpleInformacion { get; set; }
         [BindProperty]
@@ -59,7 +59,7 @@ namespace ProyectoVie.Pages.VieWeb
         [BindProperty]
         public string? PorcentajeFinanciera { get; set; }
 
-        // Participación estudiantil
+        // Participaciï¿½n estudiantil
         [BindProperty]
         public int NoCumpleParticipacion { get; set; }
         [BindProperty]
@@ -75,15 +75,15 @@ namespace ProyectoVie.Pages.VieWeb
 
         public void OnGet()
         {
-          
+
             if (Request.Query.ContainsKey("propuestaId"))
             {
-             
+
                 if (int.TryParse(Request.Query["propuestaId"], out var propuestaId))
                 {
                     PropuestaId = propuestaId; // Asigna el valor a la propiedad
 
-                    // Cadena de conexión a la base de datos
+                    // Cadena de conexiï¿½n a la base de datos
                     string connectionString = "Server=tcp:serverprogra.database.windows.net,1433;Initial Catalog=VIE;Persist Security Info=False;User ID=Prograadmin;Password=proyectoVIE123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
                     try
@@ -93,7 +93,7 @@ namespace ProyectoVie.Pages.VieWeb
                             connection.Open();
                             string query = "SELECT * FROM CALIFICACION WHERE ID_Propuesta = @idPropuesta";
                             SqlCommand command = new SqlCommand(query, connection);
-                            command.Parameters.AddWithValue("@idPropuesta", PropuestaId); // Agregar el parámetro
+                            command.Parameters.AddWithValue("@idPropuesta", PropuestaId); // Agregar el parï¿½metro
 
                             using (SqlDataReader reader = command.ExecuteReader())
                             {
@@ -146,13 +146,13 @@ namespace ProyectoVie.Pages.VieWeb
                 else
                 {
                     // Manejo de errores si no se puede convertir
-                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es válido.");
+                    ModelState.AddModelError(string.Empty, "El ID de propuesta no es vï¿½lido.");
                 }
             }
             else
             {
-                // Manejo de errores si el parámetro no existe
-                ModelState.AddModelError(string.Empty, "No se encontró el ID de propuesta.");
+                // Manejo de errores si el parï¿½metro no existe
+                ModelState.AddModelError(string.Empty, "No se encontrï¿½ el ID de propuesta.");
             }
         }
     }
