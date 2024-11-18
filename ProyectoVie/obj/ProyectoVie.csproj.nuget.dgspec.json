@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {}
+  },
+  "projects": {
+    "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
+        "projectName": "ProyectoVie",
+        "projectPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
+        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+        "outputPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4641e449ff66993174ca73e092b149d0edc746df
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

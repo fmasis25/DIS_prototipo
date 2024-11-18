@@ -1,4 +1,5 @@
-﻿body {
+﻿/* Estilo Global */
+body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
     overflow: hidden;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -35,13 +37,14 @@
     margin-right: 0;
 }
 
+/* Sidebar */
 .sidebar {
     width: 180px;
     background-color: #0a4275;
     color: white;
     padding: 15px;
     position: fixed;
-    height: 100%;
+    height: calc(100% - 60px);
     top: 60px;
     left: 0;
     display: flex;
@@ -51,7 +54,8 @@
     z-index: 1000;
 }
 
-    .sidebar .option, .sidebar .exit-option {
+    .sidebar .option,
+    .sidebar .exit-option {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -62,26 +66,18 @@
         margin-bottom: 20px;
     }
 
-        .sidebar .option a img, .sidebar .exit-option a img {
+        .sidebar .option a img,
+        .sidebar .exit-option a img {
             width: 30px;
             height: auto;
             margin-right: 10px;
         }
 
-        .sidebar .option span, .sidebar .exit-option span {
+        .sidebar .option span,
+        .sidebar .exit-option span {
             font-size: 16px;
             text-align: left;
         }
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 150px;
-    }
-
-        .sidebar img {
-            max-width: 25px;
-        }
-}
 
 .main-content {
     margin-left: 240px;
@@ -89,45 +85,45 @@
     margin-top: 80px;
     width: calc(100% - 240px);
     box-sizing: border-box;
-}
-
-.propuestas-container {
-    height: 400px;
     overflow-y: auto;
 }
 
-.propuestas-table {
+/* Tabla de Usuarios */
+.usuarios-container {
+    margin-bottom: 20px;
+}
+
+.usuarios-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-    .propuestas-table th, .propuestas-table td {
-        border: 1px solid #ccc;
-        padding: 10px;
+    .usuarios-table th,
+    .usuarios-table td {
+        padding: 12px;
         text-align: left;
+        border-bottom: 1px solid #ddd;
     }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
+    .usuarios-table th {
+        background-color: #0a4275;
+        color: #fff;
     }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+    .usuarios-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+/* Títulos */
+h1 {
+    font-size: 24px;
+    color: #0a4275;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #0a4275;
+    margin-top: 20px;
 }
