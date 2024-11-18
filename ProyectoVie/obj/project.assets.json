@@ -2087,25 +2087,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\windows\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\Felipe\\.nuget\\packages\\": {}
->>>>>>> 4641e449ff66993174ca73e092b149d0edc746df
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
-      "projectName": "ProyectoVie",
-      "projectPath": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
-      "packagesPath": "C:\\Users\\windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\windows\\Documents\\Diseño\\DIS_prototipo\\ProyectoVie\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
       "projectName": "ProyectoVie",
       "projectPath": "D:\\Descargas\\DIS_prototipo\\ProyectoVie\\ProyectoVie.csproj",
@@ -2114,7 +2100,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4641e449ff66993174ca73e092b149d0edc746df
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2183,6 +2168,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché D:\\Descargas\\DIS_prototipo\\ProyectoVie\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1903",
       "level": "Warning",
